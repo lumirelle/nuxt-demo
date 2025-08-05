@@ -3,24 +3,43 @@ import { ref } from 'vue'
 
 const date = ref<Date | null>(null)
 
+const { t } = useI18n({
+  useScope: 'local',
+})
+
 function handleChange(date: Date | null) {
-  ElMessage.success(`You pick the date: ${date?.toLocaleDateString()}`)
+  ElMessage.success(t('success', { date: date?.toLocaleDateString() }))
 }
 </script>
+
+<i18n lang="yaml">
+en:
+  title: "{'@element-plus/nuxt - DatePicker'}"
+  back: "{'Back to try @element-plus/nuxt'}"
+  success: 'You pick the date: {date}'
+zh-CN:
+  title: "{'@element-plus/nuxt - DatePicker'}"
+  back: "{'返回尝试 @element-plus/nuxt'}"
+  success: '您选择了日期: {date}'
+zh-TW:
+  title: "{'@element-plus/nuxt - DatePicker'}"
+  back: "{'返回嘗試 @element-plus/nuxt'}"
+  success: '您選擇了日期: {date}'
+</i18n>
 
 <template>
   <div>
     <MyH level="1">
-      @element-plus/nuxt - DatePicker
+      {{ t('title') }}
     </MyH>
     <MyH level="2">
-      DatePicker
+      ElDatePicker
     </MyH>
     <p><ElDatePicker v-model="date" type="datetime" @change="handleChange" /></p>
     <p>
-      <NuxtLink to="/element-plus">
-        <span>Back to try @element-plus/nuxt</span>
-      </NuxtLink>
+      <NuxtLinkLocale to="/element-plus">
+        <span>{{ t('back') }}</span>
+      </NuxtLinkLocale>
     </p>
   </div>
 </template>

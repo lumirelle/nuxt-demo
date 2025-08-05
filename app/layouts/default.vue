@@ -9,16 +9,19 @@
         <p text-5 font-bold>
           Nuxt 4 Demo
         </p>
-        <!-- `@nuxtjs/color-mode` -->
-        <!-- 1. The color schema is auto-detected in the client side -->
-        <!-- If we use `useDark` from `@vueuse/core` directly, it will get hydration error -->
-        <!-- Because the result is always `false` in the server side, but auto-detected in the client side (maybe get 'true') -->
-        <!-- 2. It's better to use `@nuxtjs/color-mode` module with out of box SSR support -->
-        <!-- We just need to wrap the element using `$colorMode.preference` with `ColorScheme` component to avoid flashing -->
-        <!-- See https://color-mode.nuxtjs.org/#caveats for more details -->
-        <ColorScheme>
-          <ElSwitch v-model="$colorMode.preference" active-value="dark" inactive-value="light" :active-icon="ElIconMoon" :inactive-icon="ElIconSunny" inline-prompt />
-        </ColorScheme>
+        <div flex="~ row" items-center gap-4>
+          <LangSwitcher />
+          <!-- `@nuxtjs/color-mode` -->
+          <!-- 1. The color schema is auto-detected in the client side -->
+          <!-- If we use `useDark` from `@vueuse/core` directly, it will get hydration error -->
+          <!-- Because the result is always `false` in the server side, but auto-detected in the client side (maybe get 'true') -->
+          <!-- 2. It's better to use `@nuxtjs/color-mode` module with out of box SSR support -->
+          <!-- We just need to wrap the element using `$colorMode.preference` with `ColorScheme` component to avoid flashing -->
+          <!-- See https://color-mode.nuxtjs.org/#caveats for more details -->
+          <ColorScheme>
+            <ElSwitch v-model="$colorMode.preference" active-value="dark" inactive-value="light" :active-icon="ElIconMoon" :inactive-icon="ElIconSunny" inline-prompt />
+          </ColorScheme>
+        </div>
       </div>
     </header>
     <div max-w-1200px mx-auto>

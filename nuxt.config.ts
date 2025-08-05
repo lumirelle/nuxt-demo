@@ -15,13 +15,21 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
 
   modules: [
+    // Element Plus auto import & theme & variables override support
     '@element-plus/nuxt',
+    // ESLint devtools integration
     '@nuxt/eslint',
+    // TODO: Image optimization
     '@nuxt/image',
+    // Third party scripts loading
     '@nuxt/scripts',
+    // Test utils
     '@nuxt/test-utils',
+    // Color mode
     '@nuxtjs/color-mode',
+    // i18n
     '@nuxtjs/i18n',
+    // TODO: below
     '@nuxtjs/seo',
     '@pinia/nuxt',
     '@unocss/nuxt',
@@ -67,6 +75,9 @@ export default defineNuxtConfig({
         },
       },
     },
+    imports: [
+      ['useLocale', 'es/hooks/use-locale/index.mjs'],
+    ],
   },
 
   eslint: {
@@ -97,7 +108,17 @@ export default defineNuxtConfig({
   },
 
   colorMode: {
+    // Compatible with UnoCSS & Element Plus
     classSuffix: '',
+  },
+
+  i18n: {
+    locales: [
+      { code: 'en', name: 'English' },
+      { code: 'zh-CN', name: '简体中文' },
+      { code: 'zh-TW', name: '繁體中文' },
+    ],
+    defaultLocale: 'en',
   },
 
   vite: {
