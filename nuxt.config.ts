@@ -29,10 +29,13 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     // i18n
     '@nuxtjs/i18n',
-    // TODO: below
+    // TODO: SEO
     '@nuxtjs/seo',
+    // TODO: Pinia
     '@pinia/nuxt',
+    // UnoCSS
     '@unocss/nuxt',
+    // TODO: Pending triage below
     '@vueuse/nuxt',
     'nuxt-echarts',
     'nuxt-gtag',
