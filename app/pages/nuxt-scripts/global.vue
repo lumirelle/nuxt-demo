@@ -21,16 +21,18 @@ function handleClick() {
 
 <template>
   <div>
-    <h1>@nuxt/scripts - Using global script</h1>
+    <MyH level="1">
+      @nuxt/scripts - Using global script
+    </MyH>
     <p>This script is loaded globally in `nuxt.config.ts`</p>
     <p>You can open the Network tab in the devtools of browser to see the script is loaded.</p>
     <p>Please choose all requests and filter by name "js-confetti".</p>
-    <button @click="handleClick">
+    <ElButton @click="handleClick">
       Click me to trigger confetti
-    </button>
+    </ElButton>
     <p>
-      <NuxtLink to="/">
-        Back to home
+      <NuxtLink to="/nuxt-scripts">
+        <span>Back to try @nuxt/scripts</span>
       </NuxtLink>
     </p>
   </div>

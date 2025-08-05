@@ -1,26 +1,27 @@
 <template>
   <div>
     <div>
-      <h1>
+      <MyH level="1">
         Welcome to Nuxt 4
-      </h1>
+      </MyH>
     </div>
-    <h2>Nuxt Modules</h2>
-    <h3>@nuxt/scripts</h3>
+    <MyH level="2">
+      Nuxt Modules
+    </MyH>
+    <MyH level="3">
+      @nuxt/scripts
+    </MyH>
     <p>
-      <NuxtLink to="/nuxt-scripts/global">
-        Try @nuxt/scripts - global script
+      <NuxtLink to="/nuxt-scripts">
+        <span>Try @nuxt/scripts</span>
       </NuxtLink>
     </p>
-    <p>
-      <NuxtLink to="/nuxt-scripts/demand">
-        Try @nuxt/scripts - load script on demand
-      </NuxtLink>
-    </p>
-    <h3>@element-plus/nuxt</h3>
+    <MyH level="3">
+      @element-plus/nuxt
+    </MyH>
     <p>
       <NuxtLink to="/element-plus">
-        Try @element-plus/nuxt
+        <span>Try @element-plus/nuxt</span>
       </NuxtLink>
     </p>
   </div>

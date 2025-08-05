@@ -1,16 +1,16 @@
 <template>
   <div>
     <MyH level="1">
-      @element-plus/nuxt
+      @nuxt/scripts
     </MyH>
     <p>
-      <NuxtLink to="/element-plus/button">
-        <span>Try @element-plus/nuxt - Button</span>
+      <NuxtLink to="/nuxt-scripts/global">
+        <span>Try @nuxt/scripts - global script</span>
       </NuxtLink>
     </p>
     <p>
-      <NuxtLink to="/element-plus/date-picker">
-        <span>Try @element-plus/nuxt - DatePicker</span>
+      <NuxtLink to="/nuxt-scripts/demand">
+        <span>Try @nuxt/scripts - load script on demand</span>
       </NuxtLink>
     </p>
     <p>

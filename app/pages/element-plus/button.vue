@@ -1,13 +1,19 @@
 <template>
   <div>
-    <h1>@element-plus/nuxt - Button</h1>
-    <h2>Button</h2>
+    <MyH level="1">
+      @element-plus/nuxt - Button
+    </MyH>
+    <MyH level="2">
+      Button
+    </MyH>
     <p><ElButton>Click me</ElButton></p>
-    <h2>LazyElButton</h2>
+    <MyH level="2">
+      LazyElButton
+    </MyH>
     <p><LazyElButton>Click me</LazyElButton></p>
     <p>
       <NuxtLink to="/element-plus">
-        Back to try @element-plus/nuxt
+        <span>Back to try @element-plus/nuxt</span>
       </NuxtLink>
     </p>
   </div>

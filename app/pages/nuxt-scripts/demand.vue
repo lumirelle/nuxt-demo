@@ -39,30 +39,20 @@ function refresh() {
 
 <template>
   <div>
-    <h1>@nuxt/scripts - Load script on demand</h1>
-    <p><span ref="mouseOverEl" class="trigger">Trigger the script loading manually by hovering over this sentence.</span></p>
+    <MyH level="1">
+      @nuxt/scripts - Load script on demand
+    </MyH>
+    <p><span ref="mouseOverEl" hover="text-red">Trigger the script loading manually by hovering over this sentence.</span></p>
     <p>After the script is loaded, the confetti will be triggered and output "LOADED".</p>
     <p>You can also refresh this page to see the script is loaded again.</p>
-    <button @click="refresh">
+    <ElButton @click="refresh">
       Refresh this page
-    </button>
+    </ElButton>
     <p>Note: This script is loaded from npm, you can also loaded from CDN by using <code>useScript</code></p>
     <p>
-      <NuxtLink to="/">
-        Back to home
+      <NuxtLink to="/nuxt-scripts">
+        <span>Back to try @nuxt/scripts</span>
       </NuxtLink>
     </p>
   </div>
 </template>
-
-<style lang="css" scoped>
-.trigger:hover {
-  color: red;
-}
-
-code {
-  background-color: #f0f0f0;
-  padding: 2px 4px;
-  border-radius: 4px;
-}
-</style>

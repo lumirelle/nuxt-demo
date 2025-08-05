@@ -10,12 +10,16 @@ function handleChange(date: Date | null) {
 
 <template>
   <div>
-    <h1>@element-plus/nuxt - DatePicker</h1>
-    <h2>DatePicker</h2>
+    <MyH level="1">
+      @element-plus/nuxt - DatePicker
+    </MyH>
+    <MyH level="2">
+      DatePicker
+    </MyH>
     <p><ElDatePicker v-model="date" type="datetime" @change="handleChange" /></p>
     <p>
       <NuxtLink to="/element-plus">
-        Back to try @element-plus/nuxt
+        <span>Back to try @element-plus/nuxt</span>
       </NuxtLink>
     </p>
   </div>

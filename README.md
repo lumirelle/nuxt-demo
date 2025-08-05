@@ -70,7 +70,7 @@ Before attributify:
 After attributify:
 
 ```html
-<div flex flex-row justify-between items-center max-w-1200px mx-auto py-1 px-4>
+<div flex="~ row" justify-between items-center max-w-1200px mx-auto p="y-1 x-4">
   <p text-5 font-bold>Nuxt 4 Demo</p>
 </div>
 ```
