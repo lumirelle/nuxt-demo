@@ -1,0 +1,53 @@
+{
+  "name": "nuxt-app",
+  "type": "module",
+  "private": true,
+  "packageManager": "pnpm@10.14.0+sha512.ad27a79641b49c3e481a16a805baa71817a04bbe06a38d17e60e2eaee83f6a146c6a688125f5792e48dd5ba30e7da52a5cda4c3992b9ccf333f9ce223af84748",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "test": "vitest",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@nuxt/image": "^1.11.0",
+    "@nuxt/scripts": "^0.11.10",
+    "@nuxtjs/seo": "^3.1.0",
+    "@pinia/nuxt": "^0.11.2",
+    "@unhead/vue": "^2.0.13",
+    "@vueuse/nuxt": "^13.6.0",
+    "dayjs": "^1.11.13",
+    "echarts": "^5.6.0",
+    "nuxt": "^4.0.2",
+    "nuxt-gtag": "^3.0.3",
+    "nuxt-svgo": "^4.2.5",
+    "nuxt-swiper": "^2.0.1",
+    "nuxt-typed-router": "^4.0.1",
+    "pinia": "^3.0.3",
+    "vue": "^3.5.18",
+    "vue-router": "^4.5.1"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^5.1.0",
+    "@element-plus/icons-vue": "^2.3.1",
+    "@element-plus/nuxt": "^1.1.4",
+    "@nuxt/eslint": "^1.7.1",
+    "@nuxt/test-utils": "^3.19.2",
+    "@nuxtjs/i18n": "^10.0.3",
+    "@unocss/nuxt": "^66.4.1",
+    "@vue/test-utils": "^2.4.6",
+    "element-plus": "^2.10.5",
+    "eslint": "^9.32.0",
+    "eslint-plugin-format": "^1.0.1",
+    "happy-dom": "^18.0.1",
+    "nuxt-echarts": "^0.4.0",
+    "nuxt-qrcode": "^0.4.6",
+    "prettier": "^3.6.2",
+    "sass-embedded": "^1.89.2",
+    "typescript": "^5.9.2",
+    "unocss": "^66.4.1",
+    "vitest": "^3.2.4"
+  }
+}
