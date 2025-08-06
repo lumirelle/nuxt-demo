@@ -15,6 +15,9 @@ en:
     elementPlus:
       title: "{'@element-plus/nuxt'}"
       description: "{'Try @element-plus/nuxt'}"
+    nuxtImage:
+      title: "{'@nuxt/image'}"
+      description: "{'Try @nuxt/image'}"
 zh-CN:
   title: 欢迎使用 Nuxt 4
   modules:
@@ -25,6 +28,9 @@ zh-CN:
     elementPlus:
       title: "{'@element-plus/nuxt'}"
       description: "{'尝试 @element-plus/nuxt'}"
+    nuxtImage:
+      title: "{'@nuxt/image'}"
+      description: "{'尝试 @nuxt/image'}"
 zh-TW:
   title: 歡迎使用 Nuxt 4
   modules:
@@ -35,6 +41,9 @@ zh-TW:
     elementPlus:
       title: "{'@element-plus/nuxt'}"
       description: "{'嘗試 @element-plus/nuxt'}"
+    nuxtImage:
+      title: "{'@nuxt/image'}"
+      description: "{'嘗試 @nuxt/image'}"
 </i18n>
 
 <template>
@@ -48,19 +57,27 @@ zh-TW:
       {{ t('modules.title') }}
     </MyH>
     <MyH level="3">
-      {{ t('modules.nuxtScripts.title') }}
-    </MyH>
-    <p>
-      <NuxtLinkLocale to="/nuxt-scripts">
-        <span>{{ t('modules.nuxtScripts.description') }}</span>
-      </NuxtLinkLocale>
-    </p>
-    <MyH level="3">
       {{ t('modules.elementPlus.title') }}
     </MyH>
     <p>
       <NuxtLinkLocale to="/element-plus">
         <span>{{ t('modules.elementPlus.description') }}</span>
+      </NuxtLinkLocale>
+    </p>
+    <MyH level="3">
+      {{ t('modules.nuxtImage.title') }}
+    </MyH>
+    <p>
+      <NuxtLinkLocale to="/nuxt-image">
+        <span>{{ t('modules.nuxtImage.description') }}</span>
+      </NuxtLinkLocale>
+    </p>
+    <MyH level="3">
+      {{ t('modules.nuxtScripts.title') }}
+    </MyH>
+    <p>
+      <NuxtLinkLocale to="/nuxt-scripts">
+        <span>{{ t('modules.nuxtScripts.description') }}</span>
       </NuxtLinkLocale>
     </p>
   </div>

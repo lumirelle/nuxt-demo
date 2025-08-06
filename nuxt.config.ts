@@ -19,8 +19,6 @@ export default defineNuxtConfig({
     '@element-plus/nuxt',
     // ESLint devtools integration
     '@nuxt/eslint',
-    // TODO: Image optimization
-    '@nuxt/image',
     // Third party scripts loading
     '@nuxt/scripts',
     // Test utils
@@ -90,14 +88,6 @@ export default defineNuxtConfig({
       // See https://eslint.nuxt.com/packages/module#custom-config-presets for more information.
       standalone: false,
     },
-  },
-
-  image: {
-    // To enable image optimization on an external website, specify which domains are allowed to be optimized.
-    // See https://image.nuxt.com/get-started/configuration#domains for more information.
-    domains: [
-      'https://www.ipipgo.com',
-    ],
   },
 
   scripts: {
