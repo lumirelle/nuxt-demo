@@ -4,7 +4,11 @@
 
 Basic Framework:
 
-- [Nuxt 4](https://nuxt.com/docs/4.x/getting-started/introduction) ([Vue 3](https://vuejs.org/guide/introduction.html))
+- [Nuxt 4](https://nuxt.com/docs/4.x/getting-started/introduction)
+- [Vue 3](https://vuejs.org/guide/introduction.html)
+- [Pinia](https://pinia.vuejs.org/zh/getting-started/)
+- [VueRouter](https://router.vuejs.org/zh/introduction.html)
+- [VueI18n](https://vue-i18n.intlify.dev/zh/guide/introduction.html)
 
 UI Library:
 
@@ -16,7 +20,27 @@ CSS Framework:
 
 Utilities:
 
+- [VueUse](https://vueuse.org/zh/)
+- [Bignumber.js](https://mikemcl.github.io/bignumber.js/)
+- [Day.js](https://day.js.org/zh-tw/)
+- [ECharts](https://echarts.apache.org/zh/index.html)
+- [Nuxt Swiper](https://nuxt.com/modules/swiper)
+- [Nuxt QRCode](https://nuxt.com/modules/qrcode)
+- [Nuxt GTag](https://nuxt.com/modules/gtag)
 - [Highlight.js](https://highlightjs.org/)
+- TODO: MD5 & SHA256 (Finding crypto package)
+- TODO: LRU Cache
+- TODO: XLSX
+
+Optimizations:
+
+- [Nuxt Scripts](https://nuxt.com/modules/scripts)
+- [Nuxt SVGO](https://nuxt.com/modules/nuxt-svgo)
+
+DX:
+
+- [Nuxt Test Utils](https://nuxt.com/modules/test-utils)
+- [Nuxt Typed Router](https://nuxt.com/modules/typed-router)
 
 ## Nuxt 4
 
@@ -52,6 +76,10 @@ See [Nuxt Modules Page](https://nuxt.com/modules) for more information.
 ### Vue Addons
 
 TODO:
+
+## Element Plus
+
+Nothing to say...
 
 ## UnoCSS
 
@@ -89,7 +117,17 @@ For example below, `page-header` & `page-title` are semantic classes which are c
 </div>
 ```
 
-## Highlight.js
+## Utilities
+
+### Vue Use
+
+Vue Use provide plenty of utilities for Vue Composition API.
+
+For example, `useClipboard` can help you copy text to clipboard, `useCookie` can help you manage cookies.
+
+So we don't need `clipboard` & `cookie-universal-nuxt` packages any more.
+
+### Highlight.js
 
 Highlight.js is a syntax highlighter for code blocks.
 
