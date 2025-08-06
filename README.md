@@ -21,13 +21,14 @@ CSS Framework:
 Utilities:
 
 - [VueUse](https://vueuse.org/zh/)
+- [Highlight.js](https://highlightjs.org/)
+- TODO: Below
 - [Bignumber.js](https://mikemcl.github.io/bignumber.js/)
 - [Day.js](https://day.js.org/zh-tw/)
 - [ECharts](https://echarts.apache.org/zh/index.html)
 - [Nuxt Swiper](https://nuxt.com/modules/swiper)
 - [Nuxt QRCode](https://nuxt.com/modules/qrcode)
 - [Nuxt GTag](https://nuxt.com/modules/gtag)
-- [Highlight.js](https://highlightjs.org/)
 - TODO: MD5 & SHA256 (Finding crypto package)
 - TODO: LRU Cache
 - TODO: XLSX
@@ -67,19 +68,25 @@ Nuxt 4 provides a lot of features than Nuxt 2, including:
   - ...
 - ...
 
-### Nuxt Modules
+Reading the getting started guide [here](https://nuxt.com/docs/4.x/getting-started/introduction).
 
-TODO:
+## Nuxt Modules
+
+Nuxt modules provide a lot of abilities, such as auto-importing, type generation, devtools integration, etc.
 
 See [Nuxt Modules Page](https://nuxt.com/modules) for more information.
 
-### Vue Addons
+## Vue 3
 
-TODO:
+Noting to say...
+
+## Vue Addons
+
+Pinia & Vue Router & Vue i18n.
 
 ## Element Plus
 
-Nothing to say...
+It may not be the best, but it must not be a wrong choice.
 
 ## UnoCSS
 
@@ -90,6 +97,8 @@ Atomic CSS can reduce the size of the CSS file, especially for a large project.
 UnoCSS has presets compatible with Tailwind CSS & other CSS frameworks.
 
 This demo use `presetWind3` & `presetAttributify` presets, compatible with Tailwind CSS 3 & attributify atomic css classes.
+
+Attributify let you write CSS classes like HTML attributes, which can avoid the mixing of semantic & non-semantic classes.
 
 Before attributify:
 
@@ -106,8 +115,6 @@ After attributify:
   <p text-5 font-bold>Nuxt 4 Demo</p>
 </div>
 ```
-
-Attributify let you write CSS classes like HTML attributes, which can avoid the mixing of semantic & non-semantic classes.
 
 For example below, `page-header` & `page-title` are semantic classes which are commonly used in JS, and it's annoying for developers to find them with so many other non-semantic classes.
 
