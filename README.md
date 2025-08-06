@@ -14,6 +14,10 @@ CSS Framework:
 
 - [UnoCSS](https://unocss.dev/guide/)
 
+Utilities:
+
+- [Highlight.js](https://highlightjs.org/)
+
 ## Nuxt 4
 
 Nuxt 4 provides a lot of features than Nuxt 2, including:
@@ -84,3 +88,11 @@ For example below, `page-header` & `page-title` are semantic classes which are c
   <p class="text-5 font-bold page-title">Nuxt 4 Demo</p>
 </div>
 ```
+
+## Highlight.js
+
+Highlight.js is a syntax highlighter for code blocks.
+
+It supports many languages, and you can use it with Vue 3.
+
+This demo use [HighlightJsVuePlugin](https://github.com/highlightjs/vue-plugin) to highlight code blocks.
