@@ -11,11 +11,11 @@ function Render() {
   return h(
     `h${props.level}`,
     {
-      class: `group text-${props.level} font-bold relative ml--2 pl-2`,
+      class: `group font-bold relative ml--0.4em pl-0.4em`,
     },
     [
       h('span', {
-        class: 'text-gray-500 absolute left--2 hidden group-hover:block',
+        class: 'text-gray-500 absolute left--0.4em hidden group-hover:block',
       }, '#'),
       slots.default?.(),
     ],
