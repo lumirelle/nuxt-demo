@@ -1,15 +1,5 @@
 <script setup lang="ts">
-export interface JSConfettiApi {
-  JSConfetti: {
-    new (): {
-      addConfetti: (options?: { emojis: string[] }) => void
-    }
-  }
-}
-
-declare global {
-  interface Window extends JSConfettiApi {}
-}
+import Code from '~/constants/nuxt-scripts/global.code'
 
 function handleClick() {
   // Using JSConfetti, which is loaded globally in `nuxt.config.ts`
@@ -55,6 +45,7 @@ zh-TW:
     <p>{{ t('description') }}</p>
     <p>{{ t('description2') }}</p>
     <p>{{ t('description3') }}</p>
+    <HighlightJs :code="Code.global" />
     <ElButton @click="handleClick">
       {{ t('description4') }}
     </ElButton>

@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
+import Code from '~/constants/element-plus/date-picker.code'
+
 const date = ref<Date | null>(null)
 
 const { t } = useI18n({
@@ -35,6 +37,7 @@ zh-TW:
     <MyH level="2">
       ElDatePicker
     </MyH>
+    <HighlightJs :code="Code.elDatePicker" />
     <p><ElDatePicker v-model="date" type="datetime" @change="handleChange" /></p>
     <p>
       <NuxtLinkLocale to="/element-plus">

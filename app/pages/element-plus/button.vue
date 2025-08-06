@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import Code from '~/constants/element-plus/button.code'
+
 const { t } = useI18n({
   useScope: 'local',
 })
@@ -27,10 +29,12 @@ zh-TW:
     <MyH level="2">
       ElButton
     </MyH>
+    <HighlightJs :code="Code.elButton" />
     <p><ElButton>{{ t('button') }}</ElButton></p>
     <MyH level="2">
       LazyElButton
     </MyH>
+    <HighlightJs :code="Code.lazyElButton" />
     <p><LazyElButton>{{ t('button') }}</LazyElButton></p>
     <p>
       <NuxtLinkLocale to="/element-plus">

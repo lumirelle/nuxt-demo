@@ -1,15 +1,5 @@
 <script setup lang="ts">
-export interface JSConfettiApi {
-  JSConfetti: {
-    new (): {
-      addConfetti: (options?: { emojis: string[] }) => void
-    }
-  }
-}
-
-declare global {
-  interface Window extends JSConfettiApi {}
-}
+import Code from '~/constants/nuxt-scripts/demand.code'
 
 const mouseOverEl = ref<HTMLElement | null>(null)
 
@@ -76,13 +66,18 @@ zh-TW:
     <MyH level="1">
       {{ t('title') }}
     </MyH>
-    <p><span ref="mouseOverEl" hover="text-red">{{ t('trigger') }}</span></p>
     <p>{{ t('loaded') }}</p>
     <p>{{ t('refresh') }}</p>
+    <I18nT keypath="note" tag="p">
+      <template #code>
+        <code>{{ t('code') }}</code>
+      </template>
+    </I18nT>
+    <HighlightJs :code="Code.demand" />
+    <p><span ref="mouseOverEl" underline hover="text-red">{{ t('trigger') }}</span></p>
     <ElButton @click="refresh">
       {{ t('refreshButton') }}
     </ElButton>
-    <i18nT keypath="note" tag="p" :values="{ code: t('code') }" />
     <p>
       <NuxtLinkLocale to="/nuxt-scripts">
         <span>{{ t('back') }}</span>
