@@ -198,6 +198,33 @@ const { t } = useI18n({
       </section>
     </section>
 
+    <!-- HighlightJS -->
+    <section border-b="1px solid [var(--el-border-color)]">
+      <H level="2">
+        {{ t('highlight-js.title') }}
+      </H>
+      <section>
+        <I18nT keypath="highlight-js.more-info" tag="p">
+          <template #link>
+            <NuxtLinkLocale to="https://highlightjs.org/#usage" external target="_blank">
+              <span>Highlight.js</span>
+            </NuxtLinkLocale>
+          </template>
+        </I18nT>
+      </section>
+      <section>
+        <H level="3">
+          {{ t('highlight-js.basic-usage.title') }}
+        </H>
+        <p>{{ t('highlight-js.basic-usage.desc') }}</p>
+        <p>
+          <NuxtLinkLocale to="/highlight-js/basic-usage">
+            <span>{{ t('highlight-js.basic-usage.try') }}</span>
+          </NuxtLinkLocale>
+        </p>
+      </section>
+    </section>
+
     <!-- Nuxt Modules -->
     <section border-b="1px solid [var(--el-border-color)]">
       <H level="2">
@@ -284,6 +311,14 @@ en:
       desc: Vue Use is a collection of utilities based on Vue Composition API.
       try: Try basic usage of Vue Use
 
+  highlight-js:
+    title: Highlight.js
+    more-info: See {link} documentation for more information.
+    basic-usage:
+      title: Basic Usage
+      desc: A demo of using Highlight.js with syntax highlighting in a page (Support dark mode).
+      try: Try basic usage of Highlight.js
+
   nuxt-modules:
     title: Nuxt Modules
     nuxt-scripts:
@@ -346,6 +381,14 @@ zh-CN:
       desc: Vue Use 是基于 Vue Composition API 的一组实用工具集合。
       try: 尝试 Vue Use 的基本使用
 
+  highlight-js:
+    title: Highlight.js
+    more-info: 查看 {link} 文档了解更多信息。
+    basic-usage:
+      title: 基本使用
+      desc: 使用 Highlight.js 在页面中进行语法高亮的演示（支持暗黑模式）。
+      try: 尝试 Highlight.js 的基本使用
+
   nuxt-modules:
     title: Nuxt 模块
     nuxt-scripts:
@@ -407,6 +450,14 @@ zh-TW:
       title: 基本使用
       desc: Vue Use 是基於 Vue Composition API 的一組實用工具集合。
       try: 嘗試 Vue Use 的基本使用
+
+  highlight-js:
+    title: Highlight.js
+    more-info: 查看 {link} 文檔了解更多信息。
+    basic-usage:
+      title: 基本使用
+      desc: 使用 Highlight.js 在頁面中進行語法高亮的演示（支持暗黑模式）。
+      try: 嘗試 Highlight.js 的基本使用
 
   nuxt-modules:
     title: Nuxt 模組
