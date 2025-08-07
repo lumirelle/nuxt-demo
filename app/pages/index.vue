@@ -7,60 +7,114 @@ const { t } = useI18n({
 <i18n lang="yaml">
 en:
   title: Welcome to Nuxt 4
-  modules:
+
+  nuxt:
+    title: "Nuxt 4"
+    description: See {link} documentation for more information.
+
+  vue:
+    title: "Vue 3"
+    description: See {link} documentation for more information.
+
+  nuxt-modules:
     title: "Nuxt Modules"
-    nuxtScripts:
+    nuxt-scripts:
       title: "{'@nuxt/scripts'}"
       description: "{'Try @nuxt/scripts'}"
-    elementPlus:
+    element-plus:
       title: "{'@element-plus/nuxt'}"
       description: "{'Try @element-plus/nuxt'}"
+
 zh-CN:
   title: 欢迎使用 Nuxt 4
-  modules:
+
+  nuxt:
+    title: "Nuxt 4"
+    description: 查看 {link} 文档了解更多信息。
+
+  vue:
+    title: "Vue 3"
+    description: 查看 {link} 文档了解更多信息。
+
+  nuxt-modules:
     title: "Nuxt 模块"
-    nuxtScripts:
+    nuxt-scripts:
       title: "{'@nuxt/scripts'}"
       description: "{'尝试 @nuxt/scripts'}"
-    elementPlus:
+    element-plus:
       title: "{'@element-plus/nuxt'}"
       description: "{'尝试 @element-plus/nuxt'}"
+
 zh-TW:
   title: 歡迎使用 Nuxt 4
-  modules:
+
+  nuxt:
+    title: "Nuxt 4"
+    description: 查看 {link} 文檔了解更多信息。
+
+  vue:
+    title: "Vue 3"
+    description: 查看 {link} 文檔了解更多信息。
+
+  nuxt-modules:
     title: "Nuxt 模組"
-    nuxtScripts:
+    nuxt-scripts:
       title: "{'@nuxt/scripts'}"
       description: "{'嘗試 @nuxt/scripts'}"
-    elementPlus:
+    element-plus:
       title: "{'@element-plus/nuxt'}"
       description: "{'嘗試 @element-plus/nuxt'}"
 </i18n>
 
 <template>
   <div>
-    <div>
-      <MyH level="1">
-        {{ t('title') }}
-      </MyH>
-    </div>
-    <MyH level="2">
-      {{ t('modules.title') }}
-    </MyH>
-    <MyH level="3">
-      {{ t('modules.elementPlus.title') }}
-    </MyH>
+    <H level="1">
+      {{ t('title') }}
+    </H>
+
+    <H level="2">
+      {{ t('nuxt.title') }}
+    </H>
+    <p>
+      <I18nT keypath="nuxt.description">
+        <template #link>
+          <NuxtLinkLocale to="https://nuxt.com/docs/4.x/getting-started/introduction" external>
+            Nuxt 4
+          </NuxtLinkLocale>
+        </template>
+      </I18nT>
+    </p>
+
+    <H level="2">
+      {{ t('vue.title') }}
+    </H>
+    <p>
+      <I18nT keypath="vue.description">
+        <template #link>
+          <NuxtLinkLocale to="https://vuejs.org/guide/introduction.html" external>
+            Vue 3
+          </NuxtLinkLocale>
+        </template>
+      </I18nT>
+    </p>
+
+    <H level="2">
+      {{ t('nuxt-modules.title') }}
+    </H>
+    <H level="3">
+      {{ t('nuxt-modules.element-plus.title') }}
+    </H>
     <p>
       <NuxtLinkLocale to="/element-plus">
-        <span>{{ t('modules.elementPlus.description') }}</span>
+        <span>{{ t('nuxt-modules.element-plus.description') }}</span>
       </NuxtLinkLocale>
     </p>
-    <MyH level="3">
-      {{ t('modules.nuxtScripts.title') }}
-    </MyH>
+    <H level="3">
+      {{ t('nuxt-modules.nuxt-scripts.title') }}
+    </H>
     <p>
       <NuxtLinkLocale to="/nuxt-scripts">
-        <span>{{ t('modules.nuxtScripts.description') }}</span>
+        <span>{{ t('nuxt-modules.nuxt-scripts.description') }}</span>
       </NuxtLinkLocale>
     </p>
   </div>

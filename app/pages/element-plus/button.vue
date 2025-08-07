@@ -23,17 +23,17 @@ zh-TW:
 
 <template>
   <div>
-    <MyH level="1">
+    <H level="1">
       {{ t('title') }}
-    </MyH>
-    <MyH level="2">
+    </H>
+    <H level="2">
       ElButton
-    </MyH>
+    </H>
     <HighlightJs :code="Code.elButton" />
     <p><ElButton>{{ t('button') }}</ElButton></p>
-    <MyH level="2">
+    <H level="2">
       LazyElButton
-    </MyH>
+    </H>
     <HighlightJs :code="Code.lazyElButton" />
     <p><LazyElButton>{{ t('button') }}</LazyElButton></p>
     <p>

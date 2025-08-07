@@ -24,9 +24,9 @@ zh-TW:
 
 <template>
   <div>
-    <MyH level="1">
+    <H level="1">
       {{ t('title') }}
-    </MyH>
+    </H>
     <p>
       <NuxtLinkLocale to="/element-plus/button">
         <span>{{ t('button') }}</span>

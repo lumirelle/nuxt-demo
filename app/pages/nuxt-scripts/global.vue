@@ -39,9 +39,9 @@ zh-TW:
 
 <template>
   <div>
-    <MyH level="1">
+    <H level="1">
       {{ t('title') }}
-    </MyH>
+    </H>
     <p>{{ t('description') }}</p>
     <p>{{ t('description2') }}</p>
     <p>{{ t('description3') }}</p>

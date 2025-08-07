@@ -63,9 +63,9 @@ zh-TW:
 
 <template>
   <div>
-    <MyH level="1">
+    <H level="1">
       {{ t('title') }}
-    </MyH>
+    </H>
     <p>{{ t('loaded') }}</p>
     <p>{{ t('refresh') }}</p>
     <I18nT keypath="note" tag="p">

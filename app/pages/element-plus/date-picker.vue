@@ -31,12 +31,12 @@ zh-TW:
 
 <template>
   <div>
-    <MyH level="1">
+    <H level="1">
       {{ t('title') }}
-    </MyH>
-    <MyH level="2">
+    </H>
+    <H level="2">
       ElDatePicker
-    </MyH>
+    </H>
     <HighlightJs :code="Code.elDatePicker" />
     <p><ElDatePicker v-model="date" type="datetime" @change="handleChange" /></p>
     <p>
