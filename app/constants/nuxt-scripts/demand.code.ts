@@ -1,4 +1,4 @@
-export default {
+export const Code = {
   demand: [
     '<script setup lang="ts">',
     'const mouseOverEl = ref<HTMLElement | null>(null)',
@@ -46,3 +46,5 @@ export default {
     '</template>',
   ].join('\n'),
 }
+
+export default Code

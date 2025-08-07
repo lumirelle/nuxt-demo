@@ -59,3 +59,5 @@ export const Code = {
       </template>
     `,
 }
+
+export default Code

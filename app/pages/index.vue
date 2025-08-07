@@ -10,6 +10,7 @@ const { t } = useI18n({
       {{ t('title') }}
     </H>
 
+    <!-- Nuxt -->
     <section>
       <H level="2">
         {{ t('nuxt.title') }}
@@ -27,6 +28,7 @@ const { t } = useI18n({
       </section>
     </section>
 
+    <!-- Vue -->
     <section>
       <H level="2">
         {{ t('vue.title') }}
@@ -44,6 +46,7 @@ const { t } = useI18n({
       </section>
     </section>
 
+    <!-- Pinia -->
     <section>
       <H level="2">
         {{ t('pinia.title') }}
@@ -93,6 +96,7 @@ const { t } = useI18n({
       </section>
     </section>
 
+    <!-- Vue Router -->
     <section>
       <H level="2">
         {{ t('vue-router.title') }}
@@ -110,6 +114,36 @@ const { t } = useI18n({
       </section>
     </section>
 
+    <!-- Vue I18n -->
+    <section>
+      <H level="2">
+        {{ t('vue-i18n.title') }}
+      </H>
+      <section>
+        <I18nT keypath="vue-i18n.more-info" tag="p">
+          <template #link>
+            <NuxtLinkLocale to="https://vue-i18n.intlify.dev/guide/introduction.html" external target="_blank">
+              <span>Vue I18n</span>
+            </NuxtLinkLocale>
+          </template>
+        </I18nT>
+      </section>
+      <section>
+        <H level="3">
+          {{ t('vue-i18n.basic-usage.title') }}
+        </H>
+        <p>
+          {{ t('vue-i18n.basic-usage.desc') }}
+        </p>
+        <p>
+          <NuxtLinkLocale to="/vue-i18n/basic-usage">
+            <span>{{ t('vue-i18n.basic-usage.try') }}</span>
+          </NuxtLinkLocale>
+        </p>
+      </section>
+    </section>
+
+    <!-- Nuxt Modules -->
     <section>
       <H level="2">
         {{ t('nuxt-modules.title') }}
@@ -166,6 +200,14 @@ const { t } = useI18n({
       title: Vue Router
       more-info: See {link} documentation for more information.
 
+    vue-i18n:
+      title: Vue I18n
+      more-info: See {link} documentation for more information.
+      basic-usage:
+        title: Basic Usage
+        desc: A demo of using Vue I18n with local scope (yaml) and vscode i18n extension settings (i18n ally).
+        try: Try basic usage of Vue I18n
+
     nuxt-modules:
       title: Nuxt Modules
       nuxt-scripts:
@@ -188,6 +230,7 @@ const { t } = useI18n({
 
     pinia:
       title: Pinia
+      more-info: 查看 {link} 文档了解更多信息。
       basic-usage:
         title: 基本使用
         desc: 使用 Pinia Store 的 {states}、{getters} 和 {actions}。
@@ -200,6 +243,14 @@ const { t } = useI18n({
     vue-router:
       title: Vue Router
       more-info: 查看 {link} 文档了解更多信息。
+
+    vue-i18n:
+      title: Vue I18n
+      more-info: 查看 {link} 文档了解更多信息。
+      basic-usage:
+        title: 基本使用
+        desc: 使用 Vue I18n 的 local scope (yaml) 和 vscode i18n 扩展设置 (i18n ally)。
+        try: 尝试 Vue I18n 的基本使用
 
     nuxt-modules:
       title: Nuxt 模块
@@ -223,6 +274,7 @@ const { t } = useI18n({
 
     pinia:
       title: Pinia
+      more-info: 查看 {link} 文檔了解更多信息。
       basic-usage:
         title: 基本使用
         desc: 使用 Pinia Store 的 {states}、{getters} 和 {actions}。
@@ -235,6 +287,14 @@ const { t } = useI18n({
     vue-router:
       title: Vue Router
       more-info: 查看 {link} 文檔了解更多信息。
+
+    vue-i18n:
+      title: Vue I18n
+      more-info: 查看 {link} 文檔了解更多信息。
+      basic-usage:
+        title: 基本使用
+        desc: 使用 Vue I18n 的 local scope (yaml) 和 vscode i18n 擴展設置 (i18n ally)。
+        try: 嘗試 Vue I18n 的基本使用
 
     nuxt-modules:
       title: Nuxt 模組

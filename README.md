@@ -82,7 +82,11 @@ Noting to say...
 
 ## Vue Addons
 
-Pinia & Vue Router & Vue i18n.
+Pinia & Vue Router & Vue I18n.
+
+### Vue I18n
+
+It's pity that type safety is not supported for i18n custom blocks in SFC currently: [Official Annotation](https://vue-i18n.intlify.dev/guide/advanced/typescript.html#type-safe-resources-in-usei18n).
 
 ## Element Plus
 
