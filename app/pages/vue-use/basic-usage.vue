@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Code } from '~/constants/vue-use/basic-usage.code'
+import { Code } from '#shared/constants/vue-use/basic-usage.code'
 
 const { t } = useI18n({
   useScope: 'local',

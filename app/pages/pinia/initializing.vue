@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
-import { Code } from '~/constants/pinia/initializing.code'
+import { Code } from '#shared/constants/pinia/initializing.code'
 
 const { t } = useI18n({
   useScope: 'local',

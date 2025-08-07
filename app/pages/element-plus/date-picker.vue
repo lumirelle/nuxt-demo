@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-import { Code } from '~/constants/element-plus/date-picker.code'
+import { Code } from '#shared/constants/element-plus/date-picker.code'
 
 const date = ref<Date | null>(null)
 

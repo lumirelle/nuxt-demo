@@ -225,6 +225,33 @@ const { t } = useI18n({
       </section>
     </section>
 
+    <!-- Bignumber.JS -->
+    <section border-b="1px solid [var(--el-border-color)]">
+      <H level="2">
+        {{ t('bignumber-js.title') }}
+      </H>
+      <section>
+        <I18nT keypath="bignumber-js.more-info" tag="p">
+          <template #link>
+            <NuxtLinkLocale to="https://mikemcl.github.io/bignumber.js/" external target="_blank">
+              <span>Bignumber.js</span>
+            </NuxtLinkLocale>
+          </template>
+        </I18nT>
+      </section>
+      <section>
+        <H level="3">
+          {{ t('bignumber-js.basic-usage.title') }}
+        </H>
+        <p>{{ t('bignumber-js.basic-usage.desc') }}</p>
+        <p>
+          <NuxtLinkLocale to="/bignumber-js/basic-usage">
+            <span>{{ t('bignumber-js.basic-usage.try') }}</span>
+          </NuxtLinkLocale>
+        </p>
+      </section>
+    </section>
+
     <!-- Nuxt Modules -->
     <section border-b="1px solid [var(--el-border-color)]">
       <H level="2">
@@ -319,6 +346,14 @@ en:
       desc: A demo of using Highlight.js with syntax highlighting in a page (Support dark mode).
       try: Try basic usage of Highlight.js
 
+  bignumber-js:
+    title: Bignumber.js
+    more-info: See {link} documentation for more information.
+    basic-usage:
+      title: Basic Usage
+      desc: A demo of using Bignumber.js for arbitrary-precision decimal arithmetic.
+      try: Try basic usage of Bignumber.js
+
   nuxt-modules:
     title: Nuxt Modules
     nuxt-scripts:
@@ -389,6 +424,14 @@ zh-CN:
       desc: 使用 Highlight.js 在页面中进行语法高亮的演示（支持暗黑模式）。
       try: 尝试 Highlight.js 的基本使用
 
+  bignumber-js:
+    title: Bignumber.js
+    more-info: 查看 {link} 文档了解更多信息。
+    basic-usage:
+      title: 基本使用
+      desc: 使用 Bignumber.js 进行任意精度小数运算的演示。
+      try: 尝试 Bignumber.js 的基本使用
+
   nuxt-modules:
     title: Nuxt 模块
     nuxt-scripts:
@@ -458,6 +501,14 @@ zh-TW:
       title: 基本使用
       desc: 使用 Highlight.js 在頁面中進行語法高亮的演示（支持暗黑模式）。
       try: 嘗試 Highlight.js 的基本使用
+
+  bignumber-js:
+    title: Bignumber.js
+    more-info: 查看 {link} 文檔了解更多信息。
+    basic-usage:
+      title: 基本使用
+      desc: 使用 Bignumber.js 進行任意精度小數運算的演示。
+      try: 嘗試 Bignumber.js 的基本使用
 
   nuxt-modules:
     title: Nuxt 模組

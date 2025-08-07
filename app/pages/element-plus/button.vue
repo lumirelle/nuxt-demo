@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Code } from '~/constants/element-plus/button.code'
+import { Code } from '#shared/constants/element-plus/button.code'
 
 const { t } = useI18n({
   useScope: 'local',

@@ -76,7 +76,7 @@ function Render() {
 </template>`,
   page:
 `<script setup lang="ts">
-import { Code } from '~/constants/highlight-js/basic-usage.code'
+import { Code } from '#shared/constants/highlight-js/basic-usage.code'
 
 const { t } = useI18n({
   useScope: 'local',
