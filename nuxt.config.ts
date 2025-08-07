@@ -47,6 +47,7 @@ export default defineNuxtConfig({
   elementPlus: {
     // Enable dark mode
     themes: ['dark'],
+
     // Import Element Plus SCSS & override the default variables
     importStyle: 'scss',
     themeChalk: {
@@ -77,9 +78,6 @@ export default defineNuxtConfig({
         },
       },
     },
-    imports: [
-      ['useLocale', 'es/hooks/use-locale/index.mjs'],
-    ],
   },
 
   eslint: {
