@@ -52,6 +52,14 @@ const { t } = useI18n({
           <span>{{ t('pinia.basic-usage.description') }}</span>
         </NuxtLinkLocale>
       </p>
+      <H level="3">
+        {{ t('pinia.initializing.title') }}
+      </H>
+      <p>
+        <NuxtLinkLocale to="/pinia/initializing">
+          <span>{{ t('pinia.initializing.description') }}</span>
+        </NuxtLinkLocale>
+      </p>
     </section>
 
     <section>
@@ -83,65 +91,86 @@ const { t } = useI18n({
     title: Welcome to Nuxt 4
 
     nuxt:
-      title: "Nuxt 4"
+      title: Nuxt 4
       description: See {link} documentation for more information.
 
     vue:
-      title: "Vue 3"
+      title: Vue 3
       description: See {link} documentation for more information.
 
     pinia:
-      title: "Pinia"
+      title: Pinia
       basic-usage:
-        title: "Basic Usage"
-        description: "Try basic usage of Pinia"
+        title: Basic Usage
+        description: Try basic usage of Pinia
+      initializing:
+        title: Initializing Usage (Equivalent to `nuxtServerInit` in Nuxt 2)
+        description: Try initializing usage of Pinia
 
     nuxt-modules:
-      title: "Nuxt Modules"
+      title: Nuxt Modules
       nuxt-scripts:
-        title: "{'@nuxt/scripts'}"
-        description: "{'Try @nuxt/scripts'}"
+        title: "{'@'}nuxt/scripts"
+        description: "Try {'@'}nuxt/scripts"
       element-plus:
-        title: "{'@element-plus/nuxt'}"
-        description: "{'Try @element-plus/nuxt'}"
+        title: "{'@'}element-plus/nuxt"
+        description: "Try {'@'}element-plus/nuxt"
 
   zh-CN:
     title: 欢迎使用 Nuxt 4
 
     nuxt:
-      title: "Nuxt 4"
+      title: Nuxt 4
       description: 查看 {link} 文档了解更多信息。
 
     vue:
-      title: "Vue 3"
+      title: Vue 3
       description: 查看 {link} 文档了解更多信息。
 
+    pinia:
+      title: Pinia
+      basic-usage:
+        title: 基本使用
+        description: 尝试 Pinia 的基本使用
+      initializing:
+        title: 初始化使用（等價於 Nuxt 2 的 `nuxtServerInit`）
+        description: 尝试 Pinia 的初始化使用
+
     nuxt-modules:
-      title: "Nuxt 模块"
+      title: Nuxt 模块
       nuxt-scripts:
-        title: "{'@nuxt/scripts'}"
-        description: "{'尝试 @nuxt/scripts'}"
+        title: "{'@'}nuxt/scripts"
+        description: "尝试 {'@'}nuxt/scripts"
       element-plus:
-        title: "{'@element-plus/nuxt'}"
-        description: "{'尝试 @element-plus/nuxt'}"
+        title: "{'@'}element-plus/nuxt"
+        description: "尝试 {'@'}element-plus/nuxt"
 
   zh-TW:
     title: 歡迎使用 Nuxt 4
 
     nuxt:
-      title: "Nuxt 4"
+      title: Nuxt 4
       description: 查看 {link} 文檔了解更多信息。
 
     vue:
-      title: "Vue 3"
+      title: Vue 3
       description: 查看 {link} 文檔了解更多信息。
 
+    pinia:
+      title: Pinia
+      basic-usage:
+        title: 基本使用
+        description: 嘗試 Pinia 的基本使用
+      initializing:
+        title: 初始化使用（等價於 Nuxt 2 的 `nuxtServerInit`）
+        description: 嘗試 Pinia 的初始化使用
+
     nuxt-modules:
-      title: "Nuxt 模組"
+      title: Nuxt 模組
       nuxt-scripts:
-        title: "{'@nuxt/scripts'}"
-        description: "{'嘗試 @nuxt/scripts'}"
+        title: "{'@'}nuxt/scripts"
+        description: "嘗試 {'@'}nuxt/scripts"
       element-plus:
-        title: "{'@element-plus/nuxt'}"
-        description: "{'嘗試 @element-plus/nuxt'}"
+        title: "{'@'}element-plus/nuxt"
+        description: "嘗試 {'@'}element-plus/nuxt"
   </i18n>

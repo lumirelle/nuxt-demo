@@ -1,6 +1,5 @@
 export const Code = {
-  basic: {
-    'app/stores/basic.ts': `
+  store: `
       export const useBasicStore = defineStore('basic', {
         state: () => ({
           count: 0,
@@ -23,7 +22,7 @@ export const Code = {
         },
       })
     `,
-    'app/pages/pinia/basic-usage.vue': `
+  page: `
       <script setup lang="ts">
         const store = useBasicStore()
       </script>
@@ -59,5 +58,4 @@ export const Code = {
         </div>
       </template>
     `,
-  },
 }

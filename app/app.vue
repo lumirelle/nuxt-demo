@@ -7,6 +7,25 @@ const { locale } = useI18n()
 const elLocale = computed(() => {
   return locale.value === 'zh-CN' ? zhCn : locale.value === 'zh-TW' ? zhTw : en
 })
+
+// Initialize the store, equivalent to `nuxtServerInit` in Nuxt 2
+const initializingStore = useInitializingStore()
+
+const isStoreInitialized = ref(false)
+
+// Use Promise.all, support more stores initialization in the future
+Promise.all([
+  callOnce('initializing', () => initializingStore.askQuestion),
+])
+  .then(() => {
+    isStoreInitialized.value = true
+  })
+
+watch(isStoreInitialized, (value) => {
+  if (value) {
+    ElMessage.success('Store initialized!')
+  }
+})
 </script>
 
 <template>
