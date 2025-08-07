@@ -33,18 +33,18 @@ const { t } = useI18n({
       <H level="2">
         {{ t('result.title') }}
       </H>
-      <p>
-        {{ t('result.xml') }}
-      </p>
-      <p>
+      <section>
+        <p>
+          {{ t('result.xml') }}
+        </p>
         <HighlightJs :code="Code.xml" language="xml" />
-      </p>
-      <p>
-        {{ t('result.javascript') }}
-      </p>
-      <p>
+      </section>
+      <section>
+        <p>
+          {{ t('result.javascript') }}
+        </p>
         <HighlightJs :code="Code.javascript" language="javascript" />
-      </p>
+      </section>
     </section>
     <section>
       <NuxtLinkLocale to="/">
