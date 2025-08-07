@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Code from '~/constants/nuxt-scripts/global.code'
+import {Code} from '~/constants/nuxt-scripts/global.code'
 
 function handleClick() {
   // Using JSConfetti, which is loaded globally in `nuxt.config.ts`

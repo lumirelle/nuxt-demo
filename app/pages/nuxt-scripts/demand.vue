@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Code from '~/constants/nuxt-scripts/demand.code'
+import { Code } from '~/constants/nuxt-scripts/demand.code'
 
 const mouseOverEl = ref<HTMLElement | null>(null)
 
