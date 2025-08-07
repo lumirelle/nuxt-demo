@@ -171,6 +171,33 @@ const { t } = useI18n({
       </section>
     </section>
 
+    <!-- Vue Use -->
+    <section border-b="1px solid [var(--el-border-color)]">
+      <H level="2">
+        {{ t('vue-use.title') }}
+      </H>
+      <section>
+        <I18nT keypath="vue-use.more-info" tag="p">
+          <template #link>
+            <NuxtLinkLocale to="https://vueuse.org/guide/" external target="_blank">
+              <span>Vue Use</span>
+            </NuxtLinkLocale>
+          </template>
+        </I18nT>
+      </section>
+      <section>
+        <H level="3">
+          {{ t('vue-use.basic-usage.title') }}
+        </H>
+        <p>{{ t('vue-use.basic-usage.desc') }}</p>
+        <p>
+          <NuxtLinkLocale to="/vue-use/basic-usage">
+            <span>{{ t('vue-use.basic-usage.try') }}</span>
+          </NuxtLinkLocale>
+        </p>
+      </section>
+    </section>
+
     <!-- Nuxt Modules -->
     <section border-b="1px solid [var(--el-border-color)]">
       <H level="2">
@@ -249,6 +276,14 @@ en:
       desc: A demo of using UnoCSS with {preset1} and {preset2}.
       try: Try basic usage of UnoCSS
 
+  vue-use:
+    title: Vue Use
+    more-info: See {link} documentation for more information.
+    basic-usage:
+      title: Basic Usage
+      desc: Vue Use is a collection of utilities based on Vue Composition API.
+      try: Try basic usage of Vue Use
+
   nuxt-modules:
     title: Nuxt Modules
     nuxt-scripts:
@@ -303,6 +338,14 @@ zh-CN:
       desc: 使用 UnoCSS 的 {preset1} 和 {preset2} 的演示。
       try: 尝试 UnoCSS 的基本使用
 
+  vue-use:
+    title: Vue Use
+    more-info: 查看 {link} 文档了解更多信息。
+    basic-usage:
+      title: 基本使用
+      desc: Vue Use 是基于 Vue Composition API 的一组实用工具集合。
+      try: 尝试 Vue Use 的基本使用
+
   nuxt-modules:
     title: Nuxt 模块
     nuxt-scripts:
@@ -356,6 +399,14 @@ zh-TW:
       title: 基本使用
       desc: 使用 UnoCSS 的 {preset1} 和 {preset2} 的演示。
       try: 嘗試 UnoCSS 的基本使用
+
+  vue-use:
+    title: Vue Use
+    more-info: 查看 {link} 文檔了解更多信息。
+    basic-usage:
+      title: 基本使用
+      desc: Vue Use 是基於 Vue Composition API 的一組實用工具集合。
+      try: 嘗試 Vue Use 的基本使用
 
   nuxt-modules:
     title: Nuxt 模組
