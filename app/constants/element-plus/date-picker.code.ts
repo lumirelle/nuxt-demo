@@ -1,28 +1,33 @@
-export default {
-  elDatePicker: [
-    '<script setup lang="ts">',
-    'const { t } = useI18n({',
-    '  useScope: "local",',
-    '})',
-    '',
-    'const date = ref<Date | null>(null)',
-    '',
-    'function handleChange(date: Date | null) {',
-    '  ElMessage.success(t("success", { date: date?.toLocaleDateString() }))',
-    '}',
-    '</script>',
-    '',
-    '<i18n lang="yaml">',
-    'en:',
-    '  success: You pick the date: {date}',
-    'zh-CN:',
-    '  success: 您选择了日期: {date}',
-    'zh-TW:',
-    '  success: 您選擇了日期: {date}',
-    '</i18n>',
-    '',
-    '<template>',
-    '  <ElDatePicker v-model="date" type="datetime" @change="handleChange" />',
-    '</template>',
-  ].join('\n'),
+export const Code = {
+  elDatePicker:
+`<script setup lang="ts">
+import { ref } from 'vue'
+
+const date = ref<Date | null>(null)
+
+const { t } = useI18n({
+  useScope: 'local',
+})
+
+function handleChange(date: Date | null) {
+  ElMessage.success(t('success', { date: date?.toLocaleString() }))
 }
+</script>
+
+<template>
+  <div>
+    <p><ElDatePicker v-model="date" type="datetime" @change="handleChange" /></p>
+  </div>
+</template>
+
+<i18n lang="yaml">
+en:
+  success: 'You pick the date: {date}'
+zh-CN:
+  success: '您选择了日期: {date}'
+zh-TW:
+  success: '您選擇了日期: {date}'
+</i18n>`,
+}
+
+export default Code

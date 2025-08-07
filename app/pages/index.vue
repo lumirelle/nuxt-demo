@@ -148,16 +148,21 @@ const { t } = useI18n({
       <H level="2">
         {{ t('nuxt-modules.title') }}
       </H>
+      <!-- Element Plus -->
       <section>
         <H level="3">
           {{ t('nuxt-modules.element-plus.title') }}
         </H>
+        <p v-for="i in 2" :key="i">
+          {{ t(`nuxt-modules.element-plus.p${i}`) }}
+        </p>
         <p>
           <NuxtLinkLocale to="/element-plus">
             <span>{{ t('nuxt-modules.element-plus.try') }}</span>
           </NuxtLinkLocale>
         </p>
       </section>
+      <!-- Nuxt Scripts -->
       <section>
         <H level="3">
           {{ t('nuxt-modules.nuxt-scripts.title') }}
@@ -173,135 +178,141 @@ const { t } = useI18n({
 </template>
 
 <i18n lang="yaml">
-  en:
-    title: Welcome to Nuxt 4
+en:
+  title: Welcome to Nuxt 4
 
-    nuxt:
-      title: Nuxt 4
-      more-info: See {link} documentation for more information.
+  nuxt:
+    title: Nuxt 4
+    more-info: See {link} documentation for more information.
 
-    vue:
-      title: Vue 3
-      more-info: See {link} documentation for more information.
+  vue:
+    title: Vue 3
+    more-info: See {link} documentation for more information.
 
-    pinia:
-      title: Pinia
-      more-info: See {link} documentation for more information.
-      basic-usage:
-        title: Basic Usage
-        desc: A demo of using Pinia store with {states}, {getters}, and {actions} in a page.
-        try: Try basic usage of Pinia
-      initializing:
-        title: Initializing Usage (Equivalent to `nuxtServerInit` in Nuxt 2)
-        desc: A demo of using Pinia store and initializing it while app initializing.
-        try: Try initializing usage of Pinia
+  pinia:
+    title: Pinia
+    more-info: See {link} documentation for more information.
+    basic-usage:
+      title: Basic Usage
+      desc: A demo of using Pinia store with {states}, {getters}, and {actions} in a page.
+      try: Try basic usage of Pinia
+    initializing:
+      title: Initializing Usage (Equivalent to `nuxtServerInit` in Nuxt 2)
+      desc: A demo of using Pinia store and initializing it while app initializing.
+      try: Try initializing usage of Pinia
 
-    vue-router:
-      title: Vue Router
-      more-info: See {link} documentation for more information.
+  vue-router:
+    title: Vue Router
+    more-info: See {link} documentation for more information.
 
-    vue-i18n:
-      title: Vue I18n
-      more-info: See {link} documentation for more information.
-      basic-usage:
-        title: Basic Usage
-        desc: A demo of using Vue I18n with local scope (yaml) and VSCode I18n extension settings (i18n ally).
-        try: Try basic usage of Vue I18n
+  vue-i18n:
+    title: Vue I18n
+    more-info: See {link} documentation for more information.
+    basic-usage:
+      title: Basic Usage
+      desc: A demo of using Vue I18n with local scope (yaml) and VSCode I18n extension settings (i18n ally).
+      try: Try basic usage of Vue I18n
 
-    nuxt-modules:
-      title: Nuxt Modules
-      nuxt-scripts:
-        title: "{'@'}nuxt/scripts"
-        try: "Try {'@'}nuxt/scripts"
-      element-plus:
-        title: "{'@'}element-plus/nuxt"
-        try: "Try {'@'}element-plus/nuxt"
+  nuxt-modules:
+    title: Nuxt Modules
+    nuxt-scripts:
+      title: "{'@'}nuxt/scripts"
+      try: "Try {'@'}nuxt/scripts"
+    element-plus:
+      title: "{'@'}element-plus/nuxt"
+      p1: This module provides auto-import for Element Plus components, styles, directives, icons and more.
+      p2: It also support customizing theme, variables and more in `nuxt.config.ts`
+      try: "Try {'@'}element-plus/nuxt"
 
-  zh-CN:
-    title: 欢迎使用 Nuxt 4
+zh-CN:
+  title: 欢迎使用 Nuxt 4
 
-    nuxt:
-      title: Nuxt 4
-      more-info: 查看 {link} 文档了解更多信息。
+  nuxt:
+    title: Nuxt 4
+    more-info: 查看 {link} 文档了解更多信息。
 
-    vue:
-      title: Vue 3
-      more-info: 查看 {link} 文档了解更多信息。
+  vue:
+    title: Vue 3
+    more-info: 查看 {link} 文档了解更多信息。
 
-    pinia:
-      title: Pinia
-      more-info: 查看 {link} 文档了解更多信息。
-      basic-usage:
-        title: 基本使用
-        desc: 使用 Pinia Store 的 {states}、{getters} 和 {actions}。
-        try: 尝试 Pinia 的基本使用
-      initializing:
-        title: 初始化使用（等价于 Nuxt 2 的 `nuxtServerInit`）
-        desc: 使用 Pinia Store 并在应用初始化时初始化。
-        try: 尝试 Pinia 的初始化使用
+  pinia:
+    title: Pinia
+    more-info: 查看 {link} 文档了解更多信息。
+    basic-usage:
+      title: 基本使用
+      desc: 使用 Pinia Store 的 {states}、{getters} 和 {actions}。
+      try: 尝试 Pinia 的基本使用
+    initializing:
+      title: 初始化使用（等价于 Nuxt 2 的 `nuxtServerInit`）
+      desc: 使用 Pinia Store 并在应用初始化时初始化。
+      try: 尝试 Pinia 的初始化使用
 
-    vue-router:
-      title: Vue Router
-      more-info: 查看 {link} 文档了解更多信息。
+  vue-router:
+    title: Vue Router
+    more-info: 查看 {link} 文档了解更多信息。
 
-    vue-i18n:
-      title: Vue I18n
-      more-info: 查看 {link} 文档了解更多信息。
-      basic-usage:
-        title: 基本使用
-        desc: 使用 Vue I18n 的 local scope (yaml) 和 VSCode I18n 扩展设置 (i18n ally)。
-        try: 尝试 Vue I18n 的基本使用
+  vue-i18n:
+    title: Vue I18n
+    more-info: 查看 {link} 文档了解更多信息。
+    basic-usage:
+      title: 基本使用
+      desc: 使用 Vue I18n 的 local scope (yaml) 和 VSCode I18n 扩展设置 (i18n ally)。
+      try: 尝试 Vue I18n 的基本使用
 
-    nuxt-modules:
-      title: Nuxt 模块
-      nuxt-scripts:
-        title: "{'@'}nuxt/scripts"
-        try: "尝试 {'@'}nuxt/scripts"
-      element-plus:
-        title: "{'@'}element-plus/nuxt"
-        try: "尝试 {'@'}element-plus/nuxt"
+  nuxt-modules:
+    title: Nuxt 模块
+    nuxt-scripts:
+      title: "{'@'}nuxt/scripts"
+      try: "尝试 {'@'}nuxt/scripts"
+    element-plus:
+      title: "{'@'}element-plus/nuxt"
+      p1: 这个模块提供了 Element Plus 组件、样式、指令、图标等的自动导入。
+      p2: 它还支持在 `nuxt.config.ts` 中自定义主题、变量等。
+      try: "尝试 {'@'}element-plus/nuxt"
 
-  zh-TW:
-    title: 歡迎使用 Nuxt 4
+zh-TW:
+  title: 歡迎使用 Nuxt 4
 
-    nuxt:
-      title: Nuxt 4
-      more-info: 查看 {link} 文檔了解更多信息。
+  nuxt:
+    title: Nuxt 4
+    more-info: 查看 {link} 文檔了解更多信息。
 
-    vue:
-      title: Vue 3
-      more-info: 查看 {link} 文檔了解更多信息。
+  vue:
+    title: Vue 3
+    more-info: 查看 {link} 文檔了解更多信息。
 
-    pinia:
-      title: Pinia
-      more-info: 查看 {link} 文檔了解更多信息。
-      basic-usage:
-        title: 基本使用
-        desc: 使用 Pinia Store 的 {states}、{getters} 和 {actions}。
-        try: 嘗試 Pinia 的基本使用
-      initializing:
-        title: 初始化使用（等價於 Nuxt 2 的 `nuxtServerInit`）
-        desc: 使用 Pinia Store 並在應用初始化時初始化。
-        try: 嘗試 Pinia 的初始化使用
+  pinia:
+    title: Pinia
+    more-info: 查看 {link} 文檔了解更多信息。
+    basic-usage:
+      title: 基本使用
+      desc: 使用 Pinia Store 的 {states}、{getters} 和 {actions}。
+      try: 嘗試 Pinia 的基本使用
+    initializing:
+      title: 初始化使用（等價於 Nuxt 2 的 `nuxtServerInit`）
+      desc: 使用 Pinia Store 並在應用初始化時初始化。
+      try: 嘗試 Pinia 的初始化使用
 
-    vue-router:
-      title: Vue Router
-      more-info: 查看 {link} 文檔了解更多信息。
+  vue-router:
+    title: Vue Router
+    more-info: 查看 {link} 文檔了解更多信息。
 
-    vue-i18n:
-      title: Vue I18n
-      more-info: 查看 {link} 文檔了解更多信息。
-      basic-usage:
-        title: 基本使用
-        desc: 使用 Vue I18n 的 local scope (yaml) 和 VSCode I18n 擴展設置 (i18n ally)。
-        try: 嘗試 Vue I18n 的基本使用
+  vue-i18n:
+    title: Vue I18n
+    more-info: 查看 {link} 文檔了解更多信息。
+    basic-usage:
+      title: 基本使用
+      desc: 使用 Vue I18n 的 local scope (yaml) 和 VSCode I18n 擴展設置 (i18n ally)。
+      try: 嘗試 Vue I18n 的基本使用
 
-    nuxt-modules:
-      title: Nuxt 模組
-      nuxt-scripts:
-        title: "{'@'}nuxt/scripts"
-        try: "嘗試 {'@'}nuxt/scripts"
-      element-plus:
-        title: "{'@'}element-plus/nuxt"
-        try: "嘗試 {'@'}element-plus/nuxt"
+  nuxt-modules:
+    title: Nuxt 模組
+    nuxt-scripts:
+      title: "{'@'}nuxt/scripts"
+      try: "嘗試 {'@'}nuxt/scripts"
+    element-plus:
+      title: "{'@'}element-plus/nuxt"
+      p1: 這個模組提供了 Element Plus 組件、樣式、指令、圖標等的自動導入。
+      p2: 它還支持在 `nuxt.config.ts` 中自定義主題、變量等。
+      try: "嘗試 {'@'}element-plus/nuxt"
   </i18n>

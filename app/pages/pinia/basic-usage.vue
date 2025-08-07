@@ -66,48 +66,48 @@ const store = useBasicStore()
 </template>
 
 <i18n lang="yaml">
-  en:
-    title: Pinia Basic Usage
-    result:
-      title: Result
-      count: 'This count value is getting from store state: {count}!'
-      double-count: 'This is double count from store getter: {count}!'
-      triple-count: 'This is triple count from store getter: {count}!'
-      negative-count: 'This is negative count from store getter: {count}!'
-      changed: 'They will changed while you click at the buttons below.'
-      buttons:
-        increment: Increment
-        decrement: Decrement
-        reset: Reset
-    back-home: "{'<'} Back to home page {'>'}"
+en:
+  title: Pinia Basic Usage
+  result:
+    title: Result
+    count: 'This count value is getting from store state: {count}!'
+    double-count: 'This is double count from store getter: {count}!'
+    triple-count: 'This is triple count from store getter: {count}!'
+    negative-count: 'This is negative count from store getter: {count}!'
+    changed: 'They will changed while you click at the buttons below.'
+    buttons:
+      increment: Increment
+      decrement: Decrement
+      reset: Reset
+  back-home: "{'<'} Back to home page {'>'}"
 
-  zh-CN:
-    title: Pinia 基本使用
-    result:
-      title: 结果
-      count: '这个计数值是从 store 状态中获取的: {count}!'
-      double-count: '这个是 double 计数值从 store 中获取的: {count}!'
-      triple-count: '这个是 triple 计数值从 store 中获取的: {count}!'
-      negative-count: '这个是 negative 计数值从 store 中获取的: {count}!'
-      changed: '当你点击下面的按钮时，它们将会改变。'
-      buttons:
-        increment: 增加
-        decrement: 减少
-        reset: 重置
-    back-home: "{'<'} 返回首頁 {'>'}"
+zh-CN:
+  title: Pinia 基本使用
+  result:
+    title: 结果
+    count: '这个计数值是从 store 状态中获取的: {count}!'
+    double-count: '这个是 double 计数值从 store 中获取的: {count}!'
+    triple-count: '这个是 triple 计数值从 store 中获取的: {count}!'
+    negative-count: '这个是 negative 计数值从 store 中获取的: {count}!'
+    changed: '当你点击下面的按钮时，它们将会改变。'
+    buttons:
+      increment: 增加
+      decrement: 减少
+      reset: 重置
+  back-home: "{'<'} 返回首頁 {'>'}"
 
-  zh-TW:
-    title: Pinia 基本使用
-    result:
-      title: 結果
-      count: '這個計數值是從 store 狀態中獲取的: {count}!'
-      double-count: '這個是 double 計數值從 store 中獲取的: {count}!'
-      triple-count: '這個是 triple 計數值從 store 中獲取的: {count}!'
-      negative-count: '這個是 negative 計數值從 store 中獲取的: {count}!'
-      changed: '當你點擊下面的按鈕時，它們將會改變。'
-      buttons:
-        increment: 增加
-        decrement: 减少
-        reset: 重置
-    back-home: "{'<'} 返回首頁 {'>'}"
+zh-TW:
+  title: Pinia 基本使用
+  result:
+    title: 結果
+    count: '這個計數值是從 store 狀態中獲取的: {count}!'
+    double-count: '這個是 double 計數值從 store 中獲取的: {count}!'
+    triple-count: '這個是 triple 計數值從 store 中獲取的: {count}!'
+    negative-count: '這個是 negative 計數值從 store 中獲取的: {count}!'
+    changed: '當你點擊下面的按鈕時，它們將會改變。'
+    buttons:
+      increment: 增加
+      decrement: 减少
+      reset: 重置
+  back-home: "{'<'} 返回首頁 {'>'}"
 </i18n>

@@ -112,6 +112,7 @@ export default defineNuxtConfig({
       { code: 'zh-TW', name: '繁體中文' },
     ],
     defaultLocale: 'en',
+    strategy: 'prefix_and_default',
   },
 
   vite: {
