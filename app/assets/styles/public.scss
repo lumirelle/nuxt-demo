@@ -741,10 +741,10 @@
   animation: rainbow 40s linear infinite;
 }
 
-html,
-body {
+* {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 header {

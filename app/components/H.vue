@@ -11,7 +11,7 @@ function Render() {
   return h(
     `h${props.level}`,
     {
-      class: `group font-bold relative ml--0.4em pl-0.4em`,
+      class: `group font-bold relative ml--0.4em mb-0.5em pl-0.4em`,
     },
     [
       h('span', {

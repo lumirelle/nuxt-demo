@@ -1,4 +1,4 @@
-export const useTestStore = defineStore('test', {
+export const useBasicStore = defineStore('basic', {
   state: () => ({
     count: 0,
   }),

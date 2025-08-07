@@ -25,8 +25,8 @@ const { t } = useI18n({
   <div>
     <!-- UnoCSS attributify syntax, if it's conflict with the element attributes, you can add `un-` prefix to avoid it -->
     <!-- For example, `flex` => `un-flex` -->
-    <header backdrop-blur border="b solid default">
-      <div flex="~ row" justify-between items-center max-w-1200px mx-auto p="y-1 x-4">
+    <header backdrop-blur border="b solid default" h-16>
+      <div flex="~ row" justify-between items-center max-w-1200px mx-auto p="y-1 x-4" h-full>
         <p text-5 font-bold>
           Nuxt 4 Demo
         </p>
@@ -53,7 +53,7 @@ const { t } = useI18n({
         </div>
       </div>
     </header>
-    <main max-w-1200px mx-auto>
+    <main max-w-1200px mx-auto mt-8 mb-16>
       <slot />
       <ElBacktop />
     </main>
