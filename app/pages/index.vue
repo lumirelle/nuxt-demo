@@ -19,7 +19,7 @@ const { t } = useI18n({
           <I18nT keypath="nuxt.more-info">
             <template #link>
               <NuxtLinkLocale to="https://nuxt.com/docs/4.x/getting-started/introduction" external target="_blank">
-                Nuxt 4
+                <span>Nuxt 4</span>
               </NuxtLinkLocale>
             </template>
           </I18nT>
@@ -36,7 +36,7 @@ const { t } = useI18n({
           <I18nT keypath="vue.more-info">
             <template #link>
               <NuxtLinkLocale to="https://vuejs.org/guide/introduction.html" external target="_blank">
-                Vue 3
+                <span>Vue 3</span>
               </NuxtLinkLocale>
             </template>
           </I18nT>
@@ -52,7 +52,7 @@ const { t } = useI18n({
         <I18nT keypath="pinia.more-info">
           <template #link>
             <NuxtLinkLocale to="https://pinia.vuejs.org/zh/introduction.html" external target="_blank">
-              Pinia
+              <span>Pinia</span>
             </NuxtLinkLocale>
           </template>
         </I18nT>
