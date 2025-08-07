@@ -58,35 +58,29 @@ const num4 = new BigNumber('123412421.234324', 5) // '607236.557696'
 
 <i18n lang="yaml">
 en:
-  title: Vue Use Basic Usage
+  title: Bignumber.js Basic Usage
   utils:
     p1: This is a utility function for big number operations.
     p2: These function are auto-imported by Nuxt.
   result:
     title: Result
-    xml: This is an XML code block.
-    javascript: This is a JavaScript code block.
   back-home: "{'<'} Back to home page {'>'}"
 
 zh-CN:
-  title: Vue Use 基本使用
+  title: Bignumber.js 基本使用
   utils:
     p1: 这是一个用于大数字运算的工具函数。
     p2: 这些函数是由 Nuxt 自动导入的。
   result:
     title: 结果
-    xml: "这是一个 XML 代码块。"
-    javascript: "这是一个 JavaScript 代码块。"
   back-home: "{'<'} 返回首页 {'>'}"
 
 zh-TW:
-  title: Vue Use 基本使用
+  title: Bignumber.js 基本使用
   utils:
     p1: 這是一個用於大數字運算的工具函數。
     p2: 這些函數是由 Nuxt 自動導入的。
   result:
     title: 結果
-    xml: "這是一個 XML 代碼塊。"
-    javascript: "這是一個 JavaScript 代碼塊。"
   back-home: "{'<'} 返回首頁 {'>'}"
 </i18n>

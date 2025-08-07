@@ -252,6 +252,33 @@ const { t } = useI18n({
       </section>
     </section>
 
+    <!-- Day.JS -->
+    <section border-b="1px solid [var(--el-border-color)]">
+      <H level="2">
+        {{ t('day-js.title') }}
+      </H>
+      <section>
+        <I18nT keypath="day-js.more-info" tag="p">
+          <template #link>
+            <NuxtLinkLocale to="https://day.js.org/docs/en/installation/installation" external target="_blank">
+              <span>Day.js</span>
+            </NuxtLinkLocale>
+          </template>
+        </I18nT>
+      </section>
+      <section>
+        <H level="3">
+          {{ t('day-js.basic-usage.title') }}
+        </H>
+        <p>{{ t('day-js.basic-usage.desc') }}</p>
+        <p>
+          <NuxtLinkLocale to="/day-js/basic-usage">
+            <span>{{ t('day-js.basic-usage.try') }}</span>
+          </NuxtLinkLocale>
+        </p>
+      </section>
+    </section>
+
     <!-- Nuxt Modules -->
     <section border-b="1px solid [var(--el-border-color)]">
       <H level="2">
@@ -354,6 +381,14 @@ en:
       desc: A demo of using Bignumber.js for arbitrary-precision decimal arithmetic.
       try: Try basic usage of Bignumber.js
 
+  day-js:
+    title: Day.js
+    more-info: See {link} documentation for more information.
+    basic-usage:
+      title: Basic Usage
+      desc: A demo of using Day.js for date manipulation.
+      try: Try basic usage of Day.js
+
   nuxt-modules:
     title: Nuxt Modules
     nuxt-scripts:
@@ -432,6 +467,14 @@ zh-CN:
       desc: 使用 Bignumber.js 进行任意精度小数运算的演示。
       try: 尝试 Bignumber.js 的基本使用
 
+  day-js:
+    title: Day.js
+    more-info: 查看 {link} 文档了解更多信息。
+    basic-usage:
+      title: 基本使用
+      desc: 使用 Day.js 进行日期处理的演示。
+      try: 尝试 Day.js 的基本使用
+
   nuxt-modules:
     title: Nuxt 模块
     nuxt-scripts:
@@ -509,6 +552,14 @@ zh-TW:
       title: 基本使用
       desc: 使用 Bignumber.js 進行任意精度小數運算的演示。
       try: 嘗試 Bignumber.js 的基本使用
+
+  day-js:
+    title: Day.js
+    more-info: 查看 {link} 文檔了解更多信息。
+    basic-usage:
+      title: 基本使用
+      desc: 使用 Day.js 進行日期處理的演示。
+      try: 嘗試 Day.js 的基本使用
 
   nuxt-modules:
     title: Nuxt 模組

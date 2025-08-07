@@ -23,8 +23,8 @@ Utilities:
 - [VueUse](https://vueuse.org/zh/)
 - [Highlight.js](https://highlightjs.org/)
 - [Bignumber.js](https://mikemcl.github.io/bignumber.js/)
-- TODO: Below
 - [Day.js](https://day.js.org/)
+- TODO: Below
 - [ECharts](https://echarts.apache.org/zh/index.html)
 - [Nuxt Swiper](https://nuxt.com/modules/swiper)
 - [Nuxt QRCode](https://nuxt.com/modules/qrcode)

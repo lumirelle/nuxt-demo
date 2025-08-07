@@ -56,7 +56,7 @@ const { t } = useI18n({
 
 <i18n lang="yaml">
 en:
-  title: Vue Use Basic Usage
+  title: Highlight.js Basic Usage
   result:
     title: Result
     xml: This is an XML code block.
@@ -64,7 +64,7 @@ en:
   back-home: "{'<'} Back to home page {'>'}"
 
 zh-CN:
-  title: Vue Use 基本使用
+  title: Highlight.js 基本使用
   result:
     title: 结果
     xml: "这是一个 XML 代码块。"
@@ -72,7 +72,7 @@ zh-CN:
   back-home: "{'<'} 返回首页 {'>'}"
 
 zh-TW:
-  title: Vue Use 基本使用
+  title: Highlight.js 基本使用
   result:
     title: 結果
     xml: "這是一個 XML 代碼塊。"
