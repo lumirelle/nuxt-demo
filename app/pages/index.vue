@@ -11,7 +11,7 @@ const { t } = useI18n({
     </H>
 
     <!-- Nuxt -->
-    <section>
+    <section border-b="1px solid [var(--el-border-color)]">
       <H level="2">
         {{ t('nuxt.title') }}
       </H>
@@ -27,7 +27,7 @@ const { t } = useI18n({
     </section>
 
     <!-- Vue -->
-    <section>
+    <section border-b="1px solid [var(--el-border-color)]">
       <H level="2">
         {{ t('vue.title') }}
       </H>
@@ -43,7 +43,7 @@ const { t } = useI18n({
     </section>
 
     <!-- Pinia -->
-    <section>
+    <section border-b="1px solid [var(--el-border-color)]">
       <H level="2">
         {{ t('pinia.title') }}
       </H>
@@ -93,7 +93,7 @@ const { t } = useI18n({
     </section>
 
     <!-- Vue Router -->
-    <section>
+    <section border-b="1px solid [var(--el-border-color)]">
       <H level="2">
         {{ t('vue-router.title') }}
       </H>
@@ -109,7 +109,7 @@ const { t } = useI18n({
     </section>
 
     <!-- Vue I18n -->
-    <section>
+    <section border-b="1px solid [var(--el-border-color)]">
       <H level="2">
         {{ t('vue-i18n.title') }}
       </H>
@@ -137,8 +137,42 @@ const { t } = useI18n({
       </section>
     </section>
 
+    <!-- UnoCSS -->
+    <section border-b="1px solid [var(--el-border-color)]">
+      <H level="2">
+        {{ t('unocss.title') }}
+      </H>
+      <section>
+        <I18nT keypath="unocss.more-info" tag="p">
+          <template #link>
+            <NuxtLinkLocale to="https://unocss.dev/" external target="_blank">
+              <span>UnoCSS</span>
+            </NuxtLinkLocale>
+          </template>
+        </I18nT>
+      </section>
+      <section>
+        <H level="3">
+          {{ t('unocss.basic-usage.title') }}
+        </H>
+        <I18nT keypath="unocss.basic-usage.desc" tag="p">
+          <template #preset1>
+            <code>presetWind3</code>
+          </template>
+          <template #preset2>
+            <code>presetAttributify</code>
+          </template>
+        </I18nT>
+        <p>
+          <NuxtLinkLocale to="/unocss/basic-usage">
+            <span>{{ t('unocss.basic-usage.try') }}</span>
+          </NuxtLinkLocale>
+        </p>
+      </section>
+    </section>
+
     <!-- Nuxt Modules -->
-    <section>
+    <section border-b="1px solid [var(--el-border-color)]">
       <H level="2">
         {{ t('nuxt-modules.title') }}
       </H>
@@ -207,6 +241,14 @@ en:
       desc: A demo of using Vue I18n with local scope (yaml) and VSCode I18n extension settings (i18n ally).
       try: Try basic usage of Vue I18n
 
+  unocss:
+    title: UnoCSS
+    more-info: See {link} documentation for more information.
+    basic-usage:
+      title: Basic Usage
+      desc: A demo of using UnoCSS with {preset1} and {preset2}.
+      try: Try basic usage of UnoCSS
+
   nuxt-modules:
     title: Nuxt Modules
     nuxt-scripts:
@@ -252,6 +294,14 @@ zh-CN:
       title: 基本使用
       desc: 使用 Vue I18n 的 local scope (yaml) 和 VSCode I18n 扩展设置 (i18n ally)。
       try: 尝试 Vue I18n 的基本使用
+
+  unocss:
+    title: UnoCSS
+    more-info: 查看 {link} 文档了解更多信息。
+    basic-usage:
+      title: 基本使用
+      desc: 使用 UnoCSS 的 {preset1} 和 {preset2} 的演示。
+      try: 尝试 UnoCSS 的基本使用
 
   nuxt-modules:
     title: Nuxt 模块
@@ -299,6 +349,14 @@ zh-TW:
       desc: 使用 Vue I18n 的 local scope (yaml) 和 VSCode I18n 擴展設置 (i18n ally)。
       try: 嘗試 Vue I18n 的基本使用
 
+  unocss:
+    title: UnoCSS
+    more-info: 查看 {link} 文檔了解更多信息。
+    basic-usage:
+      title: 基本使用
+      desc: 使用 UnoCSS 的 {preset1} 和 {preset2} 的演示。
+      try: 嘗試 UnoCSS 的基本使用
+
   nuxt-modules:
     title: Nuxt 模組
     nuxt-scripts:
@@ -309,4 +367,4 @@ zh-TW:
       p1: 這個模組提供了 Element Plus 組件、樣式、指令、圖標等的自動導入。
       p2: 它還支持在 `nuxt.config.ts` 中自定義主題、變量等。
       try: "嘗試 {'@'}element-plus/nuxt"
-  </i18n>
+</i18n>
