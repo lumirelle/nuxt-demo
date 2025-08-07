@@ -53,9 +53,9 @@ const { t } = useI18n({
         </div>
       </div>
     </header>
-    <div max-w-1200px mx-auto>
+    <main max-w-1200px mx-auto>
       <slot />
       <ElBacktop />
-    </div>
+    </main>
   </div>
 </template>
