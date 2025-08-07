@@ -14,38 +14,38 @@ const store = useBasicStore()
     <H level="1">
       {{ t('title') }}
     </H>
-    <div mb-6>
+    <section>
       <H level="2">
         app/stores/basic.ts
       </H>
       <HighlightJs :code="Code.basic['app/stores/basic.ts']" />
-    </div>
-    <div mb-6>
+    </section>
+    <section>
       <H level="2">
         app/pages/pinia/basic-usage.vue
       </H>
       <HighlightJs :code="Code.basic['app/pages/pinia/basic-usage.vue']" />
-    </div>
-    <div mb-6>
+    </section>
+    <section>
       <H level="2">
         Result
       </H>
-      <p mb-2>
+      <p>
         This count value is getting from store state: {{ store.count }}!
       </p>
-      <p mb-2>
+      <p>
         This is double count from store getter: {{ store.doubleCount }}!
       </p>
-      <p mb-2>
+      <p>
         This is triple count from store getter: {{ store.tripleCount }}!
       </p>
-      <p mb-2>
+      <p>
         This is negative count from store getter: {{ store.negativeCount }}!
       </p>
-      <p mb-6>
+      <p>
         They will changed while you click at the buttons below.
       </p>
-      <div flex gap-2>
+      <div flex gap-2 mt-6>
         <ElButton @click="store.increment()">
           Increment
         </ElButton>
@@ -56,12 +56,12 @@ const store = useBasicStore()
           Reset
         </ElButton>
       </div>
-    </div>
-    <div mb-6>
+    </section>
+    <section>
       <NuxtLinkLocale to="/">
         <span>{{ t('back-home') }}</span>
       </NuxtLinkLocale>
-    </div>
+    </section>
   </div>
 </template>
 

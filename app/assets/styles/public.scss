@@ -751,10 +751,23 @@ header {
   border-width: 0;
 }
 
+section {
+  margin-bottom: 1.5rem;
+}
+
+p {
+  margin-bottom: 0.5rem;
+}
+
 a,
 a > span {
   text-decoration: none;
   color: var(--rainbow-light);
+}
+
+a:hover,
+a:hover > span {
+  text-decoration: underline;
 }
 
 code {
