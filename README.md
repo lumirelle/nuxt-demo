@@ -70,6 +70,90 @@ Nuxt 4 provides a lot of features than Nuxt 2, including:
 
 Reading the getting started guide [here](https://nuxt.com/docs/4.x/getting-started/introduction).
 
+## Hydration Errors
+
+Something you must know about hydration errors if you are using SSR rendering mode of Nuxt 4: **Hydration errors**.
+
+Hydration errors are caused by the mismatch between the server-rendered HTML and the client-rendered HTML.
+
+There are some common cases of hydration errors below.
+
+### Invalid HTML Nesting Structure
+
+The most cases are invalid HTML nesting structure, such as you put a `div` inside a `p` tag:
+
+<!-- Using `xml` instead of `html` to avoid the error from prettier -->
+
+```xml
+<p><div>hi</div></p>
+```
+
+If you use prettier, you will get an error like this:
+
+> Parsing error: Unexpected closing tag "p". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags
+
+The reason is HTML Standard does not allow you to do like this, and the browser will reserve the code as below:
+
+```xml
+<p></p>
+<div>hi</div>
+<p></p>
+```
+
+So you should really know about **the nesting structure rules of HTML**, what ever you are using SSR rendering or not.
+
+Here are some basic rules:
+
+- [Interactive content](https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Content_categories#interactive_content) should not be nested in any other interactive content.
+- `h1` ~ `h6` can only contain [phrasing content](https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Content_categories#phrasing_content).
+- `label` & `p` can only accept [phrasing content](https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Content_categories#phrasing_content) except itself.
+- [Void elements](https://developer.mozilla.org/en-US/docs/Glossary/Void_element) can not contain any content, they must be closed by a self-closing tag.
+
+For more details, you can find the specific element's **Technical Summary** from [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements).
+
+### Different Data Used During Render
+
+Another common case is using different data during render.
+
+For example, you use `useDark` from `@vueuse/core` to control your Vue SFC template directly, you will get a hydration error.
+
+```html
+<script setup>
+  import { useDark } from '@vueuse/core'
+
+  const isDark = useDark()
+</script>
+
+<template>
+  <div v-if="isDark">
+    <p>Dark</p>
+  </div>
+  <div v-else>
+    <p>Light</p>
+  </div>
+</template>
+```
+
+Your server-rendered HTML is as below:
+
+```html
+<div>
+  <p>Light</p>
+</div>
+```
+
+And your client-rendered HTML is as below:
+
+```html
+<div>
+  <p>Dark</p>
+</div>
+```
+
+During the hydration process, they will cause a confliction.
+
+So you should not let your HTML structure depend on the client-based data, such as LocalStorage, Browser API, etc, if you are using SSR rendering.
+
 ## Nuxt Modules
 
 Nuxt modules provide a lot of abilities, such as auto-importing, type generation, devtools integration, etc.

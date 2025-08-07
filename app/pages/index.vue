@@ -16,15 +16,13 @@ const { t } = useI18n({
         {{ t('nuxt.title') }}
       </H>
       <section>
-        <p>
-          <I18nT keypath="nuxt.more-info" tag="p">
-            <template #link>
-              <NuxtLinkLocale to="https://nuxt.com/docs/4.x/getting-started/introduction" external target="_blank">
-                <span>Nuxt 4</span>
-              </NuxtLinkLocale>
-            </template>
-          </I18nT>
-        </p>
+        <I18nT keypath="nuxt.more-info" tag="p">
+          <template #link>
+            <NuxtLinkLocale to="https://nuxt.com/docs/4.x/getting-started/introduction" external target="_blank">
+              <span>Nuxt 4</span>
+            </NuxtLinkLocale>
+          </template>
+        </I18nT>
       </section>
     </section>
 
@@ -34,15 +32,13 @@ const { t } = useI18n({
         {{ t('vue.title') }}
       </H>
       <section>
-        <p>
-          <I18nT keypath="vue.more-info" tag="p">
-            <template #link>
-              <NuxtLinkLocale to="https://vuejs.org/guide/introduction.html" external target="_blank">
-                <span>Vue 3</span>
-              </NuxtLinkLocale>
-            </template>
-          </I18nT>
-        </p>
+        <I18nT keypath="vue.more-info" tag="p">
+          <template #link>
+            <NuxtLinkLocale to="https://vuejs.org/guide/introduction.html" external target="_blank">
+              <span>Vue 3</span>
+            </NuxtLinkLocale>
+          </template>
+        </I18nT>
       </section>
     </section>
 
@@ -102,15 +98,13 @@ const { t } = useI18n({
         {{ t('vue-router.title') }}
       </H>
       <section>
-        <p>
-          <I18nT keypath="vue-router.more-info" tag="p">
-            <template #link>
-              <NuxtLinkLocale to="https://router.vuejs.org/installation.html" external target="_blank">
-                <span>Vue Router</span>
-              </NuxtLinkLocale>
-            </template>
-          </I18nT>
-        </p>
+        <I18nT keypath="vue-router.more-info" tag="p">
+          <template #link>
+            <NuxtLinkLocale to="https://router.vuejs.org/installation.html" external target="_blank">
+              <span>Vue Router</span>
+            </NuxtLinkLocale>
+          </template>
+        </I18nT>
       </section>
     </section>
 

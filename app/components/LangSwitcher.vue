@@ -1,9 +1,7 @@
 <script setup lang="ts">
 import type { Locale } from '#i18n'
 
-const { locale, locales } = useI18n()
-
-const switchLocalePath = useSwitchLocalePath()
+const { locale, locales, setLocale } = useI18n()
 
 const visible = ref(false)
 
@@ -12,12 +10,13 @@ nextTick(() => {
 })
 
 function handleChange(code: Locale) {
-  navigateTo(switchLocalePath(code))
+  setLocale(code)
 }
 </script>
 
 <template>
-  <ElSelect v-show="visible" v-model="locale" min-w-100px @change="handleChange">
+  <!-- CAUTION: DO NOT USE `v-model` here, it will change `locale` directly & missing the cookie update & other side effects -->
+  <ElSelect v-show="visible" :model-value="locale" min-w-100px @change="handleChange">
     <ElOption v-for="i in locales" :key="i.code" :label="i.name" :value="i.code" />
   </ElSelect>
 </template>

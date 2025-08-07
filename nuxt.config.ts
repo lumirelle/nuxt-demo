@@ -33,6 +33,7 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     // UnoCSS
     '@unocss/nuxt',
+
     // TODO: Pending triage below
     '@vueuse/nuxt',
     'nuxt-echarts',
@@ -111,8 +112,9 @@ export default defineNuxtConfig({
       { code: 'zh-CN', name: '简体中文' },
       { code: 'zh-TW', name: '繁體中文' },
     ],
+    // NOTE: I18n will detect the browser language by default
     defaultLocale: 'en',
-    strategy: 'prefix_and_default',
+    strategy: 'prefix_except_default',
   },
 
   vite: {
