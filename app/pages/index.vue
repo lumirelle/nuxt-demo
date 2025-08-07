@@ -205,7 +205,7 @@ const { t } = useI18n({
       more-info: See {link} documentation for more information.
       basic-usage:
         title: Basic Usage
-        desc: A demo of using Vue I18n with local scope (yaml) and vscode i18n extension settings (i18n ally).
+        desc: A demo of using Vue I18n with local scope (yaml) and VSCode I18n extension settings (i18n ally).
         try: Try basic usage of Vue I18n
 
     nuxt-modules:
@@ -249,7 +249,7 @@ const { t } = useI18n({
       more-info: 查看 {link} 文档了解更多信息。
       basic-usage:
         title: 基本使用
-        desc: 使用 Vue I18n 的 local scope (yaml) 和 vscode i18n 扩展设置 (i18n ally)。
+        desc: 使用 Vue I18n 的 local scope (yaml) 和 VSCode I18n 扩展设置 (i18n ally)。
         try: 尝试 Vue I18n 的基本使用
 
     nuxt-modules:
@@ -293,7 +293,7 @@ const { t } = useI18n({
       more-info: 查看 {link} 文檔了解更多信息。
       basic-usage:
         title: 基本使用
-        desc: 使用 Vue I18n 的 local scope (yaml) 和 vscode i18n 擴展設置 (i18n ally)。
+        desc: 使用 Vue I18n 的 local scope (yaml) 和 VSCode I18n 擴展設置 (i18n ally)。
         try: 嘗試 Vue I18n 的基本使用
 
     nuxt-modules:
