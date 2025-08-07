@@ -14,74 +14,95 @@ const { t } = useI18n({
       <H level="2">
         {{ t('nuxt.title') }}
       </H>
-      <p>
-        <I18nT keypath="nuxt.description">
-          <template #link>
-            <NuxtLinkLocale to="https://nuxt.com/docs/4.x/getting-started/introduction" external>
-              Nuxt 4
-            </NuxtLinkLocale>
-          </template>
-        </I18nT>
-      </p>
+      <section>
+        <p>
+          <I18nT keypath="nuxt.more-info">
+            <template #link>
+              <NuxtLinkLocale to="https://nuxt.com/docs/4.x/getting-started/introduction" external>
+                Nuxt 4
+              </NuxtLinkLocale>
+            </template>
+          </I18nT>
+        </p>
+      </section>
     </section>
 
     <section>
       <H level="2">
         {{ t('vue.title') }}
       </H>
-      <p>
-        <I18nT keypath="vue.description">
-          <template #link>
-            <NuxtLinkLocale to="https://vuejs.org/guide/introduction.html" external>
-              Vue 3
-            </NuxtLinkLocale>
-          </template>
-        </I18nT>
-      </p>
+      <section>
+        <p>
+          <I18nT keypath="vue.more-info">
+            <template #link>
+              <NuxtLinkLocale to="https://vuejs.org/guide/introduction.html" external>
+                Vue 3
+              </NuxtLinkLocale>
+            </template>
+          </I18nT>
+        </p>
+      </section>
     </section>
 
     <section>
       <H level="2">
         {{ t('pinia.title') }}
       </H>
-      <H level="3">
-        {{ t('pinia.basic-usage.title') }}
-      </H>
-      <p>
-        <NuxtLinkLocale to="/pinia/basic-usage">
-          <span>{{ t('pinia.basic-usage.description') }}</span>
-        </NuxtLinkLocale>
-      </p>
-      <H level="3">
-        {{ t('pinia.initializing.title') }}
-      </H>
-      <p>
-        <NuxtLinkLocale to="/pinia/initializing">
-          <span>{{ t('pinia.initializing.description') }}</span>
-        </NuxtLinkLocale>
-      </p>
+      <section>
+        <I18nT keypath="pinia.more-info">
+          <template #link>
+            <NuxtLinkLocale to="https://pinia.vuejs.org/zh/introduction.html" external>
+              Pinia
+            </NuxtLinkLocale>
+          </template>
+        </I18nT>
+      </section>
+      <section>
+        <H level="3">
+          {{ t('pinia.basic-usage.title') }}
+        </H>
+        <p>
+          <NuxtLinkLocale to="/pinia/basic-usage">
+            <span>{{ t('pinia.basic-usage.description') }}</span>
+          </NuxtLinkLocale>
+        </p>
+      </section>
+      <section>
+        <H level="3">
+          {{ t('pinia.initializing.title') }}
+        </H>
+        <p>
+          <NuxtLinkLocale to="/pinia/initializing">
+            <span>{{ t('pinia.initializing.description') }}</span>
+          </NuxtLinkLocale>
+        </p>
+      </section>
     </section>
 
     <section>
       <H level="2">
         {{ t('nuxt-modules.title') }}
       </H>
-      <H level="3">
-        {{ t('nuxt-modules.element-plus.title') }}
-      </H>
-      <p>
-        <NuxtLinkLocale to="/element-plus">
-          <span>{{ t('nuxt-modules.element-plus.description') }}</span>
-        </NuxtLinkLocale>
-      </p>
-      <H level="3">
-        {{ t('nuxt-modules.nuxt-scripts.title') }}
-      </H>
-      <p>
-        <NuxtLinkLocale to="/nuxt-scripts">
-          <span>{{ t('nuxt-modules.nuxt-scripts.description') }}</span>
-        </NuxtLinkLocale>
-      </p>
+      <section>
+        <H level="3">
+          {{ t('nuxt-modules.element-plus.title') }}
+        </H>
+        <p>
+          <NuxtLinkLocale to="/element-plus">
+            <span>{{ t('nuxt-modules.element-plus.description') }}</span>
+          </NuxtLinkLocale>
+        </p>
+      </section>
+      <section>
+        <H level="3">
+          {{ t('nuxt-modules.nuxt-scripts.title') }}
+        </H>
+        <p>
+          <NuxtLinkLocale to="/nuxt-scripts">
+            <span>{{ t('nuxt-modules.nuxt-scripts.description') }}</span>
+          </NuxtLinkLocale>
+        </p>
+      </section>
     </section>
   </div>
 </template>
@@ -92,14 +113,15 @@ const { t } = useI18n({
 
     nuxt:
       title: Nuxt 4
-      description: See {link} documentation for more information.
+      more-info: See {link} documentation for more information.
 
     vue:
       title: Vue 3
-      description: See {link} documentation for more information.
+      more-info: See {link} documentation for more information.
 
     pinia:
       title: Pinia
+      more-info: See {link} documentation for more information.
       basic-usage:
         title: Basic Usage
         description: Try basic usage of Pinia
@@ -121,11 +143,11 @@ const { t } = useI18n({
 
     nuxt:
       title: Nuxt 4
-      description: 查看 {link} 文档了解更多信息。
+      more-info: 查看 {link} 文档了解更多信息。
 
     vue:
       title: Vue 3
-      description: 查看 {link} 文档了解更多信息。
+      more-info: 查看 {link} 文档了解更多信息。
 
     pinia:
       title: Pinia
@@ -150,11 +172,11 @@ const { t } = useI18n({
 
     nuxt:
       title: Nuxt 4
-      description: 查看 {link} 文檔了解更多信息。
+      more-info: 查看 {link} 文檔了解更多信息。
 
     vue:
       title: Vue 3
-      description: 查看 {link} 文檔了解更多信息。
+      more-info: 查看 {link} 文檔了解更多信息。
 
     pinia:
       title: Pinia
