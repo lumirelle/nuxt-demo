@@ -145,7 +145,7 @@ const { t } = useI18n({
       <section>
         <I18nT keypath="unocss.more-info" tag="p">
           <template #link>
-            <NuxtLinkLocale to="https://unocss.dev/" external target="_blank">
+            <NuxtLinkLocale to="https://unocss.dev/guide/" external target="_blank">
               <span>UnoCSS</span>
             </NuxtLinkLocale>
           </template>

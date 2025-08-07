@@ -9,23 +9,23 @@ const { t } = useI18n({
 <i18n lang="yaml">
   en:
     popover:
-      lang: "{'This is a @nuxtjs/i18n example'}"
-      colorMode: "{'This is a @nuxtjs/color-mode example'}"
+      lang: "This is a {'@'}nuxtjs/i18n example"
+      colorMode: "This is a {'@'}nuxtjs/color-mode example"
   zh-CN:
     popover:
-      lang: "{'这是一个 @nuxtjs/i18n 的示例'}"
-      colorMode: "{'这是一个 @nuxtjs/color-mode 的示例'}"
+      lang: "这是一个 {'@'}nuxtjs/i18n 的示例"
+      colorMode: "这是一个 {'@'}nuxtjs/color-mode 的示例"
   zh-TW:
     popover:
-      lang: "{'這是一個 @nuxtjs/i18n 的示例'}"
-      colorMode: "{'這是一個 @nuxtjs/color-mode 的示例'}"
+      lang: "這是一個 {'@'}nuxtjs/i18n 的示例"
+      colorMode: "這是一個 {'@'}nuxtjs/color-mode 的示例"
 </i18n>
 
 <template>
   <div>
     <!-- UnoCSS attributify syntax, if it's conflict with the element attributes, you can add `un-` prefix to avoid it -->
     <!-- For example, `flex` => `un-flex` -->
-    <header backdrop-blur border="b solid default" h-16>
+    <header backdrop-blur border="b solid default" h-16 sticky top-0 z-10>
       <div flex="~ row" justify-between items-center max-w-1200px mx-auto p="y-1 x-4" h-full>
         <p text-5 font-bold>
           Nuxt 4 Demo
