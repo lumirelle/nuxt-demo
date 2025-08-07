@@ -66,22 +66,32 @@ zh-TW:
     <H level="1">
       {{ t('title') }}
     </H>
-    <p>{{ t('loaded') }}</p>
-    <p>{{ t('refresh') }}</p>
-    <I18nT keypath="note" tag="p">
-      <template #code>
-        <code>{{ t('code') }}</code>
-      </template>
-    </I18nT>
-    <HighlightJs :code="Code.demand" />
-    <p><span ref="mouseOverEl" underline hover="text-red">{{ t('trigger') }}</span></p>
-    <ElButton @click="refresh">
-      {{ t('refreshButton') }}
-    </ElButton>
-    <p>
-      <NuxtLinkLocale to="/nuxt-scripts">
-        <span>{{ t('back') }}</span>
-      </NuxtLinkLocale>
-    </p>
+    <section>
+      <p>{{ t('loaded') }}</p>
+      <p>{{ t('refresh') }}</p>
+      <I18nT keypath="note" tag="p">
+        <template #code>
+          <code>{{ t('code') }}</code>
+        </template>
+      </I18nT>
+    </section>
+    <section>
+      <HighlightJs :code="Code.demand" />
+    </section>
+    <section>
+      <p mb-4>
+        <span ref="mouseOverEl" underline hover="text-red">{{ t('trigger') }}</span>
+      </p>
+      <ElButton @click="refresh">
+        {{ t('refreshButton') }}
+      </ElButton>
+    </section>
+    <section>
+      <p>
+        <NuxtLinkLocale to="/nuxt-scripts">
+          <span>{{ t('back') }}</span>
+        </NuxtLinkLocale>
+      </p>
+    </section>
   </div>
 </template>
