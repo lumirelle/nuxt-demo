@@ -225,6 +225,37 @@ const { t } = useI18n({
       </section>
     </section>
 
+    <!-- Shiki -->
+    <section border-b="1px solid [var(--el-border-color)]">
+      <H level="2">
+        {{ t('shiki.title') }}
+      </H>
+      <section>
+        <I18nT keypath="shiki.more-info" tag="p">
+          <template #link>
+            <NuxtLinkLocale to="https://shiki.style/guide/" external target="_blank">
+              <span>Shiki</span>
+            </NuxtLinkLocale>
+          </template>
+        </I18nT>
+      </section>
+      <section>
+        <H level="3">
+          {{ t('shiki.basic-usage.title') }}
+        </H>
+        <I18nT keypath="shiki.basic-usage.desc" tag="p">
+          <template #nuxt-module>
+            <code>nuxt-shiki</code>
+          </template>
+        </I18nT>
+        <p>
+          <NuxtLinkLocale to="/shiki/basic-usage">
+            <span>{{ t('shiki.basic-usage.try') }}</span>
+          </NuxtLinkLocale>
+        </p>
+      </section>
+    </section>
+
     <!-- Bignumber.JS -->
     <section border-b="1px solid [var(--el-border-color)]">
       <H level="2">
@@ -366,12 +397,20 @@ en:
       try: Try basic usage of Vue Use
 
   highlight-js:
-    title: Highlight.js
+    title: Highlight.js (Legacy)
     more-info: See {link} documentation for more information.
     basic-usage:
       title: Basic Usage
       desc: A demo of using Highlight.js with syntax highlighting in a page (Support dark mode).
       try: Try basic usage of Highlight.js
+
+  shiki:
+    title: Shiki (Recommended than Highlight.js)
+    more-info: See {link} documentation for more information.
+    basic-usage:
+      title: Basic Usage
+      desc: A demo of using Shiki for syntax highlighting in a page (Support dark mode), integrated with {nuxt-module}.
+      try: Try basic usage of Shiki
 
   bignumber-js:
     title: Bignumber.js
@@ -452,12 +491,20 @@ zh-CN:
       try: 尝试 Vue Use 的基本使用
 
   highlight-js:
-    title: Highlight.js
+    title: Highlight.js (Legacy)
     more-info: 查看 {link} 文档了解更多信息。
     basic-usage:
       title: 基本使用
       desc: 使用 Highlight.js 在页面中进行语法高亮的演示（支持暗黑模式）。
       try: 尝试 Highlight.js 的基本使用
+
+  shiki:
+    title: Shiki（比 Highlight.js 更推荐）
+    more-info: 查看 {link} 文档了解更多信息。
+    basic-usage:
+      title: 基本使用
+      desc: 使用 Shiki 在页面中进行语法高亮的演示（支持暗黑模式），由 {nuxt-module} 集成。
+      try: 尝试 Shiki 的基本使用
 
   bignumber-js:
     title: Bignumber.js
@@ -538,12 +585,20 @@ zh-TW:
       try: 嘗試 Vue Use 的基本使用
 
   highlight-js:
-    title: Highlight.js
+    title: Highlight.js (Legacy)
     more-info: 查看 {link} 文檔了解更多信息。
     basic-usage:
       title: 基本使用
       desc: 使用 Highlight.js 在頁面中進行語法高亮的演示（支持暗黑模式）。
       try: 嘗試 Highlight.js 的基本使用
+
+  shiki:
+    title: Shiki（比 Highlight.js 更推荐）
+    more-info: 查看 {link} 文檔了解更多信息。
+    basic-usage:
+      title: 基本使用
+      desc: 使用 Shiki 在頁面中進行語法高亮的演示（支持暗黑模式），由 {nuxt-module} 集成。
+      try: 嘗試 Shiki 的基本使用
 
   bignumber-js:
     title: Bignumber.js

@@ -1,0 +1,740 @@
+@keyframes rainbow {
+  0% {
+    --rainbow-1: #00a98e;
+    --rainbow-light: #4ad1b4;
+    --rainbow-lighter: #78fadc;
+    --rainbow-dark: #008269;
+    --rainbow-darker: #005d47;
+    --rainbow-next: #009ff7;
+  }
+
+  1.25% {
+    --rainbow-1: #00a996;
+    --rainbow-light: #4bd1bd;
+    --rainbow-lighter: #79fbe5;
+    --rainbow-dark: #008371;
+    --rainbow-darker: #005e4f;
+    --rainbow-next: #009dfa;
+  }
+
+  2.5% {
+    --rainbow-1: #00a99f;
+    --rainbow-light: #4cd1c6;
+    --rainbow-lighter: #7afbee;
+    --rainbow-dark: #00837a;
+    --rainbow-darker: #005e56;
+    --rainbow-next: #009bfc;
+  }
+
+  3.75% {
+    --rainbow-1: #00a9a7;
+    --rainbow-light: #4dd1cf;
+    --rainbow-lighter: #7bfbf8;
+    --rainbow-dark: #008382;
+    --rainbow-darker: #005e5e;
+    --rainbow-next: #0098fd;
+  }
+
+  5% {
+    --rainbow-1: #00a9b0;
+    --rainbow-light: #4ed1d7;
+    --rainbow-lighter: #7dfaff;
+    --rainbow-dark: #00838a;
+    --rainbow-darker: #005e65;
+    --rainbow-next: #0096fd;
+  }
+
+  6.25% {
+    --rainbow-1: #00a9b8;
+    --rainbow-light: #4fd1e0;
+    --rainbow-lighter: #7efaff;
+    --rainbow-dark: #008391;
+    --rainbow-darker: #005e6d;
+    --rainbow-next: #0093fd;
+  }
+
+  7.5% {
+    --rainbow-1: #00a9c0;
+    --rainbow-light: #50d0e8;
+    --rainbow-lighter: #7ffaff;
+    --rainbow-dark: #008399;
+    --rainbow-darker: #005e74;
+    --rainbow-next: #2e90fc;
+  }
+
+  8.75% {
+    --rainbow-1: #00a8c7;
+    --rainbow-light: #51d0f0;
+    --rainbow-lighter: #81f9ff;
+    --rainbow-dark: #0082a0;
+    --rainbow-darker: #005e7b;
+    --rainbow-next: #4d8dfa;
+  }
+
+  10% {
+    --rainbow-1: #00a8cf;
+    --rainbow-light: #52cff7;
+    --rainbow-lighter: #82f8ff;
+    --rainbow-dark: #0082a7;
+    --rainbow-darker: #005e81;
+    --rainbow-next: #638af8;
+  }
+
+  11.25% {
+    --rainbow-1: #00a7d5;
+    --rainbow-light: #53cfff;
+    --rainbow-lighter: #84f8ff;
+    --rainbow-dark: #0081ae;
+    --rainbow-darker: #005d87;
+    --rainbow-next: #7587f5;
+  }
+
+  12.5% {
+    --rainbow-1: #00a6dc;
+    --rainbow-light: #55ceff;
+    --rainbow-lighter: #85f7ff;
+    --rainbow-dark: #0081b4;
+    --rainbow-darker: #005d8d;
+    --rainbow-next: #8583f1;
+  }
+
+  13.75% {
+    --rainbow-1: #00a6e2;
+    --rainbow-light: #56cdff;
+    --rainbow-lighter: #87f6ff;
+    --rainbow-dark: #0080b9;
+    --rainbow-darker: #005c93;
+    --rainbow-next: #9280ed;
+  }
+
+  15% {
+    --rainbow-1: #00a4e7;
+    --rainbow-light: #57ccff;
+    --rainbow-lighter: #88f4ff;
+    --rainbow-dark: #007fbf;
+    --rainbow-darker: #005b98;
+    --rainbow-next: #9f7ce9;
+  }
+
+  16.25% {
+    --rainbow-1: #00a3ec;
+    --rainbow-light: #58caff;
+    --rainbow-lighter: #89f3ff;
+    --rainbow-dark: #007ec3;
+    --rainbow-darker: #005b9c;
+    --rainbow-next: #aa78e3;
+  }
+
+  17.5% {
+    --rainbow-1: #00a2f1;
+    --rainbow-light: #58c9ff;
+    --rainbow-lighter: #8af1ff;
+    --rainbow-dark: #007dc8;
+    --rainbow-darker: #0059a0;
+    --rainbow-next: #b574dd;
+  }
+
+  18.75% {
+    --rainbow-1: #00a0f4;
+    --rainbow-light: #59c7ff;
+    --rainbow-lighter: #8bf0ff;
+    --rainbow-dark: #007bcb;
+    --rainbow-darker: #0058a3;
+    --rainbow-next: #be71d7;
+  }
+
+  20% {
+    --rainbow-1: #009ff7;
+    --rainbow-light: #5ac5ff;
+    --rainbow-lighter: #8ceeff;
+    --rainbow-dark: #007ace;
+    --rainbow-darker: #0057a6;
+    --rainbow-next: #c76dd1;
+  }
+
+  21.25% {
+    --rainbow-1: #009dfa;
+    --rainbow-light: #5ac3ff;
+    --rainbow-lighter: #8decff;
+    --rainbow-dark: #0078d0;
+    --rainbow-darker: #0055a8;
+    --rainbow-next: #cf69c9;
+  }
+
+  22.5% {
+    --rainbow-1: #009bfc;
+    --rainbow-light: #5bc1ff;
+    --rainbow-lighter: #8de9ff;
+    --rainbow-dark: #0076d2;
+    --rainbow-darker: #0053aa;
+    --rainbow-next: #d566c2;
+  }
+
+  23.75% {
+    --rainbow-1: #0098fd;
+    --rainbow-light: #5bbfff;
+    --rainbow-lighter: #8ee7ff;
+    --rainbow-dark: #0074d3;
+    --rainbow-darker: #0051ab;
+    --rainbow-next: #dc63ba;
+  }
+
+  25% {
+    --rainbow-1: #0096fd;
+    --rainbow-light: #5bbcff;
+    --rainbow-lighter: #8ee4ff;
+    --rainbow-dark: #0071d4;
+    --rainbow-darker: #004fab;
+    --rainbow-next: #e160b3;
+  }
+
+  26.25% {
+    --rainbow-1: #0093fd;
+    --rainbow-light: #5bb9ff;
+    --rainbow-lighter: #8ee1ff;
+    --rainbow-dark: #006fd3;
+    --rainbow-darker: #004dab;
+    --rainbow-next: #e65eab;
+  }
+
+  27.5% {
+    --rainbow-1: #2e90fc;
+    --rainbow-light: #69b6ff;
+    --rainbow-lighter: #99deff;
+    --rainbow-dark: #006cd2;
+    --rainbow-darker: #004baa;
+    --rainbow-next: #e95ca2;
+  }
+
+  28.75% {
+    --rainbow-1: #4d8dfa;
+    --rainbow-light: #7eb3ff;
+    --rainbow-lighter: #abdbff;
+    --rainbow-dark: #0069d1;
+    --rainbow-darker: #0048a9;
+    --rainbow-next: #ed5a9a;
+  }
+
+  30% {
+    --rainbow-1: #638af8;
+    --rainbow-light: #8fb0ff;
+    --rainbow-lighter: #bbd7ff;
+    --rainbow-dark: #3066cf;
+    --rainbow-darker: #0045a7;
+    --rainbow-next: #ef5992;
+  }
+
+  31.25% {
+    --rainbow-1: #7587f5;
+    --rainbow-light: #9fadff;
+    --rainbow-lighter: #cad4ff;
+    --rainbow-dark: #4963cc;
+    --rainbow-darker: #0941a4;
+    --rainbow-next: #f15989;
+  }
+
+  32.5% {
+    --rainbow-1: #8583f1;
+    --rainbow-light: #aea9ff;
+    --rainbow-lighter: #d8d1ff;
+    --rainbow-dark: #5b5fc8;
+    --rainbow-darker: #2e3ea1;
+    --rainbow-next: #f25981;
+  }
+
+  33.75% {
+    --rainbow-1: #9280ed;
+    --rainbow-light: #bca6ff;
+    --rainbow-lighter: #e6cdff;
+    --rainbow-dark: #6a5cc4;
+    --rainbow-darker: #413a9d;
+    --rainbow-next: #f25a79;
+  }
+
+  35% {
+    --rainbow-1: #9f7ce9;
+    --rainbow-light: #c8a2ff;
+    --rainbow-lighter: #f2c9ff;
+    --rainbow-dark: #7758c0;
+    --rainbow-darker: #503598;
+    --rainbow-next: #f25c71;
+  }
+
+  36.25% {
+    --rainbow-1: #aa78e3;
+    --rainbow-light: #d39eff;
+    --rainbow-lighter: #fec6ff;
+    --rainbow-dark: #8354bb;
+    --rainbow-darker: #5c3193;
+    --rainbow-next: #f15e69;
+  }
+
+  37.5% {
+    --rainbow-1: #b574dd;
+    --rainbow-light: #de9bff;
+    --rainbow-lighter: #ffc2ff;
+    --rainbow-dark: #8d50b5;
+    --rainbow-darker: #662c8e;
+    --rainbow-next: #ef6061;
+  }
+
+  38.75% {
+    --rainbow-1: #be71d7;
+    --rainbow-light: #e897ff;
+    --rainbow-lighter: #ffbfff;
+    --rainbow-dark: #964baf;
+    --rainbow-darker: #6f2688;
+    --rainbow-next: #ed635a;
+  }
+
+  40% {
+    --rainbow-1: #c76dd1;
+    --rainbow-light: #f194fa;
+    --rainbow-lighter: #ffbcff;
+    --rainbow-dark: #9e47a9;
+    --rainbow-darker: #772082;
+    --rainbow-next: #eb6552;
+  }
+
+  41.25% {
+    --rainbow-1: #cf69c9;
+    --rainbow-light: #f991f2;
+    --rainbow-lighter: #ffb9ff;
+    --rainbow-dark: #a643a2;
+    --rainbow-darker: #7e197c;
+    --rainbow-next: #e8694b;
+  }
+
+  42.5% {
+    --rainbow-1: #d566c2;
+    --rainbow-light: #ff8deb;
+    --rainbow-lighter: #ffb6ff;
+    --rainbow-dark: #ac3f9b;
+    --rainbow-darker: #841075;
+    --rainbow-next: #e46c44;
+  }
+
+  43.75% {
+    --rainbow-1: #dc63ba;
+    --rainbow-light: #ff8be3;
+    --rainbow-lighter: #ffb3ff;
+    --rainbow-dark: #b23b94;
+    --rainbow-darker: #89046f;
+    --rainbow-next: #e06f3d;
+  }
+
+  45% {
+    --rainbow-1: #e160b3;
+    --rainbow-light: #ff88db;
+    --rainbow-lighter: #ffb1ff;
+    --rainbow-dark: #b7378c;
+    --rainbow-darker: #8d0068;
+    --rainbow-next: #db7336;
+  }
+
+  46.25% {
+    --rainbow-1: #e65eab;
+    --rainbow-light: #ff86d2;
+    --rainbow-lighter: #ffaffb;
+    --rainbow-dark: #bb3485;
+    --rainbow-darker: #910060;
+    --rainbow-next: #d77630;
+  }
+
+  47.5% {
+    --rainbow-1: #e95ca2;
+    --rainbow-light: #ff84ca;
+    --rainbow-lighter: #ffadf2;
+    --rainbow-dark: #be317d;
+    --rainbow-darker: #940059;
+    --rainbow-next: #d17a2a;
+  }
+
+  48.75% {
+    --rainbow-1: #ed5a9a;
+    --rainbow-light: #ff83c1;
+    --rainbow-lighter: #fface9;
+    --rainbow-dark: #c12f75;
+    --rainbow-darker: #970052;
+    --rainbow-next: #cc7d24;
+  }
+
+  50% {
+    --rainbow-1: #ef5992;
+    --rainbow-light: #ff82b8;
+    --rainbow-lighter: #ffabe0;
+    --rainbow-dark: #c32d6d;
+    --rainbow-darker: #98004b;
+    --rainbow-next: #c6811e;
+  }
+
+  51.25% {
+    --rainbow-1: #f15989;
+    --rainbow-light: #ff82af;
+    --rainbow-lighter: #ffabd7;
+    --rainbow-dark: #c52d65;
+    --rainbow-darker: #9a0043;
+    --rainbow-next: #bf8418;
+  }
+
+  52.5% {
+    --rainbow-1: #f25981;
+    --rainbow-light: #ff82a7;
+    --rainbow-lighter: #ffabce;
+    --rainbow-dark: #c52e5e;
+    --rainbow-darker: #9a003c;
+    --rainbow-next: #b98713;
+  }
+
+  53.75% {
+    --rainbow-1: #f25a79;
+    --rainbow-light: #ff839e;
+    --rainbow-lighter: #ffacc5;
+    --rainbow-dark: #c62f56;
+    --rainbow-darker: #9a0035;
+    --rainbow-next: #b28a0f;
+  }
+
+  55% {
+    --rainbow-1: #f25c71;
+    --rainbow-light: #ff8496;
+    --rainbow-lighter: #ffadbc;
+    --rainbow-dark: #c5314e;
+    --rainbow-darker: #99002e;
+    --rainbow-next: #ab8d0c;
+  }
+
+  56.25% {
+    --rainbow-1: #f15e69;
+    --rainbow-light: #ff868d;
+    --rainbow-lighter: #ffaeb4;
+    --rainbow-dark: #c43447;
+    --rainbow-darker: #980027;
+    --rainbow-next: #a3900b;
+  }
+
+  57.5% {
+    --rainbow-1: #ef6061;
+    --rainbow-light: #ff8885;
+    --rainbow-lighter: #ffb0ab;
+    --rainbow-dark: #c3373f;
+    --rainbow-darker: #970020;
+    --rainbow-next: #9c920d;
+  }
+
+  58.75% {
+    --rainbow-1: #ed635a;
+    --rainbow-light: #ff8a7d;
+    --rainbow-lighter: #ffb2a3;
+    --rainbow-dark: #c13b38;
+    --rainbow-darker: #940619;
+    --rainbow-next: #949510;
+  }
+
+  60% {
+    --rainbow-1: #eb6552;
+    --rainbow-light: #ff8d76;
+    --rainbow-lighter: #ffb59b;
+    --rainbow-dark: #be3e31;
+    --rainbow-darker: #921111;
+    --rainbow-next: #8b9715;
+  }
+
+  61.25% {
+    --rainbow-1: #e8694b;
+    --rainbow-light: #ff8f6e;
+    --rainbow-lighter: #ffb794;
+    --rainbow-dark: #bb4229;
+    --rainbow-darker: #8f1908;
+    --rainbow-next: #83991b;
+  }
+
+  62.5% {
+    --rainbow-1: #e46c44;
+    --rainbow-light: #ff9367;
+    --rainbow-lighter: #ffba8c;
+    --rainbow-dark: #b74622;
+    --rainbow-darker: #8c1f00;
+    --rainbow-next: #7a9b21;
+  }
+
+  63.75% {
+    --rainbow-1: #e06f3d;
+    --rainbow-light: #ff9661;
+    --rainbow-lighter: #ffbd86;
+    --rainbow-dark: #b44a1a;
+    --rainbow-darker: #882500;
+    --rainbow-next: #719d27;
+  }
+
+  65% {
+    --rainbow-1: #db7336;
+    --rainbow-light: #ff995a;
+    --rainbow-lighter: #ffc17f;
+    --rainbow-dark: #af4e11;
+    --rainbow-darker: #842a00;
+    --rainbow-next: #679e2e;
+  }
+
+  66.25% {
+    --rainbow-1: #d77630;
+    --rainbow-light: #ff9c54;
+    --rainbow-lighter: #ffc47a;
+    --rainbow-dark: #ab5206;
+    --rainbow-darker: #802f00;
+    --rainbow-next: #5da035;
+  }
+
+  67.5% {
+    --rainbow-1: #d17a2a;
+    --rainbow-light: #fea04f;
+    --rainbow-lighter: #ffc774;
+    --rainbow-dark: #a55600;
+    --rainbow-darker: #7b3300;
+    --rainbow-next: #51a13c;
+  }
+
+  68.75% {
+    --rainbow-1: #cc7d24;
+    --rainbow-light: #f8a34a;
+    --rainbow-lighter: #ffca70;
+    --rainbow-dark: #a05900;
+    --rainbow-darker: #773700;
+    --rainbow-next: #44a244;
+  }
+
+  70% {
+    --rainbow-1: #c6811e;
+    --rainbow-light: #f2a646;
+    --rainbow-lighter: #ffce6c;
+    --rainbow-dark: #9b5d00;
+    --rainbow-darker: #713b00;
+    --rainbow-next: #34a44b;
+  }
+
+  71.25% {
+    --rainbow-1: #bf8418;
+    --rainbow-light: #ebaa42;
+    --rainbow-lighter: #ffd168;
+    --rainbow-dark: #956000;
+    --rainbow-darker: #6c3e00;
+    --rainbow-next: #1ba553;
+  }
+
+  72.5% {
+    --rainbow-1: #b98713;
+    --rainbow-light: #e4ad3f;
+    --rainbow-lighter: #ffd466;
+    --rainbow-dark: #8e6300;
+    --rainbow-darker: #674100;
+    --rainbow-next: #00a65b;
+  }
+
+  73.75% {
+    --rainbow-1: #b28a0f;
+    --rainbow-light: #ddb03d;
+    --rainbow-lighter: #ffd764;
+    --rainbow-dark: #886600;
+    --rainbow-darker: #614400;
+    --rainbow-next: #00a663;
+  }
+
+  75% {
+    --rainbow-1: #ab8d0c;
+    --rainbow-light: #d5b33c;
+    --rainbow-lighter: #ffda63;
+    --rainbow-dark: #816900;
+    --rainbow-darker: #5b4700;
+    --rainbow-next: #00a76c;
+  }
+
+  76.25% {
+    --rainbow-1: #a3900b;
+    --rainbow-light: #cdb63c;
+    --rainbow-lighter: #f8dd63;
+    --rainbow-dark: #7a6b00;
+    --rainbow-darker: #554900;
+    --rainbow-next: #00a874;
+  }
+
+  77.5% {
+    --rainbow-1: #9c920d;
+    --rainbow-light: #c5b83d;
+    --rainbow-lighter: #f0e064;
+    --rainbow-dark: #736e00;
+    --rainbow-darker: #4e4b00;
+    --rainbow-next: #00a87d;
+  }
+
+  78.75% {
+    --rainbow-1: #949510;
+    --rainbow-light: #bdbb3e;
+    --rainbow-lighter: #e7e366;
+    --rainbow-dark: #6c7000;
+    --rainbow-darker: #474d00;
+    --rainbow-next: #00a985;
+  }
+
+  80% {
+    --rainbow-1: #8b9715;
+    --rainbow-light: #b4bd41;
+    --rainbow-lighter: #dee668;
+    --rainbow-dark: #647200;
+    --rainbow-darker: #404f00;
+    --rainbow-next: #00a98e;
+  }
+
+  81.25% {
+    --rainbow-1: #83991b;
+    --rainbow-light: #abc045;
+    --rainbow-lighter: #d4e86c;
+    --rainbow-dark: #5c7400;
+    --rainbow-darker: #385100;
+    --rainbow-next: #00a996;
+  }
+
+  82.5% {
+    --rainbow-1: #7a9b21;
+    --rainbow-light: #a2c249;
+    --rainbow-lighter: #cbea70;
+    --rainbow-dark: #537600;
+    --rainbow-darker: #2f5200;
+    --rainbow-next: #00a99f;
+  }
+
+  83.75% {
+    --rainbow-1: #719d27;
+    --rainbow-light: #98c44e;
+    --rainbow-lighter: #c1ec75;
+    --rainbow-dark: #4a7700;
+    --rainbow-darker: #255300;
+    --rainbow-next: #00a9a7;
+  }
+
+  85% {
+    --rainbow-1: #679e2e;
+    --rainbow-light: #8ec654;
+    --rainbow-lighter: #b7ee7a;
+    --rainbow-dark: #407900;
+    --rainbow-darker: #185500;
+    --rainbow-next: #00a9b0;
+  }
+
+  86.25% {
+    --rainbow-1: #5da035;
+    --rainbow-light: #84c75a;
+    --rainbow-lighter: #acf080;
+    --rainbow-dark: #357a0a;
+    --rainbow-darker: #015600;
+    --rainbow-next: #00a9b8;
+  }
+
+  87.5% {
+    --rainbow-1: #51a13c;
+    --rainbow-light: #79c961;
+    --rainbow-lighter: #a1f287;
+    --rainbow-dark: #277b16;
+    --rainbow-darker: #005700;
+    --rainbow-next: #00a9c0;
+  }
+
+  88.75% {
+    --rainbow-1: #44a244;
+    --rainbow-light: #6dca68;
+    --rainbow-lighter: #96f48e;
+    --rainbow-dark: #117c1f;
+    --rainbow-darker: #005700;
+    --rainbow-next: #00a8c7;
+  }
+
+  90% {
+    --rainbow-1: #34a44b;
+    --rainbow-light: #60cc70;
+    --rainbow-lighter: #89f595;
+    --rainbow-dark: #007d28;
+    --rainbow-darker: #005801;
+    --rainbow-next: #00a8cf;
+  }
+
+  91.25% {
+    --rainbow-1: #1ba553;
+    --rainbow-light: #51cd77;
+    --rainbow-lighter: #7cf69d;
+    --rainbow-dark: #007e30;
+    --rainbow-darker: #00590d;
+    --rainbow-next: #00a7d5;
+  }
+
+  92.5% {
+    --rainbow-1: #00a65b;
+    --rainbow-light: #48ce80;
+    --rainbow-lighter: #75f7a6;
+    --rainbow-dark: #007f38;
+    --rainbow-darker: #005917;
+    --rainbow-next: #00a6dc;
+  }
+
+  93.75% {
+    --rainbow-1: #00a663;
+    --rainbow-light: #48cf88;
+    --rainbow-lighter: #75f8ae;
+    --rainbow-dark: #008040;
+    --rainbow-darker: #005a20;
+    --rainbow-next: #00a6e2;
+  }
+
+  95% {
+    --rainbow-1: #00a76c;
+    --rainbow-light: #49cf91;
+    --rainbow-lighter: #76f9b7;
+    --rainbow-dark: #008049;
+    --rainbow-darker: #005b28;
+    --rainbow-next: #00a4e7;
+  }
+
+  96.25% {
+    --rainbow-1: #00a874;
+    --rainbow-light: #49d099;
+    --rainbow-lighter: #76f9c0;
+    --rainbow-dark: #008151;
+    --rainbow-darker: #005c30;
+    --rainbow-next: #00a3ec;
+  }
+
+  97.5% {
+    --rainbow-1: #00a87d;
+    --rainbow-light: #49d0a2;
+    --rainbow-lighter: #77fac9;
+    --rainbow-dark: #008159;
+    --rainbow-darker: #005c37;
+    --rainbow-next: #00a2f1;
+  }
+
+  98.75% {
+    --rainbow-1: #00a985;
+    --rainbow-light: #4ad1ab;
+    --rainbow-lighter: #77fad3;
+    --rainbow-dark: #008261;
+    --rainbow-darker: #005d3f;
+    --rainbow-next: #00a0f4;
+  }
+
+  to {
+    --rainbow-1: #00a98e;
+    --rainbow-light: #4ad1b4;
+    --rainbow-lighter: #78fadc;
+    --rainbow-dark: #008269;
+    --rainbow-darker: #005d47;
+    --rainbow-next: #009ff7;
+  }
+}
+
+:root {
+  --rainbow-1: #00a98e;
+  --rainbow-light: #4ad1b4;
+  --rainbow-lighter: #78fadc;
+  --rainbow-dark: #008269;
+  --rainbow-darker: #005d47;
+  --rainbow-next: #009ff7;
+  animation: rainbow 40s linear infinite;
+}

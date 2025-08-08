@@ -12,7 +12,7 @@ export const Code = {
   javascript:
 \`// This is a simple JavaScript code block
 function greet(name) {
-  return \`Hello, \${name}!\`;
+  return \\\`Hello, \${name}!\\\`;
 }
 console.log(greet('World'));\`,
 }

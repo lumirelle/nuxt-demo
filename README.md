@@ -21,7 +21,7 @@ CSS Framework:
 Utilities:
 
 - [VueUse](https://vueuse.org/zh/)
-- [Highlight.js](https://highlightjs.org/)
+- [Highlight.js](https://highlightjs.org/) or [Nuxt Shiki](https://github.com/pi0/nuxt-shiki)
 - [Bignumber.js](https://mikemcl.github.io/bignumber.js/)
 - [Day.js](https://day.js.org/)
 - TODO: Below

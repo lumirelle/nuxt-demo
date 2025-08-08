@@ -50,6 +50,6 @@ function Render() {
 
 <template>
   <!-- This style is combined with `github.min.css` & `github-dark.min.css` -->
-  <link rel="stylesheet" href="/styles/github.min.css">
+  <link rel="stylesheet" href="/styles/hightlight-js/github.min.css">
   <Render />
 </template>

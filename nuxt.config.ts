@@ -1,5 +1,3 @@
-import { inject } from 'vue'
-
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
@@ -31,10 +29,11 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
     // TODO: SEO
     '@nuxtjs/seo',
-    // TODO: Pinia
     '@pinia/nuxt',
     // UnoCSS
     '@unocss/nuxt',
+    // Shiki
+    'nuxt-shiki',
 
     // TODO: Pending triage below
     '@vueuse/nuxt',
@@ -115,6 +114,29 @@ export default defineNuxtConfig({
     // NOTE: I18n will detect the browser language by default
     defaultLocale: 'en',
     strategy: 'prefix_except_default',
+  },
+
+  shiki: {
+    bundledThemes: [
+      'vitesse-light',
+      'vitesse-dark',
+    ],
+    defaultTheme: {
+      light: 'vitesse-light',
+      dark: 'vitesse-dark',
+    },
+    bundledLangs: [
+      'vue',
+      'html',
+      'xml',
+      'js',
+      'ts',
+      'css',
+      'scss',
+      'json',
+      'yaml',
+    ],
+    // Do not set transformers here, it will not take effects.
   },
 
   vite: {
