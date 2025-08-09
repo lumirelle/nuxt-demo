@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import * as ECharts from 'echarts/core'
+import { Code } from '#shared/constants/e-charts/chart-full.code'
 
-import { Code } from '~~/shared/constants/e-charts/chart-full.code'
+import * as ECharts from 'echarts/core'
 import usaJson from '~/assets/data/map/USA.json'
 
 const { t } = useI18n({
@@ -149,7 +149,7 @@ const option: ECOption = {
       <H level="2">
         app/pages/e-charts/chart-full.vue
       </H>
-      <ShikiJs :code="Code.page" />
+      <ShikiJs :code="Code.page" lang="vue" />
     </section>
     <section>
       <H level="2">

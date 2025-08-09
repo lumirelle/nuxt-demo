@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {Code} from '#shared/constants/nuxt-scripts/global.code'
+import { Code } from '#shared/constants/nuxt-scripts/global.code'
 
 function handleClick() {
   // Using JSConfetti, which is loaded globally in `nuxt.config.ts`
@@ -48,7 +48,7 @@ zh-TW:
       <p>{{ t('p3') }}</p>
     </section>
     <section>
-      <HighlightJs :code="Code.global" />
+      <ShikiJs :code="Code.global" lang="vue" />
     </section>
     <section>
       <ElButton @click="handleClick">

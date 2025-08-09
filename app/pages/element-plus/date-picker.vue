@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-
 import { Code } from '#shared/constants/element-plus/date-picker.code'
+
+import { ref } from 'vue'
 
 const date = ref<Date | null>(null)
 
@@ -23,7 +23,7 @@ function handleChange(date: Date | null) {
       <H level="2">
         ElDatePicker
       </H>
-      <HighlightJs :code="Code.elDatePicker" />
+      <ShikiJs :code="Code.elDatePicker" lang="vue" />
     </section>
     <section>
       <p><ElDatePicker v-model="date" type="datetime" @change="handleChange" /></p>

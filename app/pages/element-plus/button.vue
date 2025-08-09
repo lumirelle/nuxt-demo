@@ -15,7 +15,7 @@ const { t } = useI18n({
       <H level="2">
         ElButton
       </H>
-      <HighlightJs :code="Code.elButton" />
+      <ShikiJs :code="Code.elButton" lang="vue" />
     </section>
     <section>
       <p><ElButton>{{ t('button') }}</ElButton></p>
@@ -24,7 +24,7 @@ const { t } = useI18n({
       <H level="2">
         LazyElButton
       </H>
-      <HighlightJs :code="Code.lazyElButton" />
+      <ShikiJs :code="Code.lazyElButton" lang="vue" />
     </section>
     <section>
       <p><LazyElButton>{{ t('button') }}</LazyElButton></p>

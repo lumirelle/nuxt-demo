@@ -76,7 +76,7 @@ zh-TW:
       </I18nT>
     </section>
     <section>
-      <HighlightJs :code="Code.demand" />
+      <ShikiJs :code="Code.demand" lang="vue" />
     </section>
     <section>
       <p mb-4>

@@ -24,13 +24,13 @@ const num4 = new BigNumber('123412421.234324', 5) // '607236.557696'
       <p v-for="i in 2" :key="i">
         {{ t(`utils.p${i}`) }}
       </p>
-      <HighlightJs :code="Code.utils" />
+      <ShikiJs :code="Code.utils" lang="ts" />
     </section>
     <section>
       <H level="2">
         app/pages/bignumber-js/basic-usage.vue
       </H>
-      <HighlightJs :code="Code.page" />
+      <ShikiJs :code="Code.page" lang="vue" />
     </section>
     <section>
       <H level="2">

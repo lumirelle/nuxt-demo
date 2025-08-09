@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { useI18n } from 'vue-i18n'
 import { Code } from '#shared/constants/vue-i18n/basic-usage.code'
+import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n({
   useScope: 'local',
@@ -16,19 +16,19 @@ const { t } = useI18n({
       <H level="2">
         .vscode/settings.json
       </H>
-      <HighlightJs :code="Code.settings" />
+      <ShikiJs :code="Code.settings" lang="json" />
     </section>
     <section>
       <H level="2">
         app/components/LangSwitcher.vue
       </H>
-      <HighlightJs :code="Code.switcher" />
+      <ShikiJs :code="Code.switcher" lang="vue" />
     </section>
     <section>
       <H level="2">
         app/pages/vue-i18n/basic-usage.vue
       </H>
-      <HighlightJs :code="Code.page" />
+      <ShikiJs :code="Code.page" lang="vue" />
     </section>
     <section>
       <H level="2">

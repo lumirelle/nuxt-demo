@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { Code } from '~~/shared/constants/e-charts/basic-usage.code'
+import { Code } from '#shared/constants/e-charts/basic-usage.code'
 
 const { t } = useI18n({
   useScope: 'local',
@@ -38,7 +38,7 @@ const option = ref<ECOption>({
       <H level="2">
         app/pages/e-charts/basic-usage.vue
       </H>
-      <ShikiJs :code="Code.page" />
+      <ShikiJs :code="Code.page" lang="vue" />
     </section>
     <section>
       <H level="2">

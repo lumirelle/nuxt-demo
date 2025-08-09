@@ -15,13 +15,13 @@ const { t } = useI18n({
       <H level="2">
         unocss.config.ts
       </H>
-      <HighlightJs :code="Code.config" />
+      <ShikiJs :code="Code.config" lang="ts" />
     </section>
     <section>
       <H level="2">
         app/pages/unocss/basic-usage.vue
       </H>
-      <HighlightJs :code="Code.page" />
+      <ShikiJs :code="Code.page" lang="vue" />
     </section>
     <section>
       <H level="2">

@@ -32,7 +32,7 @@ useEventListener('mousemove', () => {
       <H level="2">
         app/pages/vue-use/basic-usage.vue
       </H>
-      <HighlightJs :code="Code.page" />
+      <ShikiJs :code="Code.page" lang="vue" />
     </section>
     <section>
       <H level="2">

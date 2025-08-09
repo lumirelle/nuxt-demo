@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { useI18n } from 'vue-i18n'
 import { Code } from '#shared/constants/pinia/initializing.code'
+import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n({
   useScope: 'local',
@@ -33,19 +33,19 @@ const initializingStore = useInitializingStore()
       <H level="2">
         app/stores/initializing.ts
       </H>
-      <HighlightJs :code="Code.store" />
+      <ShikiJs :code="Code.store" lang="ts" />
     </section>
     <section>
       <H level="2">
         app/app.vue
       </H>
-      <HighlightJs :code="Code.app" />
+      <ShikiJs :code="Code.app" lang="vue" />
     </section>
     <section>
       <H level="2">
         app/pages/pinia/initializing.vue
       </H>
-      <HighlightJs :code="Code.page" />
+      <ShikiJs :code="Code.page" lang="vue" />
     </section>
     <section>
       <H level="2">

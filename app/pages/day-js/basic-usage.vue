@@ -15,13 +15,13 @@ const { t } = useI18n({
       <H level="2">
         app/plugins/dayjs.ts
       </H>
-      <HighlightJs :code="Code.plugins" />
+      <ShikiJs :code="Code.plugins" lang="ts" />
     </section>
     <section>
       <H level="2">
         app/pages/day-js/basic-usage.vue
       </H>
-      <HighlightJs :code="Code.page" />
+      <ShikiJs :code="Code.page" lang="vue" />
     </section>
     <section>
       <H level="2">

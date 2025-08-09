@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { useI18n } from 'vue-i18n'
 import { Code } from '#shared/constants/pinia/basic-usage.code'
+import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n({
   useScope: 'local',
@@ -18,13 +18,13 @@ const store = useBasicStore()
       <H level="2">
         app/stores/basic.ts
       </H>
-      <HighlightJs :code="Code.store" />
+      <ShikiJs :code="Code.store" lang="ts" />
     </section>
     <section>
       <H level="2">
         app/pages/pinia/basic-usage.vue
       </H>
-      <HighlightJs :code="Code.page" />
+      <ShikiJs :code="Code.page" lang="vue" />
     </section>
     <section>
       <H level="2">

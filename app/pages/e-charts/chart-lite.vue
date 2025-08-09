@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import type { ECSSRClientEventParams } from 'echarts/ssr/client/types/index.js'
-import { Code } from '~~/shared/constants/e-charts/chart-lite.code'
+import { Code } from '#shared/constants/e-charts/chart-lite.code'
 
 const { t } = useI18n({
   useScope: 'local',
@@ -68,7 +68,7 @@ function onClick(params: ECSSRClientEventParams) {
       <H level="2">
         app/pages/e-charts/chart-lite.vue
       </H>
-      <ShikiJs :code="Code.page" />
+      <ShikiJs :code="Code.page" lang="vue" />
     </section>
     <section>
       <H level="2">

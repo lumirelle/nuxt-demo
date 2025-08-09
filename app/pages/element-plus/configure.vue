@@ -17,7 +17,7 @@ const { t } = useI18n({
       </p>
     </section>
     <section>
-      <HighlightJs :code="Code.nuxtConfig" />
+      <ShikiJs :code="Code.nuxtConfig" lang="ts" />
     </section>
     <section>
       <p>
