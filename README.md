@@ -10,34 +10,24 @@ Basic Framework:
 - [VueRouter](https://router.vuejs.org/zh/introduction.html)
 - [VueI18n](https://vue-i18n.intlify.dev/zh/guide/introduction.html) (Nuxt Module: [@nuxtjs/i18n](https://i18n.nuxtjs.org/docs/getting-started))
 
-UI Library:
+UI Library & CSS Framework:
 
 - [Element Plus](https://element-plus.org/zh-CN/guide/design.html) (Nuxt Module: [@element-plus/nuxt](https://nuxt.com/modules/element-plus))
-
-CSS Framework:
-
 - [UnoCSS](https://unocss.dev/guide/) (Nuxt Module: [@unocss/nuxt](https://nuxt.com/modules/unocss))
 
 Utilities:
 
-- Vue Use:
-  - [VueUse](https://vueuse.org/zh/) (Nuxt Module: [@vueuse/nuxt](https://nuxt.com/modules/vueuse))
+- [VueUse](https://vueuse.org/zh/) (Nuxt Module: [@vueuse/nuxt](https://nuxt.com/modules/vueuse))
 - Code highlight:
   - [Highlight.js](https://highlightjs.org/) (Vue Plugin: [highlightjs-vue-plugin](https://github.com/lumirelle/highlightjs-vue-plugin))
   - [Shiki](https://shiki.style/guide/) (Nuxt Module: [nuxt-shiki](https://github.com/pi0/nuxt-shiki))
-- Big number:
-  - [Bignumber.js](https://mikemcl.github.io/bignumber.js/)
-- Date:
-  - [Day.js](https://day.js.org/)
+- [Bignumber.js](https://mikemcl.github.io/bignumber.js/)
+- [Day.js](https://day.js.org/)
 - TODO: Below
-- Data Chart:
-  - [ECharts](https://echarts.apache.org/zh/index.html)
-- Swiper:
-  - [Swiper.js](https://swiperjs.com/get-started)
-- QRCode:
-  - [Nuxt QRCode](https://qrcode.s94.dev/)
-- GTag:
-  - [Nuxt GTag](https://nuxt.com/modules/gtag)
+- [ECharts](https://echarts.apache.org/zh/index.html)
+- [Swiper.js](https://swiperjs.com/get-started)
+- [Nuxt QRCode](https://qrcode.s94.dev/)
+- [Nuxt GTag](https://nuxt.com/modules/gtag)
 - TODO: MD5 & SHA256 (Finding crypto package)
 - TODO: LRU Cache
 - TODO: XLSX
@@ -79,7 +69,7 @@ Nuxt 4 provides a lot of features than Nuxt 2, including:
 
 Reading the getting started guide [here](https://nuxt.com/docs/4.x/getting-started/introduction).
 
-## Hydration Errors
+### Hydration Errors
 
 Something you must know about hydration errors if you are using SSR rendering mode of Nuxt 4: **Hydration errors**.
 
@@ -87,7 +77,7 @@ Hydration errors are caused by the mismatch between the server-rendered HTML and
 
 There are some common cases of hydration errors below.
 
-### Invalid HTML Nesting Structure
+#### Invalid HTML Nesting Structure
 
 The most cases are invalid HTML nesting structure, such as you put a `div` inside a `p` tag:
 
@@ -120,7 +110,7 @@ Here are some basic rules:
 
 For more details, you can find the specific element's **Technical Summary** from [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements).
 
-### Different Data Used During Render
+#### Different Data Used During Render
 
 Another common case is using different data during render.
 
@@ -181,11 +171,136 @@ Pinia & Vue Router & Vue I18n.
 
 It's pity that type safety is not supported for i18n custom blocks in SFC currently: [Official Annotation](https://vue-i18n.intlify.dev/guide/advanced/typescript.html#type-safe-resources-in-usei18n).
 
-## Element Plus
+This demo uses the official Nuxt module provided by Nuxt Team, which provides plenty of apis & components for developers to maniplate route jumping with locale, locale changing, cookie based locale, and other aspects.
+
+This demo uses `<i18n>` block in Vue SFC to store **component level** i18n text, use global locale files (`i18n/*.yaml`) to store **public** i18n text.
+
+In my opinion, put **component level** i18n text directly into the SFC where they will be used is much better than put them into the folders far away, even though these folders are "named modules".
+
+#### Why I prefer to put component level i18n text into SFC directly?
+
+Just imagine that, when you receive a request to update some i18n text, you have to figure out where the old text is used, and even perform some compatibility tasks.
+
+The old text under module1:
+
+_i18n/module1/en.json_
+
+```json
+{
+  "old-text-1": "This is an old sentence."
+}
+```
+
+A page under **module1** who is using the old text:
+
+_app/pages/module1/page1.vue_
+
+```html
+<script lang="ts" setup>
+  const { t } = useI18n()
+</script>
+
+<template>
+  <div>{{ t('module1.old-text-1') }}</div>
+</template>
+```
+
+Another page under **module2** who is using the old text of **module1** **by accident**:
+
+_app/pages/module2/page2.vue_
+
+```html
+<script lang="ts" setup>
+  const { t } = useI18n()
+</script>
+
+<template>
+  <div>{{ t('module1.old-text-1') }}</div>
+</template>
+```
+
+Now you should reserve the old text or move it from module1 to module2, then add new text:
+
+Reserve the old text:
+
+_i18n/module1/en.json_
+
+```json
+{
+  "old-text-1": "This is an old sentence.",
+  "new-text-1": "This is a new sentence."
+}
+```
+
+_app/pages/module1/page1.vue_
+
+```html
+<script lang="ts" setup>
+  const { t } = useI18n()
+</script>
+
+<template>
+  <div>{{ t('module1.new-text-1') }}</div>
+</template>
+```
+
+Move it from module1 to module2
+
+_i18n/module1/en.json_
+
+```json
+{
+  "new-text-1": "This is a new sentence."
+}
+```
+
+_i18n/module2/en.json_
+
+```json
+{
+  "old-text-1": "This is an old sentence."
+}
+```
+
+_app/pages/module1/page1.vue_
+
+```html
+<script lang="ts" setup>
+  const { t } = useI18n()
+</script>
+
+<template>
+  <div>{{ t('module1.new-text-1') }}</div>
+</template>
+```
+
+_app/pages/module2/page2.vue_
+
+```html
+<script lang="ts" setup>
+  const { t } = useI18n()
+</script>
+
+<template>
+  <div>{{ t('module2.old-text-1') }}</div>
+</template>
+```
+
+They are both too troublesome.
+
+So the best practice is "Do not put the **component level** i18n text into **public** place".
+
+That's it!
+
+## UI Library & CSS Framework
+
+### Element Plus
 
 It may not be the best, but it must not be a wrong choice.
 
-## UnoCSS
+This demo uses the official Nuxt module provided by Element Plus, which provides the ability to custom the color, locale and other aspects of UI components.
+
+### UnoCSS
 
 UnoCSS is a atomic CSS framework has great performance than pure Tailwind CSS.
 
@@ -193,7 +308,9 @@ Atomic CSS can reduce the size of the CSS file, especially for a large project.
 
 UnoCSS has presets compatible with Tailwind CSS & other CSS frameworks.
 
-This demo use `presetWind3` & `presetAttributify` presets, compatible with Tailwind CSS 3 & attributify atomic css classes.
+This demo use `presetWind3` & `presetAttributify` presets, compatible with Tailwind CSS 3 & attributify atomic css classes, and add some custom rules in order to use the css variables from Element Plus.
+
+See the detail config [here](uno.config.ts).
 
 Attributify let you write CSS classes like HTML attributes, which can avoid the mixing of semantic & non-semantic classes.
 
@@ -231,10 +348,32 @@ For example, `useClipboard` can help you copy text to clipboard, `useCookie` can
 
 So we don't need `clipboard` & `cookie-universal-nuxt` packages any more.
 
-### Highlight.js
+### Code Highlight
 
-Highlight.js is a syntax highlighter for code blocks.
+There are two common choice for highlighting codes in Nuxt: Highlight.js and Shiki.
+
+#### Highlight.js (Legacy)
+
+Highlight.js is a legacy syntax highlighter for code blocks.
 
 It supports many languages, and you can use it with Vue 3.
 
-This demo use [HighlightJsVuePlugin](https://github.com/highlightjs/vue-plugin) to highlight code blocks.
+This demo uses [Highlight Js Vue Plugin](https://github.com/lumirelle/highlightjs-vue-plugin) which provide a basic Vue component wrap of using Highlight.js, and implements a [component](app/components/HighlightJs.vue) with some default presets.
+
+#### Shiki (Recommended)
+
+Modern, intelligent, strong than Highlight.js, and a little bit complex than Highlight.js.
+
+This demo uses [Nuxt Shiki](https://github.com/pi0/nuxt-shiki) which provide a basic Vue component wrap of using Shiki, and implements a [component](app/components/ShikiJs.vue) with some default presets.
+
+### BigNumber.js
+
+Big number support, avoid precision issue while calculating price, and so on.
+
+This demo implements a [util](shared/utils/bignumber.ts) which contains some math operations between `BigNumber` or `number`.
+
+### Day.js
+
+Date maniplation, Element Plus dependents on it too.
+
+This demo implements a [plugin](app/plugins/dayjs.ts) in order to add Day.js to Nuxt App.
