@@ -6,29 +6,38 @@ Basic Framework:
 
 - [Nuxt 4](https://nuxt.com/docs/4.x/getting-started/introduction)
 - [Vue 3](https://vuejs.org/guide/introduction.html)
-- [Pinia](https://pinia.vuejs.org/zh/getting-started/)
+- [Pinia](https://pinia.vuejs.org/zh/getting-started/) (Nuxt Module: [@pinia/nuxt](https://nuxt.com/modules/pinia))
 - [VueRouter](https://router.vuejs.org/zh/introduction.html)
-- [VueI18n](https://vue-i18n.intlify.dev/zh/guide/introduction.html)
+- [VueI18n](https://vue-i18n.intlify.dev/zh/guide/introduction.html) (Nuxt Module: [@nuxtjs/i18n](https://i18n.nuxtjs.org/docs/getting-started))
 
 UI Library:
 
-- [Element Plus](https://element-plus.org/zh-CN/guide/design.html)
+- [Element Plus](https://element-plus.org/zh-CN/guide/design.html) (Nuxt Module: [@element-plus/nuxt](https://nuxt.com/modules/element-plus))
 
 CSS Framework:
 
-- [UnoCSS](https://unocss.dev/guide/)
+- [UnoCSS](https://unocss.dev/guide/) (Nuxt Module: [@unocss/nuxt](https://nuxt.com/modules/unocss))
 
 Utilities:
 
-- [VueUse](https://vueuse.org/zh/)
-- [Highlight.js](https://highlightjs.org/) or [Nuxt Shiki](https://github.com/pi0/nuxt-shiki)
-- [Bignumber.js](https://mikemcl.github.io/bignumber.js/)
-- [Day.js](https://day.js.org/)
+- Vue Use:
+  - [VueUse](https://vueuse.org/zh/) (Nuxt Module: [@vueuse/nuxt](https://nuxt.com/modules/vueuse))
+- Code highlight:
+  - [Highlight.js](https://highlightjs.org/) (Vue Plugin: [highlightjs-vue-plugin](https://github.com/lumirelle/highlightjs-vue-plugin))
+  - [Shiki](https://shiki.style/guide/) (Nuxt Module: [nuxt-shiki](https://github.com/pi0/nuxt-shiki))
+- Big number:
+  - [Bignumber.js](https://mikemcl.github.io/bignumber.js/)
+- Date:
+  - [Day.js](https://day.js.org/)
 - TODO: Below
-- [ECharts](https://echarts.apache.org/zh/index.html)
-- [Nuxt Swiper](https://nuxt.com/modules/swiper)
-- [Nuxt QRCode](https://nuxt.com/modules/qrcode)
-- [Nuxt GTag](https://nuxt.com/modules/gtag)
+- Data Chart:
+  - [ECharts](https://echarts.apache.org/zh/index.html)
+- Swiper:
+  - [Swiper.js](https://swiperjs.com/get-started)
+- QRCode:
+  - [Nuxt QRCode](https://qrcode.s94.dev/)
+- GTag:
+  - [Nuxt GTag](https://nuxt.com/modules/gtag)
 - TODO: MD5 & SHA256 (Finding crypto package)
 - TODO: LRU Cache
 - TODO: XLSX

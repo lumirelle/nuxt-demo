@@ -17,11 +17,11 @@ export default defineNuxtConfig({
   modules: [
     // Element Plus auto import & theme & variables override support
     '@element-plus/nuxt',
-    // ESLint devtools integration
+    // ESLint integration in Nuxt devtools
     '@nuxt/eslint',
-    // Third party scripts loading
+    // Third party scripts loading, better performance & stronger feature
     '@nuxt/scripts',
-    // Test utils
+    // Test utils, unit test & e2e test support
     '@nuxt/test-utils',
     // Color mode
     '@nuxtjs/color-mode',
@@ -29,20 +29,23 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
     // TODO: SEO
     '@nuxtjs/seo',
+    // Pinia
     '@pinia/nuxt',
     // UnoCSS
     '@unocss/nuxt',
-    // Shiki
+    // Vue Use
+    '@vueuse/nuxt',
+    // Shiki, code highlighting
     'nuxt-shiki',
+    // Typed route path, improve your DX
+    'nuxt-typed-router',
 
     // TODO: Pending triage below
-    '@vueuse/nuxt',
     'nuxt-echarts',
     'nuxt-gtag',
     'nuxt-qrcode',
     'nuxt-svgo',
     'nuxt-swiper',
-    'nuxt-typed-router',
   ],
 
   elementPlus: {
