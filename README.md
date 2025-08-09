@@ -23,8 +23,10 @@ Utilities:
   - [Shiki](https://shiki.style/guide/) (Nuxt Module: [nuxt-shiki](https://github.com/pi0/nuxt-shiki))
 - [Bignumber.js](https://mikemcl.github.io/bignumber.js/)
 - [Day.js](https://day.js.org/)
-- TODO: Below
 - [ECharts](https://echarts.apache.org/zh/index.html)
+
+TODO: Below
+
 - [Swiper.js](https://swiperjs.com/get-started)
 - [Nuxt QRCode](https://qrcode.s94.dev/)
 - [Nuxt GTag](https://nuxt.com/modules/gtag)
