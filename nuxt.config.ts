@@ -39,9 +39,10 @@ export default defineNuxtConfig({
     'nuxt-shiki',
     // Typed route path, improve your DX
     'nuxt-typed-router',
+    // ECharts components, themes, init options, ssr support and so on
+    'nuxt-echarts',
 
     // TODO: Pending triage below
-    'nuxt-echarts',
     'nuxt-gtag',
     'nuxt-qrcode',
     'nuxt-svgo',
@@ -140,6 +141,30 @@ export default defineNuxtConfig({
       'yaml',
     ],
     // Do not set transformers here, it will not take effects.
+  },
+
+  echarts: {
+    // Enable both canvas and svg renderer
+    renderer: ['canvas', 'svg'],
+    // Add charts you want below, which is used by `<VChart>`
+    charts: ['BarChart', 'LineChart', 'PieChart', 'MapChart'],
+    // Add components you want below, which is used by `<VChart>`
+    components: [
+      'DatasetComponent',
+      'GridComponent',
+      'TooltipComponent',
+      'ToolboxComponent',
+      'LegendComponent',
+      'GeoComponent',
+      'VisualMapComponent',
+    ],
+    // Add features you want below, which is used by `<VChart>`
+    features: ['LabelLayout', 'UniversalTransition'],
+  },
+
+  build: {
+    // echarts-liquidfill is not ESM friendly
+    transpile: ['echarts-liquidfill'],
   },
 
   vite: {

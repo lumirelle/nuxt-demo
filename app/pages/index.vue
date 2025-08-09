@@ -310,6 +310,55 @@ const { t } = useI18n({
       </section>
     </section>
 
+    <!-- ECharts -->
+    <section border-b="1px solid [var(--el-border-color)]">
+      <H level="2">
+        {{ t('e-charts.title') }}
+      </H>
+      <section>
+        <I18nT keypath="e-charts.more-info" tag="p">
+          <template #link>
+            <NuxtLinkLocale to="https://echarts.apache.org/handbook/en/get-started/" external target="_blank">
+              <span>ECharts</span>
+            </NuxtLinkLocale>
+          </template>
+        </I18nT>
+      </section>
+      <section>
+        <H level="3">
+          {{ t('e-charts.basic-usage.title') }}
+        </H>
+        <p>{{ t('e-charts.basic-usage.desc') }}</p>
+        <p>
+          <NuxtLinkLocale to="/e-charts/basic-usage">
+            <span>{{ t('e-charts.basic-usage.try') }}</span>
+          </NuxtLinkLocale>
+        </p>
+      </section>
+      <section>
+        <H level="3">
+          {{ t('e-charts.chart-lite.title') }}
+        </H>
+        <p>{{ t('e-charts.chart-lite.desc') }}</p>
+        <p>
+          <NuxtLinkLocale to="/e-charts/chart-lite">
+            <span>{{ t('e-charts.chart-lite.try') }}</span>
+          </NuxtLinkLocale>
+        </p>
+      </section>
+      <section>
+        <H level="3">
+          {{ t('e-charts.chart-full.title') }}
+        </H>
+        <p>{{ t('e-charts.chart-full.desc') }}</p>
+        <p>
+          <NuxtLinkLocale to="/e-charts/chart-full">
+            <span>{{ t('e-charts.chart-full.try') }}</span>
+          </NuxtLinkLocale>
+        </p>
+      </section>
+    </section>
+
     <!-- Nuxt Modules -->
     <section border-b="1px solid [var(--el-border-color)]">
       <H level="2">
@@ -428,6 +477,22 @@ en:
       desc: A demo of using Day.js for date manipulation.
       try: Try basic usage of Day.js
 
+  e-charts:
+    title: ECharts
+    more-info: See {link} documentation for more information.
+    basic-usage:
+      title: Basic Usage (VChart, Client Rendering)
+      desc: A demo of using VChart for data visualization.
+      try: Try basic usage of VChart
+    chart-lite:
+      title: VChartLite, Server-Side Rendering, Simple Interactive
+      desc:  A demo of using VChartLite for data visualization.
+      try: Try basic usage of VChartLite
+    chart-full:
+      title: VChartFull, Server-Side Rendering, Full Interactive
+      desc:  A demo of using VChartFull for data visualization.
+      try: Try basic usage of VChartFull
+
   nuxt-modules:
     title: Nuxt Modules
     nuxt-scripts:
@@ -522,6 +587,22 @@ zh-CN:
       desc: 使用 Day.js 进行日期处理的演示。
       try: 尝试 Day.js 的基本使用
 
+  e-charts:
+    title: ECharts
+    more-info: 查看 {link} 文档了解更多信息。
+    basic-usage:
+      title: 基本使用 (VChart, 客户端渲染)
+      desc: 使用 VChart 进行数据可视化的演示。
+      try: 尝试 VChart 的基本使用
+    chart-lite:
+      title: VChartLite，服务端渲染，简单交互
+      desc: 使用 VChartLite 进行数据可视化的演示。
+      try: 尝试 VChartLite 的基本使用
+    chart-full:
+      title: VChartFull，服务端渲染，完整交互
+      desc: 使用 VChartFull 进行数据可视化的演示。
+      try: 尝试 VChartFull 的基本使用
+
   nuxt-modules:
     title: Nuxt 模块
     nuxt-scripts:
@@ -615,6 +696,22 @@ zh-TW:
       title: 基本使用
       desc: 使用 Day.js 進行日期處理的演示。
       try: 嘗試 Day.js 的基本使用
+
+  e-charts:
+    title: ECharts
+    more-info: 查看 {link} 文檔了解更多信息。
+    basic-usage:
+      title: 基本使用 (VChart, 客戶端渲染)
+      desc: 使用 VChart 進行數據可視化的演示。
+      try: 嘗試 VChart 的基本使用
+    chart-lite:
+      title: VChartLite，服务端渲染，简单交互
+      desc: 使用 VChartLite 進行數據可視化的演示。
+      try: 嘗試 VChartLite 的基本使用
+    chart-full:
+      title: VChartFull，服务端渲染，完整交互
+      desc: 使用 VChartFull 進行數據可視化的演示。
+      try: 嘗試 VChartFull 的基本使用
 
   nuxt-modules:
     title: Nuxt 模組

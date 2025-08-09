@@ -377,3 +377,26 @@ This demo implements a [util](shared/utils/bignumber.ts) which contains some mat
 Date maniplation, Element Plus dependents on it too.
 
 This demo implements a [plugin](app/plugins/dayjs.ts) in order to add Day.js to Nuxt App.
+
+### ECharts
+
+The best choice of adding charts to your page.
+
+By default, ECharts rendering on the browser, if you prefer rendering on the server (SSR Mode) for better FCP or other reasons, you should read through [ECharts SSR Guide](https://echarts.apache.org/handbook/en/how-to/cross-platform/server/) first.
+
+Then, `nuxt-echarts` provides different components to handle different situations:
+
+- `<VChart>`: A simple and powerful ECharts wrapper in Vue, the same as [`Vue-ECharts`](https://github.com/ecomfe/vue-echarts), rendering on the browser.
+- `<VChartIsland>`: Rendering ECharts on server, uses `<NuxtIsland>` under the hood, no JS, non-interactive (SVG).
+- `<VChartServer>`: A wrapper around `<VChartIsland>`, so allow client-side injection, still no JS, non-interactive (SVG).
+- `<VChartLight>`: Uses `<VChartServer>` underhood to render ECharts on server side, The SVG rendered by the server is hydrated with [ECharts lightweight client runtime](https://echarts.apache.org/handbook/en/how-to/cross-platform/server/#lightweight-client-runtime), support simple interactions.
+- `<VChartFull>`: Brings full ECharts functionality (The same as `<VChart>`) to your Nuxt app with SSR, will render a chart on the server then on the client once mounted in the browser. A little bit too heavy.
+
+TL;DR:
+
+Full Functionality & Client Only: `<VChart>`
+Non Interactions & Server Side Rendering: `<VChartServer>`
+Simple Interactions & Server Side Rendering: `<VChartLight>`
+Full Functionality & Server Side Rendering: `<VChartFull>`
+
+Read through [ECharts Guide](https://echarts.apache.org/handbook/en/get-started) & [Nuxt ECharts Guide](https://echarts.nuxt.dev/getting-started) for futher usage.
