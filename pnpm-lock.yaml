@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@highlightjs/vue-plugin':
-        specifier: ^2.1.0
-        version: 2.1.0(highlight.js@11.11.1)(vue@3.5.18(typescript@5.9.2))
+        specifier: ^2.1.2
+        version: 2.1.2(highlight.js@11.11.1)(vue@3.5.18(typescript@5.9.2))
       '@nuxt/scripts':
         specifier: ^0.11.10
         version: 0.11.10(@netlify/blobs@9.1.2)(@unhead/vue@2.0.14(vue@3.5.18(typescript@5.9.2)))(db0@0.3.2)(ioredis@5.7.0)(magicast@0.3.5)(typescript@5.9.2)(vue@3.5.18(typescript@5.9.2))
@@ -781,8 +781,8 @@ packages:
   '@floating-ui/utils@0.2.10':
     resolution: {integrity: sha512-aGTxbpbg8/b5JfU1HXSrbH3wXZuLPJcNEcZQFMxLs3oSzgtVu6nFPkbbGGUvBcUjKV2YyB9Wxxabo+HEH9tcRQ==}
 
-  '@highlightjs/vue-plugin@2.1.0':
-    resolution: {integrity: sha512-E+bmk4ncca+hBEYRV2a+1aIzIV0VSY/e5ArjpuSN9IO7wBJrzUE2u4ESCwrbQD7sAy+jWQjkV5qCCWgc+pu7CQ==}
+  '@highlightjs/vue-plugin@2.1.2':
+    resolution: {integrity: sha512-P7s9DLBGpBsbltk3ZKuYUu9lwDCEfpttjJ5ErI6Wco6GQWIsjcSCJzCoMHgXhRUNkFDtZo7ZgeF8M10POPbDLw==}
     peerDependencies:
       highlight.js: ^11.0.1
       vue: ^3
@@ -7284,7 +7284,7 @@ snapshots:
 
   '@floating-ui/utils@0.2.10': {}
 
-  '@highlightjs/vue-plugin@2.1.0(highlight.js@11.11.1)(vue@3.5.18(typescript@5.9.2))':
+  '@highlightjs/vue-plugin@2.1.2(highlight.js@11.11.1)(vue@3.5.18(typescript@5.9.2))':
     dependencies:
       highlight.js: 11.11.1
       vue: 3.5.18(typescript@5.9.2)
