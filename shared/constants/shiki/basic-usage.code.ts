@@ -31,7 +31,10 @@ export const Code = {
 
 })`,
   styles:
-`// CSS Var
+`// This file contains styles for the Shiki code block except syntax highlight.
+// For example, font size, line height, focus style and so on.
+
+// CSS Var
 :root {
   --code-line-highlight-color: rgba(142, 150, 170, 0.14);
   --code-line-diff-add-color: rgba(16, 185, 129, 0.14);
