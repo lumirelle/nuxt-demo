@@ -15,7 +15,7 @@ const { t } = useI18n({
       <H level="2">
         shared/constants/highlight-js/basic-usage.code.ts
       </H>
-      <HighlightJs :code="Code.code" :autodetect="false" language="js" />
+      <HighlightJs :code="Code.code" language="js" />
     </section>
     <section>
       <H level="2">

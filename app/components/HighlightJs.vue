@@ -19,7 +19,7 @@ hljs.registerLanguage('python', python)
 // Just register the language you need above
 
 // eslint-disable-next-line import/first
-import HighlightJSVue from '@highlightjs/vue-plugin'
+import HighlightJSVue from 'highlightjs-vue-plugin'
 
 // eslint-disable-next-line vue/define-macros-order
 const props = defineProps({
