@@ -147,6 +147,33 @@ const { t } = useI18n({
       </section>
     </section>
 
+    <!-- Element Plus -->
+    <section>
+      <H level="2">
+        {{ t('element-plus.title') }}
+      </H>
+      <I18nT keypath="element-plus.more-info" tag="p">
+        <template #link>
+          <NuxtLinkLocale to="https://element-plus.org/zh-CN/guide/design.html" external target="_blank">
+            <span>Element Plus</span>
+          </NuxtLinkLocale>
+        </template>
+        <template #link2>
+          <NuxtLinkLocale to="https://nuxt.com/modules/element-plus" external target="_blank">
+            <span>@element-plus/nuxt</span>
+          </NuxtLinkLocale>
+        </template>
+      </I18nT>
+      <p v-for="i in 2" :key="i">
+        {{ t(`element-plus.p${i}`) }}
+      </p>
+      <p>
+        <NuxtLinkLocale to="/element-plus">
+          <span>{{ t('element-plus.try') }}</span>
+        </NuxtLinkLocale>
+      </p>
+    </section>
+
     <!-- UnoCSS -->
     <section border-b="1px solid [var(--el-border-color)]">
       <H level="2">
@@ -399,20 +426,6 @@ const { t } = useI18n({
       <H level="2">
         {{ t('nuxt-modules.title') }}
       </H>
-      <!-- Element Plus -->
-      <section>
-        <H level="3">
-          {{ t('nuxt-modules.element-plus.title') }}
-        </H>
-        <p v-for="i in 2" :key="i">
-          {{ t(`nuxt-modules.element-plus.p${i}`) }}
-        </p>
-        <p>
-          <NuxtLinkLocale to="/element-plus">
-            <span>{{ t('nuxt-modules.element-plus.try') }}</span>
-          </NuxtLinkLocale>
-        </p>
-      </section>
       <!-- Nuxt Scripts -->
       <section>
         <H level="3">
@@ -463,6 +476,13 @@ en:
       title: Basic Usage
       desc: A demo of using Vue I18n with local scope (yaml) and VSCode I18n extension settings (i18n ally).
       try: Try basic usage of Vue I18n
+
+  element-plus:
+    title: Element Plus
+    more-info: See {link} and {link2} documentation for more information.
+    p1: This Nuxt module provides auto-import for Element Plus components, styles, directives, icons and more.
+    p2: It also support customizing theme, variables and more in `nuxt.config.ts`
+    try: Try usages of Element Plus
 
   unocss:
     title: UnoCSS
@@ -533,11 +553,6 @@ en:
     nuxt-scripts:
       title: "{'@'}nuxt/scripts"
       try: "Try {'@'}nuxt/scripts"
-    element-plus:
-      title: "{'@'}element-plus/nuxt"
-      p1: This module provides auto-import for Element Plus components, styles, directives, icons and more.
-      p2: It also support customizing theme, variables and more in `nuxt.config.ts`
-      try: "Try {'@'}element-plus/nuxt"
 
 zh-CN:
   title: 欢迎使用 Nuxt 4
@@ -573,6 +588,13 @@ zh-CN:
       title: 基本使用
       desc: 使用 Vue I18n 的 local scope (yaml) 和 VSCode I18n 扩展设置 (i18n ally)。
       try: 尝试 Vue I18n 的基本使用
+
+  element-plus:
+    title: Element Plus
+    more-info: 查看 {link} 和 {link2} 文档了解更多信息。
+    p1: 这个 Nuxt 模块提供了 Element Plus 组件、样式、指令、图标等的自动导入。
+    p2: 它还支持在 `nuxt.config.ts` 中自定义主题、变量等。
+    try: 尝试 Element Plus 的基本使用
 
   unocss:
     title: UnoCSS
@@ -643,11 +665,6 @@ zh-CN:
     nuxt-scripts:
       title: "{'@'}nuxt/scripts"
       try: "尝试 {'@'}nuxt/scripts"
-    element-plus:
-      title: "{'@'}element-plus/nuxt"
-      p1: 这个模块提供了 Element Plus 组件、样式、指令、图标等的自动导入。
-      p2: 它还支持在 `nuxt.config.ts` 中自定义主题、变量等。
-      try: "尝试 {'@'}element-plus/nuxt"
 
 zh-TW:
   title: 歡迎使用 Nuxt 4
@@ -683,6 +700,13 @@ zh-TW:
       title: 基本使用
       desc: 使用 Vue I18n 的 local scope (yaml) 和 VSCode I18n 擴展設置 (i18n ally)。
       try: 嘗試 Vue I18n 的基本使用
+
+  element-plus:
+    title: Element Plus
+    more-info: 查看 {link} 和 {link2} 文檔了解更多信息。
+    p1: 這個 Nuxt 模組提供了 Element Plus 組件、樣式、指令、圖標等的自動導入。
+    p2: 它還支持在 `nuxt.config.ts` 中自定義主題、變量等。
+    try: 嘗試 Element Plus 的基本使用
 
   unocss:
     title: UnoCSS
@@ -753,9 +777,4 @@ zh-TW:
     nuxt-scripts:
       title: "{'@'}nuxt/scripts"
       try: "嘗試 {'@'}nuxt/scripts"
-    element-plus:
-      title: "{'@'}element-plus/nuxt"
-      p1: 這個模組提供了 Element Plus 組件、樣式、指令、圖標等的自動導入。
-      p2: 它還支持在 `nuxt.config.ts` 中自定義主題、變量等。
-      try: "嘗試 {'@'}element-plus/nuxt"
 </i18n>
