@@ -410,3 +410,5 @@ The best choice to implement custom swiper in your page.
 Notice that, `Nuxt Swiper` utilizes `Swiper.js` as its foundation using its **web components**, they use the kebab-case naming convention vs the PascalCase naming convention that Vue uses.
 
 If you want to learn how to use web components in Vue.js please refer to the docs here: [Vue.js Web Components](https://vuejs.org/guide/extras/web-components.html)
+
+[Can I Use](https://caniuse.com/?search=web%20components) shows that web components are supported in 85.54% of browsers used in China. Among unsupported browsers, 8.99% are the IE browser. That's to say, we don't need to worry about web components compatibility in most cases.
