@@ -54,6 +54,11 @@ const { t } = useI18n({
               <span>Pinia</span>
             </NuxtLinkLocale>
           </template>
+          <template #link2>
+            <NuxtLinkLocale to="https://nuxt.com/modules/pinia" external target="_blank">
+              <span>@pinia/nuxt</span>
+            </NuxtLinkLocale>
+          </template>
         </I18nT>
       </section>
       <section>
@@ -120,6 +125,11 @@ const { t } = useI18n({
               <span>Vue I18n</span>
             </NuxtLinkLocale>
           </template>
+          <template #link2>
+            <NuxtLinkLocale to="https://i18n.nuxtjs.org/docs/getting-started" external target="_blank">
+              <span>@nuxtjs/i18n</span>
+            </NuxtLinkLocale>
+          </template>
         </I18nT>
       </section>
       <section>
@@ -147,6 +157,11 @@ const { t } = useI18n({
           <template #link>
             <NuxtLinkLocale to="https://unocss.dev/guide/" external target="_blank">
               <span>UnoCSS</span>
+            </NuxtLinkLocale>
+          </template>
+          <template #link2>
+            <NuxtLinkLocale to="https://nuxt.com/modules/unocss" external target="_blank">
+              <span>@unocss/nuxt</span>
             </NuxtLinkLocale>
           </template>
         </I18nT>
@@ -183,6 +198,11 @@ const { t } = useI18n({
               <span>Vue Use</span>
             </NuxtLinkLocale>
           </template>
+          <template #link2>
+            <NuxtLinkLocale to="https://nuxt.com/modules/vueuse" external target="_blank">
+              <span>@vueuse/nuxt</span>
+            </NuxtLinkLocale>
+          </template>
         </I18nT>
       </section>
       <section>
@@ -210,6 +230,11 @@ const { t } = useI18n({
               <span>Highlight.js</span>
             </NuxtLinkLocale>
           </template>
+          <template #link2>
+            <NuxtLinkLocale to="https://github.com/lumirelle/highlightjs-vue-plugin" external target="_blank">
+              <span>highlightjs-vue-plugin</span>
+            </NuxtLinkLocale>
+          </template>
         </I18nT>
       </section>
       <section>
@@ -235,6 +260,11 @@ const { t } = useI18n({
           <template #link>
             <NuxtLinkLocale to="https://shiki.style/guide/" external target="_blank">
               <span>Shiki</span>
+            </NuxtLinkLocale>
+          </template>
+          <template #link2>
+            <NuxtLinkLocale to="https://github.com/pi0/nuxt-shiki" external target="_blank">
+              <span>nuxt-shiki</span>
             </NuxtLinkLocale>
           </template>
         </I18nT>
@@ -322,6 +352,11 @@ const { t } = useI18n({
               <span>ECharts</span>
             </NuxtLinkLocale>
           </template>
+          <template #link2>
+            <NuxtLinkLocale to="https://echarts.nuxt.dev/getting-started" external target="_blank">
+              <span>nuxt-echarts</span>
+            </NuxtLinkLocale>
+          </template>
         </I18nT>
       </section>
       <section>
@@ -407,7 +442,7 @@ en:
 
   pinia:
     title: Pinia
-    more-info: See {link} documentation for more information.
+    more-info: See {link} and {link2} documentation for more information.
     basic-usage:
       title: Basic Usage
       desc: A demo of using Pinia store with {states}, {getters}, and {actions} in a page.
@@ -423,7 +458,7 @@ en:
 
   vue-i18n:
     title: Vue I18n
-    more-info: See {link} documentation for more information.
+    more-info: See {link} and {link2} documentation for more information.
     basic-usage:
       title: Basic Usage
       desc: A demo of using Vue I18n with local scope (yaml) and VSCode I18n extension settings (i18n ally).
@@ -431,7 +466,7 @@ en:
 
   unocss:
     title: UnoCSS
-    more-info: See {link} documentation for more information.
+    more-info: See {link} and {link2} documentation for more information.
     basic-usage:
       title: Basic Usage
       desc: A demo of using UnoCSS with {preset1} and {preset2}.
@@ -439,7 +474,7 @@ en:
 
   vue-use:
     title: Vue Use
-    more-info: See {link} documentation for more information.
+    more-info: See {link} and {link2} documentation for more information.
     basic-usage:
       title: Basic Usage
       desc: Vue Use is a collection of utilities based on Vue Composition API.
@@ -447,7 +482,7 @@ en:
 
   highlight-js:
     title: Highlight.js (Legacy)
-    more-info: See {link} documentation for more information.
+    more-info: See {link} and {link2} documentation for more information.
     basic-usage:
       title: Basic Usage
       desc: A demo of using Highlight.js with syntax highlighting in a page (Support dark mode).
@@ -455,7 +490,7 @@ en:
 
   shiki:
     title: Shiki (Recommended than Highlight.js)
-    more-info: See {link} documentation for more information.
+    more-info: See {link} and {link2} documentation for more information.
     basic-usage:
       title: Basic Usage
       desc: A demo of using Shiki for syntax highlighting in a page (Support dark mode), integrated with {nuxt-module}.
@@ -479,7 +514,7 @@ en:
 
   e-charts:
     title: ECharts
-    more-info: See {link} documentation for more information.
+    more-info: See {link} and {link2} documentation for more information.
     basic-usage:
       title: Basic Usage (VChart, Client Rendering)
       desc: A demo of using VChart for data visualization.
@@ -517,7 +552,7 @@ zh-CN:
 
   pinia:
     title: Pinia
-    more-info: 查看 {link} 文档了解更多信息。
+    more-info: 查看 {link} 和 {link2} 文档了解更多信息。
     basic-usage:
       title: 基本使用
       desc: 使用 Pinia Store 的 {states}、{getters} 和 {actions}。
@@ -533,7 +568,7 @@ zh-CN:
 
   vue-i18n:
     title: Vue I18n
-    more-info: 查看 {link} 文档了解更多信息。
+    more-info: 查看 {link} 和 {link2} 文档了解更多信息。
     basic-usage:
       title: 基本使用
       desc: 使用 Vue I18n 的 local scope (yaml) 和 VSCode I18n 扩展设置 (i18n ally)。
@@ -541,7 +576,7 @@ zh-CN:
 
   unocss:
     title: UnoCSS
-    more-info: 查看 {link} 文档了解更多信息。
+    more-info: 查看 {link} 和 {link2} 文档了解更多信息。
     basic-usage:
       title: 基本使用
       desc: 使用 UnoCSS 的 {preset1} 和 {preset2} 的演示。
@@ -549,7 +584,7 @@ zh-CN:
 
   vue-use:
     title: Vue Use
-    more-info: 查看 {link} 文档了解更多信息。
+    more-info: 查看 {link} 和 {link2} 文档了解更多信息。
     basic-usage:
       title: 基本使用
       desc: Vue Use 是基于 Vue Composition API 的一组实用工具集合。
@@ -557,7 +592,7 @@ zh-CN:
 
   highlight-js:
     title: Highlight.js (Legacy)
-    more-info: 查看 {link} 文档了解更多信息。
+    more-info: 查看 {link} 和 {link2} 文档了解更多信息。
     basic-usage:
       title: 基本使用
       desc: 使用 Highlight.js 在页面中进行语法高亮的演示（支持暗黑模式）。
@@ -565,7 +600,7 @@ zh-CN:
 
   shiki:
     title: Shiki（比 Highlight.js 更推荐）
-    more-info: 查看 {link} 文档了解更多信息。
+    more-info: 查看 {link} 和 {link2} 文档了解更多信息。
     basic-usage:
       title: 基本使用
       desc: 使用 Shiki 在页面中进行语法高亮的演示（支持暗黑模式），由 {nuxt-module} 集成。
@@ -589,7 +624,7 @@ zh-CN:
 
   e-charts:
     title: ECharts
-    more-info: 查看 {link} 文档了解更多信息。
+    more-info: 查看 {link} 和 {link2} 文档了解更多信息。
     basic-usage:
       title: 基本使用 (VChart, 客户端渲染)
       desc: 使用 VChart 进行数据可视化的演示。
@@ -627,7 +662,7 @@ zh-TW:
 
   pinia:
     title: Pinia
-    more-info: 查看 {link} 文檔了解更多信息。
+    more-info: 查看 {link} 和 {link2} 文檔了解更多信息。
     basic-usage:
       title: 基本使用
       desc: 使用 Pinia Store 的 {states}、{getters} 和 {actions}。
@@ -643,7 +678,7 @@ zh-TW:
 
   vue-i18n:
     title: Vue I18n
-    more-info: 查看 {link} 文檔了解更多信息。
+    more-info: 查看 {link} 和 {link2} 文檔了解更多信息。
     basic-usage:
       title: 基本使用
       desc: 使用 Vue I18n 的 local scope (yaml) 和 VSCode I18n 擴展設置 (i18n ally)。
@@ -651,7 +686,7 @@ zh-TW:
 
   unocss:
     title: UnoCSS
-    more-info: 查看 {link} 文檔了解更多信息。
+    more-info: 查看 {link} 和 {link2} 文檔了解更多信息。
     basic-usage:
       title: 基本使用
       desc: 使用 UnoCSS 的 {preset1} 和 {preset2} 的演示。
@@ -659,7 +694,7 @@ zh-TW:
 
   vue-use:
     title: Vue Use
-    more-info: 查看 {link} 文檔了解更多信息。
+    more-info: 查看 {link} 和 {link2} 文檔了解更多信息。
     basic-usage:
       title: 基本使用
       desc: Vue Use 是基於 Vue Composition API 的一組實用工具集合。
@@ -667,7 +702,7 @@ zh-TW:
 
   highlight-js:
     title: Highlight.js (Legacy)
-    more-info: 查看 {link} 文檔了解更多信息。
+    more-info: 查看 {link} 和 {link2} 文檔了解更多信息。
     basic-usage:
       title: 基本使用
       desc: 使用 Highlight.js 在頁面中進行語法高亮的演示（支持暗黑模式）。
@@ -675,7 +710,7 @@ zh-TW:
 
   shiki:
     title: Shiki（比 Highlight.js 更推荐）
-    more-info: 查看 {link} 文檔了解更多信息。
+    more-info: 查看 {link} 和 {link2} 文檔了解更多信息。
     basic-usage:
       title: 基本使用
       desc: 使用 Shiki 在頁面中進行語法高亮的演示（支持暗黑模式），由 {nuxt-module} 集成。
@@ -699,7 +734,7 @@ zh-TW:
 
   e-charts:
     title: ECharts
-    more-info: 查看 {link} 文檔了解更多信息。
+    more-info: 查看 {link} 和 {link2} 文檔了解更多信息。
     basic-usage:
       title: 基本使用 (VChart, 客戶端渲染)
       desc: 使用 VChart 進行數據可視化的演示。

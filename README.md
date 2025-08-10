@@ -23,7 +23,7 @@ Utilities:
   - [Shiki](https://shiki.style/guide/) (Nuxt Module: [nuxt-shiki](https://github.com/pi0/nuxt-shiki))
 - [Bignumber.js](https://mikemcl.github.io/bignumber.js/)
 - [Day.js](https://day.js.org/)
-- [ECharts](https://echarts.apache.org/zh/index.html)
+- [ECharts](https://echarts.apache.org/zh/index.html) (Nuxt Module: [nuxt-echarts](https://echarts.nuxt.dev/getting-started))
 
 TODO: Below
 
