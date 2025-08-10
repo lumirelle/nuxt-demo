@@ -24,10 +24,10 @@ Utilities:
 - [Bignumber.js](https://mikemcl.github.io/bignumber.js/)
 - [Day.js](https://day.js.org/)
 - [ECharts](https://echarts.apache.org/zh/index.html) (Nuxt Module: [nuxt-echarts](https://echarts.nuxt.dev/getting-started))
+- [Swiper.js](https://swiperjs.com/get-started) (Nuxt Module: [nuxt-swiper](https://github.com/cpreston321/nuxt-swiper))
 
 TODO: Below
 
-- [Swiper.js](https://swiperjs.com/get-started)
 - [Nuxt QRCode](https://qrcode.s94.dev/)
 - [Nuxt GTag](https://nuxt.com/modules/gtag)
 - TODO: MD5 & SHA256 (Finding crypto package)
@@ -402,3 +402,11 @@ Simple Interactions & Server Side Rendering: `<VChartLight>`
 Full Functionality & Server Side Rendering: `<VChartFull>`
 
 Read through [ECharts Guide](https://echarts.apache.org/handbook/en/get-started) & [Nuxt ECharts Guide](https://echarts.nuxt.dev/getting-started) for futher usage.
+
+### Swiper.js
+
+The best choice to implement custom swiper in your page.
+
+Notice that, `Nuxt Swiper` utilizes `Swiper.js` as its foundation using its **web components**, they use the kebab-case naming convention vs the PascalCase naming convention that Vue uses.
+
+If you want to learn how to use web components in Vue.js please refer to the docs here: [Vue.js Web Components](https://vuejs.org/guide/extras/web-components.html)

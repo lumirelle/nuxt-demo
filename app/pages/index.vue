@@ -421,6 +421,49 @@ const { t } = useI18n({
       </section>
     </section>
 
+    <!-- Swiper.js -->
+    <section border-b="1px solid [var(--el-border-color)]">
+      <H level="2">
+        {{ t('swiper-js.title') }}
+      </H>
+      <section>
+        <I18nT keypath="swiper-js.more-info" tag="p">
+          <template #link>
+            <NuxtLinkLocale to="https://swiperjs.com/get-started" external target="_blank">
+              <span>Swiper.js</span>
+            </NuxtLinkLocale>
+          </template>
+          <template #link2>
+            <NuxtLinkLocale to="https://github.com/cpreston321/nuxt-swiper" external target="_blank">
+              <span>nuxt-swiper</span>
+            </NuxtLinkLocale>
+          </template>
+        </I18nT>
+      </section>
+      <section>
+        <H level="3">
+          {{ t('swiper-js.basic-usage.title') }}
+        </H>
+        <p>{{ t('swiper-js.basic-usage.desc') }}</p>
+        <p>
+          <NuxtLinkLocale to="/swiper-js/basic-usage">
+            <span>{{ t('swiper-js.basic-usage.try') }}</span>
+          </NuxtLinkLocale>
+        </p>
+      </section>
+      <section>
+        <H level="3">
+          {{ t('swiper-js.advanced-usage.title') }}
+        </H>
+        <p>{{ t('swiper-js.advanced-usage.desc') }}</p>
+        <p>
+          <NuxtLinkLocale to="/swiper-js/advanced-usage">
+            <span>{{ t('swiper-js.advanced-usage.try') }}</span>
+          </NuxtLinkLocale>
+        </p>
+      </section>
+    </section>
+
     <!-- Nuxt Modules -->
     <section border-b="1px solid [var(--el-border-color)]">
       <H level="2">
@@ -548,6 +591,18 @@ en:
       desc:  A demo of using VChartFull for data visualization.
       try: Try basic usage of VChartFull
 
+  swiper-js:
+    title: Swiper.js
+    more-info: See {link} and {link2} documentation for more information.
+    basic-usage:
+      title: Basic Usage
+      desc: A demo of using Swiper.js with default options.
+      try: Try basic usage of Swiper.js
+    advanced-usage:
+      title: Advanced Usage
+      desc:  A demo of using Swiper.js with advanced options.
+      try: Try advanced usage of Swiper.js
+
   nuxt-modules:
     title: Nuxt Modules
     nuxt-scripts:
@@ -660,6 +715,18 @@ zh-CN:
       desc: 使用 VChartFull 进行数据可视化的演示。
       try: 尝试 VChartFull 的基本使用
 
+  swiper-js:
+    title: Swiper.js
+    more-info: 查看 {link} 和 {link2} 文档了解更多信息。
+    basic-usage:
+      title: 基本使用
+      desc: 使用 Swiper.js 默认选项的演示。
+      try: 尝试 Swiper.js 的基本使用
+    advanced-usage:
+      title: 高级用法
+      desc: 使用 Swiper.js 高级选项的演示。
+      try: 尝试 Swiper.js 的高级用法
+
   nuxt-modules:
     title: Nuxt 模块
     nuxt-scripts:
@@ -771,6 +838,18 @@ zh-TW:
       title: VChartFull，服务端渲染，完整交互
       desc: 使用 VChartFull 進行數據可視化的演示。
       try: 嘗試 VChartFull 的基本使用
+
+  swiper-js:
+    title: Swiper.js
+    more-info: 查看 {link} 和 {link2} 文檔了解更多信息。
+    basic-usage:
+      title: 基本使用
+      desc: 使用 Swiper.js 默認選項的演示。
+      try: 嘗試 Swiper.js 的基本使用
+    advanced-usage:
+      title: 高級用法
+      desc: 使用 Swiper.js 高級選項的演示。
+      try: 嘗試 Swiper.js 的高級用法
 
   nuxt-modules:
     title: Nuxt 模組
