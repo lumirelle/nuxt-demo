@@ -25,10 +25,10 @@ Utilities:
 - [Day.js](https://day.js.org/)
 - [ECharts](https://echarts.apache.org/zh/index.html) (Nuxt Module: [nuxt-echarts](https://echarts.nuxt.dev/getting-started))
 - [Swiper.js](https://swiperjs.com/get-started) (Nuxt Module: [nuxt-swiper](https://github.com/cpreston321/nuxt-swiper))
+- [Nuxt QRCode](https://qrcode.s94.dev/)
 
 TODO: Below
 
-- [Nuxt QRCode](https://qrcode.s94.dev/)
 - [Nuxt GTag](https://nuxt.com/modules/gtag)
 - TODO: MD5 & SHA256 (Finding crypto package)
 - TODO: LRU Cache
@@ -417,3 +417,11 @@ Here are the results from Can I Use:
 
 - [Custom Element (V1) Compatibility](https://caniuse.com/custom-elementsv1)
 - [Shadow DOM (V1) Compatibility](https://caniuse.com/shadowdomv1)
+
+### Nuxt QRCode
+
+A Nuxt module that provides support for generating and reading QRCodes.
+
+For generating QRCodes, use the component `<Qrcode>` & composable `useQrcode()`.
+
+For reading QRCodes, use the component `<QrcodeStream>` & `<QrcodeCapture>` & `<QrcodeDropZone>` (No demos here, because of these use cases are quit unusual). If you really need to use them, please refer to the [documentation](https://qrcode.s94.dev/read/qrcode-stream).
