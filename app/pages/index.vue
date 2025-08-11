@@ -480,6 +480,28 @@ const { t } = useI18n({
           </NuxtLinkLocale>
         </p>
       </section>
+      <!-- Nuxt QRCode -->
+      <section>
+        <H level="3">
+          {{ t('nuxt-modules.nuxt-qrcode.title') }}
+        </H>
+        <section>
+          <H level="4">
+            {{ t('nuxt-modules.nuxt-qrcode.basic-usage.title') }}
+          </H>
+          <NuxtLinkLocale to="/nuxt-qrcode/basic-usage">
+            <span>{{ t('nuxt-modules.nuxt-qrcode.basic-usage.try') }}</span>
+          </NuxtLinkLocale>
+        </section>
+        <section>
+          <H level="4">
+            {{ t('nuxt-modules.nuxt-qrcode.composable.title') }}
+          </H>
+          <NuxtLinkLocale to="/nuxt-qrcode/composable">
+            <span>{{ t('nuxt-modules.nuxt-qrcode.composable.try') }}</span>
+          </NuxtLinkLocale>
+        </section>
+      </section>
     </section>
   </div>
 </template>
@@ -608,6 +630,14 @@ en:
     nuxt-scripts:
       title: "{'@'}nuxt/scripts"
       try: "Try {'@'}nuxt/scripts"
+    nuxt-qrcode:
+      title: nuxt-qrcode
+      basic-usage:
+        title: Nuxt QRCode Basic Usage
+        try: Try basic usage of nuxt-qrcode
+      composable:
+        title: Nuxt QRCode Composable Usage
+        try: Try composable usage of nuxt-qrcode
 
 zh-CN:
   title: 欢迎使用 Nuxt 4
@@ -732,6 +762,14 @@ zh-CN:
     nuxt-scripts:
       title: "{'@'}nuxt/scripts"
       try: "尝试 {'@'}nuxt/scripts"
+    nuxt-qrcode:
+      title: nuxt-qrcode
+      basic-usage:
+        title: Nuxt QRCode 基本用法
+        try: 尝试 nuxt-qrcode 的基本用法
+      composable:
+        title: Nuxt QRCode Composable 用法
+        try: 尝试 nuxt-qrcode 的 Composable 用法
 
 zh-TW:
   title: 歡迎使用 Nuxt 4
@@ -856,4 +894,12 @@ zh-TW:
     nuxt-scripts:
       title: "{'@'}nuxt/scripts"
       try: "嘗試 {'@'}nuxt/scripts"
+    nuxt-qrcode:
+      title: nuxt-qrcode
+      basic-usage:
+        title: Nuxt QRCode 基本用法
+        try: 嘗試 nuxt-qrcode 的基本用法
+      composable:
+        title: Nuxt QRCode Composable 用法
+        try: 嘗試 nuxt-qrcode 的 Composable 用法
 </i18n>

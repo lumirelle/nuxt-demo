@@ -41,10 +41,11 @@ export default defineNuxtConfig({
     'nuxt-typed-router',
     // ECharts components, themes, init options, ssr support and so on
     'nuxt-echarts',
+    // Generating and reading QRCodes.
+    'nuxt-qrcode',
 
     // TODO: Pending triage below
     'nuxt-gtag',
-    'nuxt-qrcode',
     'nuxt-svgo',
     'nuxt-swiper',
   ],
