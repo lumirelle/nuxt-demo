@@ -31,7 +31,6 @@ TODO: Below
 
 - [Nuxt GTag](https://nuxt.com/modules/gtag)
 - TODO: MD5 & SHA256 (Finding crypto package)
-- TODO: LRU Cache
 - TODO: XLSX
 
 Optimizations:
@@ -76,6 +75,8 @@ Reading the getting started guide [here](https://nuxt.com/docs/4.x/getting-start
 Something you must know about hydration errors if you are using SSR rendering mode of Nuxt 4: **Hydration errors**.
 
 Hydration errors are caused by the mismatch between the server-rendered HTML and the client-rendered HTML.
+
+Please refer to the [official documentation](https://nuxt.com/docs/4.x/guide/best-practices/hydration) for more information.
 
 There are some common cases of hydration errors below.
 
@@ -154,6 +155,63 @@ And your client-rendered HTML is as below:
 During the hydration process, they will cause a confliction.
 
 So you should not let your HTML structure depend on the client-based data, such as LocalStorage, Browser API, etc, if you are using SSR rendering.
+
+### Data Fetching
+
+Nuxt 4 uses `ofetch` to provide a better data fetching experience. It is a lightweight and powerful fetch wrapper that supports features like automatic retries, request cancellation, and more.
+
+Thanks that, we don't need to use `axios` and implement our own axios plugin any more.
+
+Nuxt 4 provides three ways to fetch data: `$fetch`, `useFetch`, `useAsyncData`.
+
+Notice that, `useFetch` & `useAsyncData` are designed to fetch data only on the server, in order to avoid redundant data fetching actions and prevent navigation until data fetching is completed.
+
+Refer to [The need of `useFetch` and `useAsyncData`](https://nuxt.com/docs/4.x/getting-started/data-fetching#the-need-for-usefetch-and-useasyncdata) for more information.
+
+Beware that using only `$fetch` will not provide network calls de-duplication and navigation prevention. It is recommended to use $fetch for client-side interactions (event-based) or combined with useAsyncData when fetching the initial component data.
+
+Refer to [`$fetch`](https://nuxt.com/docs/4.x/getting-started/data-fetching#fetch) for more information.
+
+As this, Nuxt provides the abilities of [lazy fetching](https://nuxt.com/docs/4.x/getting-started/data-fetching#lazy), [picking data](https://nuxt.com/docs/4.x/getting-started/data-fetching#minimize-payload-size), [caching and refetchin](https://nuxt.com/docs/4.x/getting-started/data-fetching#caching-and-refetching), and so on.
+
+#### Pass Client Headers
+
+When calling `useFetch` on the server, Nuxt will use `useRequestFetch` to proxy client headers and cookies (with the exception of headers not meant to be forwarded, like `host`) automatically.
+
+If you want to reach the same behavior while using `$fetch`, you should use the proxy manually, likes:
+
+```ts
+const requestFetch = useRequestFetch()
+async function doFetchHeaders() {
+  const { data } = await requestFetch('/api/submit') // This **will** pass headers to endpoint `/api/submit`
+}
+
+async function doFetch() {
+  const { data } = await $fetch('/api/submit') // This **will not** pass headers to endpoint `/api/submit`
+}
+```
+
+Or you can specify custom headers you want to include in the request by `useRequestHeaders`:
+
+```ts
+const headers = useRequestHeaders(['cookies'])
+async function doFetchWithHeaders() {
+  const { data } = await $fetch('/api/submit', { headers })
+}
+```
+
+Be very careful before proxying headers to an external API and just include headers that you need. Not all headers are safe to be bypassed and might introduce unwanted behavior. Here is a list of common headers that are NOT to be proxied:
+
+- `host`, `accept`
+- `content-length`, `content-md5`, `content-type`
+- `x-forwarded-host`, `x-forwarded-port`, `x-forwarded-proto`
+- `cf-connecting-ip`, `cf-ray`
+
+#### Caching and Refetching
+
+Thanks to this feature, we don't need to use external libraries like `lru-cache` to implement caching ourselves any more. The response data of `useFetch` and `useAsyncData` will cached by Nuxt automatically.
+
+Please refer to [Nuxt document](https://nuxt.com/docs/4.x/getting-started/data-fetching#caching-and-refetching) for more information.
 
 ## Nuxt Modules
 
@@ -425,3 +483,9 @@ A Nuxt module that provides support for generating and reading QRCodes.
 For generating QRCodes, use the component `<Qrcode>` & composable `useQrcode()`.
 
 For reading QRCodes, use the component `<QrcodeStream>` & `<QrcodeCapture>` & `<QrcodeDropZone>` (No demos here, because of these use cases are quit unusual). If you really need to use them, please refer to the [documentation](https://qrcode.s94.dev/read/qrcode-stream).
+
+### LRU Cache
+
+Nuxt provide built-in support for data caching while using `useFetch` or `useAsyncData`, we don't need to use external libraries like `lru-cache` to implement caching ourselves.
+
+See chapter [`useFetch` & `useAsyncData`](data-fetching) for more details.

@@ -24,6 +24,28 @@ const { t } = useI18n({
           </template>
         </I18nT>
       </section>
+      <section>
+        <H level="3">
+          {{ t('nuxt.data-fetching.title') }}
+        </H>
+        <I18nT keypath="nuxt.data-fetching.more-info" tag="p">
+          <template #link>
+            <NuxtLinkLocale to="https://nuxt.com/docs/4.x/getting-started/data-fetching" external target="_blank">
+              <span>Nuxt Data Fetching</span>
+            </NuxtLinkLocale>
+          </template>
+        </I18nT>
+        <section>
+          <H level="4">
+            {{ t('nuxt.data-fetching.basic-usage.title') }}
+          </H>
+          <p>
+            <NuxtLinkLocale to="/nuxt/data-fetching/basic-usage">
+              <span>{{ t('nuxt.data-fetching.basic-usage.try') }}</span>
+            </NuxtLinkLocale>
+          </p>
+        </section>
+      </section>
     </section>
 
     <!-- Vue -->
@@ -508,6 +530,12 @@ en:
   nuxt:
     title: Nuxt 4
     more-info: See {link} documentation for more information.
+    data-fetching:
+      title: Data Fetching
+      more-info: See {link} documentation for more information.
+      basic-usage:
+        title: Basic Usage
+        try: Try basic usage of Nuxt Data Fetching
 
   vue:
     title: Vue 3
@@ -639,6 +667,12 @@ zh-CN:
   nuxt:
     title: Nuxt 4
     more-info: 查看 {link} 文档了解更多信息。
+    data-fetching:
+      title: 数据获取
+      more-info: 查看 {link} 文档了解更多信息。
+      basic-usage:
+        title: 基本使用
+        try: 尝试 Nuxt 数据获取的基本用法
 
   vue:
     title: Vue 3
@@ -770,6 +804,12 @@ zh-TW:
   nuxt:
     title: Nuxt 4
     more-info: 查看 {link} 文檔了解更多信息。
+    data-fetching:
+      title: 數據獲取
+      more-info: 查看 {link} 文檔了解更多信息。
+      basic-usage:
+        title: 基本使用
+        try: 嘗試 Nuxt 數據獲取的基本用法。
 
   vue:
     title: Vue 3
