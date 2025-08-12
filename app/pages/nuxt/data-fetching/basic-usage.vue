@@ -19,8 +19,11 @@ interface AskResp {
 // Use `useFetch` & `useAsyncData` for server-side data fetching
 
 // `useFetch` is a developer experience sugar of `useAsyncData` & `$fetch`
-// This is nearly equivalent to `useAsyncData(() => $fetch('https://test-ipglobal.cd.xiaoxigroup.net/web/ipglobal-core/web/webMeal/queryStaticMeal'))`
-const { data } = useFetch<StaticMealResp>('https://test-ipglobal.cd.xiaoxigroup.net/web/ipglobal-core/web/webMeal/queryStaticMeal')
+// This is nearly equivalent to `useAsyncData('staticMeal', () => $fetch('/api/queryStaticMeal'))`
+const { data } = useFetch<StaticMealResp>('/api/queryStaticMeal', {
+  key: 'staticMeal',
+  method: 'get',
+})
 
 const stringifiedData = computed(() => JSON.stringify(data.value, null, 2))
 
