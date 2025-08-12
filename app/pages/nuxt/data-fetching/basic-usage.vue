@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { Code } from '#shared/constants/nuxt/data-fetching/basic-usage.code'
+import { Code } from '#shared/constants/code/nuxt/data-fetching/basic-usage.code'
 
 const { t } = useI18n({
   useScope: 'local',

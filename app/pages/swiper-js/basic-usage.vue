@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { Code } from '#shared/constants/swiper-js/basic-usage.code'
+import { Code } from '#shared/constants/code/swiper-js/basic-usage.code'
 
 const { t } = useI18n({
   useScope: 'local',

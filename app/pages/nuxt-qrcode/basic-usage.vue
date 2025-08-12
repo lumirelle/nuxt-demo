@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import type { SVGVariant } from 'nuxt-qrcode'
 
-import { Code } from '#shared/constants/nuxt-qrcode/basic-usage.code'
+import { Code } from '#shared/constants/code/nuxt-qrcode/basic-usage.code'
 
 const { t } = useI18n({
   useScope: 'local',

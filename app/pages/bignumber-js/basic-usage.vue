@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Code } from '#shared/constants/bignumber-js/basic-usage.code'
+import { Code } from '#shared/constants/code/bignumber-js/basic-usage.code'
 import { BigNumber } from 'bignumber.js'
 
 const { t } = useI18n({

@@ -202,7 +202,7 @@ console.log(greet('World'));\`,
 export default Code`,
   page:
 `<script setup lang="ts">
-import { Code } from '#shared/constants/shiki/basic-usage.code'
+import { Code } from '#shared/constants/code/shiki/basic-usage.code'
 
 const { t } = useI18n({
   useScope: 'local',

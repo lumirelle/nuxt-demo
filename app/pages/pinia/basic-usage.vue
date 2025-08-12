@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Code } from '#shared/constants/pinia/basic-usage.code'
+import { Code } from '#shared/constants/code/pinia/basic-usage.code'
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n({

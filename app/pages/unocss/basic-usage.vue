@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { Code } from '#shared/constants/unocss/basic-usage.code'
+import { Code } from '#shared/constants/code/unocss/basic-usage.code'
 
 const { t } = useI18n({
   useScope: 'local',

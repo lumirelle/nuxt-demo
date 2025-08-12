@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { Code } from '#shared/constants/e-charts/basic-usage.code'
+import { Code } from '#shared/constants/code/e-charts/basic-usage.code'
 
 const { t } = useI18n({
   useScope: 'local',

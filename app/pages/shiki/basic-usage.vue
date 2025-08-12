@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Code } from '#shared/constants/shiki/basic-usage.code'
+import { Code } from '#shared/constants/code/shiki/basic-usage.code'
 
 const { t } = useI18n({
   useScope: 'local',
@@ -31,7 +31,7 @@ const { t } = useI18n({
     </section>
     <section>
       <H level="2">
-        shared/constants/shiki/basic-usage.code.ts
+        shared/constants/code/shiki/basic-usage.code.ts
       </H>
       <ShikiJs :code="Code.code" lang="ts" />
     </section>

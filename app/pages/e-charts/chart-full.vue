@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { Code } from '#shared/constants/e-charts/chart-full.code'
+import { Code } from '#shared/constants/code/e-charts/chart-full.code'
 
 import * as ECharts from 'echarts/core'
 import usaJson from '~/assets/data/map/USA.json'

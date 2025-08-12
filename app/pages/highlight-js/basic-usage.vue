@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Code } from '#shared/constants/highlight-js/basic-usage.code'
+import { Code } from '#shared/constants/code/highlight-js/basic-usage.code'
 
 const { t } = useI18n({
   useScope: 'local',
@@ -13,7 +13,7 @@ const { t } = useI18n({
     </H>
     <section>
       <H level="2">
-        shared/constants/highlight-js/basic-usage.code.ts
+        shared/constants/code/highlight-js/basic-usage.code.ts
       </H>
       <HighlightJs :code="Code.code" language="js" />
     </section>
