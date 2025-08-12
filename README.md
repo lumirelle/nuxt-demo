@@ -260,6 +260,41 @@ const { data: watchData } = await useFetch('/api/foo', { key: 'foo', watch: [id]
 
 Please refer to [Nuxt document](https://nuxt.com/docs/4.x/getting-started/data-fetching#caching-and-refetching) for more information.
 
+#### Caching in Nitro
+
+If you want to caching data in server (Yes, that's Nitro!). You should use the ability provided by Nitro: [KV Storage](#kv-storage) & [Cache](#cache).
+
+In short, you should **proxy your data fetching** with Nitro `api` or `route` with `event handler`, then add the caching logic in the event handler.
+
+Before:
+
+_app/pages/foo.vue_
+
+```ts
+const { data } = await useFetch('/backend/endpoint/foo', { key: 'foo' }) // Use backend endpoint directly
+```
+
+After:
+
+_app/pages/foo.vue_
+
+```ts
+const { data } = await useFetch('/api/foo', { key: 'foo' }) // Use Nitro endpoint instead
+```
+
+_server/api/foo.ts_
+
+```ts
+export default defineCachedEventHandler(() => {
+  return $fetch('/backend/endpoint/foo', { // Use backend endpoint in Nitro endpoint, like a proxy
+    method: 'get',
+    // ...
+  })
+}, {
+  name: 'foo'
+})
+```
+
 ## Nitro
 
 Nuxt 4 uses Nitro as its server engine, which provides a powerful and flexible way to handle server-side rendering, API routes, and more. Nitro is designed to be lightweight and efficient, making it a great choice for modern web applications.
