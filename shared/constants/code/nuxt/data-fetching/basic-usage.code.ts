@@ -1,18 +1,24 @@
 export const Code = {
   queryStaticMeal:
-`export default defineEventHandler(async () => {
-  return await $fetch('https://test-ipglobal.cd.xiaoxigroup.net/web/ipglobal-core/web/webMeal/queryStaticMeal')
+`import type { StaticMeal } from '#shared/schemas/queryStaticMeal'
+
+export default defineEventHandler(async () => {
+  return await $fetch<StaticMeal>('https://test-ipglobal.cd.xiaoxigroup.net/web/ipglobal-core/web/webMeal/queryStaticMeal')
 })`,
   ask:
-`export default defineEventHandler(async () => {
+`import type { AskResp } from '#shared/schemas/ask'
+
+export default defineEventHandler(async () => {
   const value = Math.random() * 10
   if (value < 5) {
-    return { message: 'Yes' }
+    return { message: 'Yes' } as AskResp
   }
-  return { message: 'No' }
+  return { message: 'No' } as AskResp
 })`,
   sumbit:
-`export default defineEventHandler(async () => {
+`import type { SubmitResp } from '#shared/schemas/submit'
+
+export default defineEventHandler(async () => {
   const value = Math.random() * 10
   if (value < 5) {
     throw createError({
@@ -20,30 +26,23 @@ export const Code = {
       statusMessage: 'Error!',
     })
   }
-  return { message: 'Success!' }
+  return { message: 'Success!' } as SubmitResp
 })`,
   page:
 `<script lang="ts" setup>
+import type { AskResp } from '#shared/schemas/ask'
+import type { StaticMeal } from '#shared/schemas/queryStaticMeal'
+import type { SubmitResp } from '#shared/schemas/submit'
+
 const { t } = useI18n({
   useScope: 'local',
 })
-
-// Response type definition
-interface StaticMealResp {
-  data: object
-}
-interface SubmitResp {
-  message: string
-}
-interface AskResp {
-  message: string
-}
 
 // Use \`useFetch\` & \`useAsyncData\` for server-side data fetching
 
 // \`useFetch\` is a developer experience sugar of \`useAsyncData\` & \`$fetch\`
 // This is nearly equivalent to \`useAsyncData('staticMeal', () => $fetch('/api/queryStaticMeal'))\`
-const { data } = useFetch<StaticMealResp>('/api/queryStaticMeal', {
+const { data } = useFetch<StaticMeal>('/api/queryStaticMeal', {
   key: 'staticMeal',
   method: 'get',
 })

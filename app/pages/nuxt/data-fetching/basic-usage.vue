@@ -1,26 +1,18 @@
 <script lang="ts" setup>
+import type { AskResp } from '#shared/schemas/ask'
+import type { StaticMeal } from '#shared/schemas/queryStaticMeal'
+import type { SubmitResp } from '#shared/schemas/submit'
 import { Code } from '#shared/constants/code/nuxt/data-fetching/basic-usage.code'
 
 const { t } = useI18n({
   useScope: 'local',
 })
 
-// Response type definition
-interface StaticMealResp {
-  data: object
-}
-interface SubmitResp {
-  message: string
-}
-interface AskResp {
-  message: string
-}
-
 // Use `useFetch` & `useAsyncData` for server-side data fetching
 
 // `useFetch` is a developer experience sugar of `useAsyncData` & `$fetch`
 // This is nearly equivalent to `useAsyncData('staticMeal', () => $fetch('/api/queryStaticMeal'))`
-const { data } = useFetch<StaticMealResp>('/api/queryStaticMeal', {
+const { data } = useFetch<StaticMeal>('/api/queryStaticMeal', {
   key: 'staticMeal',
   method: 'get',
 })
