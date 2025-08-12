@@ -59,6 +59,12 @@ function ask() {
     </H>
     <section>
       <H level="2">
+        server/api/queryStaticMeal.get.ts
+      </H>
+      <ShikiJs :code="Code.queryStaticMeal" lang="ts" />
+    </section>
+    <section>
+      <H level="2">
         server/api/sumbit.post.ts
       </H>
       <ShikiJs :code="Code.sumbit" lang="ts" />
