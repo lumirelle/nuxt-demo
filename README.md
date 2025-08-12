@@ -211,6 +211,49 @@ Be very careful before proxying headers to an external API and just include head
 
 Thanks to this feature, we don't need to use external libraries like `lru-cache` to implement caching ourselves any more. The response data of `useFetch` and `useAsyncData` will cached by Nuxt automatically.
 
+By default, `useFetch` and `useAsyncData` use keys to prevent refetching the same data.
+
+```ts
+const { data } = await useFetch('/api/foo') // In this case, key is the provided URL
+const { data } = await useFetch('/api/foo', { key: 'foo' }) // In this case, key is 'foo'
+
+const { data } = await useAsyncData(() => $fetch('/api/bar')) // In this case, key is '<filename>-<linenumber>'
+const { data } = await useAsyncData('bar', () => $fetch('/api/bar')) // In this case, key is 'bar'
+```
+
+You can share state across page components by using the same key.
+
+Notice that, share state requires the following options provided to composable must be consistent:
+
+- `handler` function
+- `deep` option
+- `transform` function
+- `pick` array
+- `getCachedData` function
+- `default` value
+
+Because these options will results different data. If you need independent instances, please use different keys.
+
+You can refresh, clear the cached data by exposed functions from composables, or quick refreshing data by providing `watch` array:
+
+```ts
+const { data, refresh, clear } = await useFetch('/api/foo', { key: 'foo' })
+
+// This will refetching the data
+function doRefresh() {
+  refresh()
+}
+
+// This will clear the data (Only the data under the key 'foo')
+function doClear() {
+  clear()
+}
+
+const id = ref(1)
+// Data will refetching after id changed
+const { data: watchData } = await useFetch('/api/foo', { key: 'foo', watch: [id] })
+```
+
 Please refer to [Nuxt document](https://nuxt.com/docs/4.x/getting-started/data-fetching#caching-and-refetching) for more information.
 
 ## Nuxt Modules
