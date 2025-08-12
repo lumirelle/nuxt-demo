@@ -207,7 +207,7 @@ Be very careful before proxying headers to an external API and just include head
 - `x-forwarded-host`, `x-forwarded-port`, `x-forwarded-proto`
 - `cf-connecting-ip`, `cf-ray`
 
-#### Caching and Refetching (Share across components)
+#### Caching and Refetching (Share Across Components)
 
 By default, `useFetch` and `useAsyncData` use keys to prevent refetching the same data, it supports sharing data across components.
 
