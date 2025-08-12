@@ -1,24 +1,18 @@
 export const Code = {
-  queryStaticMeal:
-`import type { StaticMeal } from '#shared/schemas/queryStaticMeal'
-
-export default defineEventHandler(async () => {
-  return await $fetch<StaticMeal>('https://test-ipglobal.cd.xiaoxigroup.net/web/ipglobal-core/web/webMeal/queryStaticMeal')
+  time:
+`export default defineEventHandler(async () => {
+  return new Date().toISOString()
 })`,
   ask:
-`import type { AskResp } from '#shared/schemas/ask'
-
-export default defineEventHandler(async () => {
+`export default defineEventHandler(async () => {
   const value = Math.random() * 10
   if (value < 5) {
-    return { message: 'Yes' } as AskResp
+    return { message: 'Yes' }
   }
-  return { message: 'No' } as AskResp
+  return { message: 'No' }
 })`,
   sumbit:
-`import type { SubmitResp } from '#shared/schemas/submit'
-
-export default defineEventHandler(async () => {
+`export default defineEventHandler(async () => {
   const value = Math.random() * 10
   if (value < 5) {
     throw createError({
@@ -26,14 +20,10 @@ export default defineEventHandler(async () => {
       statusMessage: 'Error!',
     })
   }
-  return { message: 'Success!' } as SubmitResp
+  return { message: 'Success!' }
 })`,
   page:
 `<script lang="ts" setup>
-import type { AskResp } from '#shared/schemas/ask'
-import type { StaticMeal } from '#shared/schemas/queryStaticMeal'
-import type { SubmitResp } from '#shared/schemas/submit'
-
 const { t } = useI18n({
   useScope: 'local',
 })
@@ -41,9 +31,9 @@ const { t } = useI18n({
 // Use \`useFetch\` & \`useAsyncData\` for server-side data fetching
 
 // \`useFetch\` is a developer experience sugar of \`useAsyncData\` & \`$fetch\`
-// This is nearly equivalent to \`useAsyncData('staticMeal', () => $fetch('/api/queryStaticMeal'))\`
-const { data } = useFetch<StaticMeal>('/api/queryStaticMeal', {
-  key: 'staticMeal',
+// This is nearly equivalent to \`useAsyncData('staticMeal', () => $fetch('/api/time'))\`
+const { data } = useFetch('/api/time', {
+  key: 'time',
   method: 'get',
 })
 
@@ -51,7 +41,7 @@ const stringifiedData = computed(() => JSON.stringify(data.value, null, 2))
 
 function submit() {
   // Use \`$fetch\` for client-side data fetching
-  $fetch<SubmitResp>('/api/submit', {
+  $fetch('/api/submit', {
     method: 'post',
   }).then((res) => {
     ElMessage.success(res.message)
@@ -64,7 +54,7 @@ const question = ref('')
 
 function ask() {
   // Use \`$fetch\` for client-side data fetching
-  $fetch<AskResp>('/api/ask', {
+  $fetch('/api/ask', {
     method: 'get',
   }).then((res) => {
     ElMessage.success(res.message)

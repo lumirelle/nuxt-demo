@@ -1,7 +1,4 @@
 <script lang="ts" setup>
-import type { AskResp } from '#shared/schemas/ask'
-import type { StaticMeal } from '#shared/schemas/queryStaticMeal'
-import type { SubmitResp } from '#shared/schemas/submit'
 import { Code } from '#shared/constants/code/nuxt/data-fetching/basic-usage.code'
 
 const { t } = useI18n({
@@ -11,9 +8,9 @@ const { t } = useI18n({
 // Use `useFetch` & `useAsyncData` for server-side data fetching
 
 // `useFetch` is a developer experience sugar of `useAsyncData` & `$fetch`
-// This is nearly equivalent to `useAsyncData('staticMeal', () => $fetch('/api/queryStaticMeal'))`
-const { data } = useFetch<StaticMeal>('/api/queryStaticMeal', {
-  key: 'staticMeal',
+// This is nearly equivalent to `useAsyncData('staticMeal', () => $fetch('/api/time'))`
+const { data } = useFetch('/api/time', {
+  key: 'time',
   method: 'get',
 })
 
@@ -21,7 +18,7 @@ const stringifiedData = computed(() => JSON.stringify(data.value, null, 2))
 
 function submit() {
   // Use `$fetch` for client-side data fetching
-  $fetch<SubmitResp>('/api/submit', {
+  $fetch('/api/submit', {
     method: 'post',
   }).then((res) => {
     ElMessage.success(res.message)
@@ -34,7 +31,7 @@ const question = ref('')
 
 function ask() {
   // Use `$fetch` for client-side data fetching
-  $fetch<AskResp>('/api/ask', {
+  $fetch('/api/ask', {
     method: 'get',
   }).then((res) => {
     ElMessage.success(res.message)
@@ -51,9 +48,9 @@ function ask() {
     </H>
     <section>
       <H level="2">
-        server/api/queryStaticMeal.get.ts
+        server/api/time.get.ts
       </H>
-      <ShikiJs :code="Code.queryStaticMeal" lang="ts" />
+      <ShikiJs :code="Code.time" lang="ts" />
     </section>
     <section>
       <H level="2">

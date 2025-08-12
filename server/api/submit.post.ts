@@ -1,5 +1,3 @@
-import type { SubmitResp } from '#shared/schemas/submit'
-
 export default defineEventHandler(async () => {
   const value = Math.random() * 10
   if (value < 5) {
@@ -8,5 +6,5 @@ export default defineEventHandler(async () => {
       statusMessage: 'Error!',
     })
   }
-  return { message: 'Success!' } as SubmitResp
+  return { message: 'Success!' }
 })
