@@ -163,6 +163,25 @@ export default defineNuxtConfig({
     features: ['LabelLayout', 'UniversalTransition'],
   },
 
+  nitro: {
+    storage: {
+      cache: {
+        driver: 'lru-cache',
+        // Options provided to lru-cache constructor
+        ttl: 1000 * 60 * 5,
+        max: 100,
+      },
+    },
+    devStorage: {
+      cache: {
+        driver: 'lru-cache',
+        // Options provided to lru-cache constructor
+        ttl: 1000 * 60 * 5,
+        max: 100,
+      },
+    },
+  },
+
   build: {
     // echarts-liquidfill is not ESM friendly
     transpile: ['echarts-liquidfill'],

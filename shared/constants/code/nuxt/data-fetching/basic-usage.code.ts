@@ -1,7 +1,7 @@
 export const Code = {
   time:
 `export default defineEventHandler(async () => {
-  return new Date().toISOString()
+  return new Date().toLocaleString()
 })`,
   ask:
 `export default defineEventHandler(async () => {

@@ -45,6 +45,34 @@ const { t } = useI18n({
             </NuxtLinkLocale>
           </p>
         </section>
+        <section>
+          <H level="4">
+            {{ t('nuxt.data-fetching.shared.title') }}
+          </H>
+          <p>
+            {{ t('nuxt.data-fetching.shared.p1') }}
+          </p>
+          <p>
+            <NuxtLinkLocale to="/nuxt/data-fetching/shared">
+              <span>{{ t('nuxt.data-fetching.shared.try') }}</span>
+            </NuxtLinkLocale>
+          </p>
+        </section>
+        <section>
+          <H level="4">
+            {{ t('nuxt.data-fetching.cached.title') }}
+          </H>
+          <p>
+            <NuxtLinkLocale to="/nuxt/data-fetching/cached-1">
+              <span>{{ t('nuxt.data-fetching.cached.try-1') }}</span>
+            </NuxtLinkLocale>
+          </p>
+          <p>
+            <NuxtLinkLocale to="/nuxt/data-fetching/cached-2">
+              <span>{{ t('nuxt.data-fetching.cached.try-2') }}</span>
+            </NuxtLinkLocale>
+          </p>
+        </section>
       </section>
     </section>
 
@@ -536,6 +564,14 @@ en:
       basic-usage:
         title: Basic Usage
         try: Try basic usage of Nuxt Data Fetching
+      shared:
+        title: Shared Data
+        p1: Shared page data with components.
+        try: Try shared data across components (even pages)
+      cached:
+        title: Cached Data
+        try-1: Try caching data on the server (LRU Cache)
+        try-2: Try fetching data again, see if data changed
 
   vue:
     title: Vue 3
@@ -673,6 +709,14 @@ zh-CN:
       basic-usage:
         title: 基本使用
         try: 尝试 Nuxt 数据获取的基本用法
+      shared:
+        title: 数据共享
+        p1: 将页面数据共享给组件
+        try: 尝试在组件之间共享数据
+      cached:
+        title: 数据缓存
+        try-1: 尝试在服务端缓存数据（LRU Cache）
+        try-2: 尝试再次获取数据，看看它是否改变
 
   vue:
     title: Vue 3
@@ -810,6 +854,14 @@ zh-TW:
       basic-usage:
         title: 基本使用
         try: 嘗試 Nuxt 數據獲取的基本用法。
+      shared:
+        title: 共享數據
+        p1: 將頁面數據共享給組件。
+        try: 嘗試在組件之間共享數據（甚至頁面）
+      cached:
+        title: 數據緩存
+        try-1: 嘗試在服務端緩存數據（LRU Cache）
+        try-2: 嘗試再次獲取數據，看看它是否改變
 
   vue:
     title: Vue 3

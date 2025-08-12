@@ -207,11 +207,9 @@ Be very careful before proxying headers to an external API and just include head
 - `x-forwarded-host`, `x-forwarded-port`, `x-forwarded-proto`
 - `cf-connecting-ip`, `cf-ray`
 
-#### Caching and Refetching
+#### Caching and Refetching (Share across components)
 
-Thanks to this feature, we don't need to use external libraries like `lru-cache` to implement caching ourselves any more. The response data of `useFetch` and `useAsyncData` will cached by Nuxt automatically.
-
-By default, `useFetch` and `useAsyncData` use keys to prevent refetching the same data.
+By default, `useFetch` and `useAsyncData` use keys to prevent refetching the same data, it supports sharing data across components.
 
 ```ts
 const { data } = await useFetch('/api/foo') // In this case, key is the provided URL
@@ -221,7 +219,7 @@ const { data } = await useAsyncData(() => $fetch('/api/bar')) // In this case, k
 const { data } = await useAsyncData('bar', () => $fetch('/api/bar')) // In this case, key is 'bar'
 ```
 
-You can share state across page components by using the same key.
+You can share state across components by using the same key.
 
 Notice that, share state requires the following options provided to composable must be consistent:
 
@@ -233,6 +231,12 @@ Notice that, share state requires the following options provided to composable m
 - `default` value
 
 Because these options will results different data. If you need independent instances, please use different keys.
+
+In components, use `useNuxtData` to access the shared data:
+
+```ts
+const { data: foo } = useNuxtData('foo')
+```
 
 You can refresh, clear the cached data by exposed functions from composables, or quick refreshing data by providing `watch` array:
 
@@ -255,6 +259,43 @@ const { data: watchData } = await useFetch('/api/foo', { key: 'foo', watch: [id]
 ```
 
 Please refer to [Nuxt document](https://nuxt.com/docs/4.x/getting-started/data-fetching#caching-and-refetching) for more information.
+
+## Nitro
+
+Nuxt 4 uses Nitro as its server engine, which provides a powerful and flexible way to handle server-side rendering, API routes, and more. Nitro is designed to be lightweight and efficient, making it a great choice for modern web applications.
+
+### KV Storage
+
+Nitro provides a built-in storage layer integration with `unstorage` that can abstract filesystem or database or any other data source.
+
+Please refer to [Nitro Document](https://nitro.build/guide/storage) for more information.
+
+### Cache
+
+Nitro provides a caching system built on top of the storage layer. The built-in KV storage named `cache` is used underhood.
+
+Notice that, this caching system is based on `event handler` provided by `h3`.
+
+An [event handler](https://v1.h3.dev/guide/event-handler) is a function that will be bound to a route and executed when the route is matched by the router for an incoming request.
+
+**In short, event handler provides the ability to create server routes / endpoints on Nitro, an you can request them on both server-side & client-side. Then, you can `$fetch` data and return them on event handlers.**
+
+_server/api/ask.get.ts_ (Create a endpoint with `get` method by file name extensions)
+
+```ts
+export default defineEventHandler(() => {
+  return $fetch('/backend/endpoint', {
+    method: 'get',
+    // ...
+  })
+})
+```
+
+In the case above, our endpoint located at `<BASE_URL>/api/ask` just a proxy of backend endpoint and with the ability of caching.
+
+By using `defineCachedEventHandler` & `defineCachedFunction`, you can caching the result of event handler & functions (which are part of one, and reusing it in multiple handlers)
+
+For further usage, please refer to [h3 Document](https://v1.h3.dev/guide).
 
 ## Nuxt Modules
 
@@ -529,6 +570,4 @@ For reading QRCodes, use the component `<QrcodeStream>` & `<QrcodeCapture>` & `<
 
 ### LRU Cache
 
-Nuxt provide built-in support for data caching while using `useFetch` or `useAsyncData`, we don't need to use external libraries like `lru-cache` to implement caching ourselves.
-
-See chapter [`useFetch` & `useAsyncData`](data-fetching) for more details.
+Nuxt provide built-in support for data caching which is powered by `nitro`, we don't need to use external libraries like `lru-cache` to implement caching ourselves.
