@@ -28,39 +28,39 @@ const { t } = useI18n({
   useScope: 'local',
 })
 
-// Use \`useFetch\` & \`useAsyncData\` for server-side data fetching
+// Use \`useFetch\` & \`useAsyncData\` for server-side data fetching // [!code focus]
 
-// \`useFetch\` is a developer experience sugar of \`useAsyncData\` & \`$fetch\`
-// This is nearly equivalent to \`useAsyncData('staticMeal', () => $fetch('/api/time'))\`
-const { data } = useFetch('/api/time', {
-  key: 'time',
-  method: 'get',
-})
+// \`useFetch\` is a developer experience sugar of \`useAsyncData\` & \`$fetch\` // [!code focus]
+// This is nearly equivalent to \`useAsyncData('staticMeal', () => $fetch('/api/time'))\` // [!code focus]
+const { data } = useFetch('/api/time', { // [!code focus]
+  key: 'time', // [!code focus]
+  method: 'get', // [!code focus]
+}) // [!code focus]
 
-const stringifiedData = computed(() => JSON.stringify(data.value, null, 2))
+const stringifiedData = computed(() => JSON.stringify(data.value, null, 2)) // [!code focus]
 
 function submit() {
-  // Use \`$fetch\` for client-side data fetching
-  $fetch('/api/submit', {
-    method: 'post',
-  }).then((res) => {
-    ElMessage.success(res.message)
-  }).catch((error) => {
-    ElMessage.error(error.message)
-  })
+  // Use \`$fetch\` for client-side data fetching // [!code focus]
+  $fetch('/api/submit', { // [!code focus]
+    method: 'post', // [!code focus]
+  }).then((res) => { // [!code focus]
+    ElMessage.success(res.message) // [!code focus]
+  }).catch((error) => { // [!code focus]
+    ElMessage.error(error.message) // [!code focus]
+  }) // [!code focus]
 }
 
 const question = ref('')
 
 function ask() {
-  // Use \`$fetch\` for client-side data fetching
-  $fetch('/api/ask', {
-    method: 'get',
-  }).then((res) => {
-    ElMessage.success(res.message)
-  }).catch((error) => {
-    ElMessage.error(error.message)
-  })
+  // Use \`$fetch\` for client-side data fetching // [!code focus]
+  $fetch('/api/ask', { // [!code focus]
+    method: 'get', // [!code focus]
+  }).then((res) => { // [!code focus]
+    ElMessage.success(res.message) // [!code focus]
+  }).catch((error) => { // [!code focus]
+    ElMessage.error(error.message) // [!code focus]
+  }) // [!code focus]
 }
 </script>
 
@@ -73,13 +73,13 @@ function ask() {
       <div flex gap-4 h-100px>
         <div flex="~ 1 col" justify-between>
           <p>{{ t('click-submit') }}</p>
-          <ElButton @click="submit">
-            {{ t('submit') }}
-          </ElButton>
+          <ElButton @click="submit"> // [!code focus]
+            {{ t('submit') }} // [!code focus]
+          </ElButton> // [!code focus]
         </div>
         <div flex="~ 1 col" justify-between>
           <p>{{ t('blur-ask') }}</p>
-          <ElInput v-model="question" @blur="ask" />
+          <ElInput v-model="question" @blur="ask" /> // [!code focus]
         </div>
       </div>
     </section>
@@ -87,7 +87,7 @@ function ask() {
       <H level="3">
         <code>useFetch</code> & <code>useAsyncData</code>
       </H>
-      <ShikiJs :code="stringifiedData" lang="json" />
+      <ShikiJs :code="stringifiedData" lang="json" /> // [!code focus]
     </section>
   </div>
 </template>

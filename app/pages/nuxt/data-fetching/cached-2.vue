@@ -9,7 +9,7 @@ const { t } = useI18n({
   useScope: 'local',
 })
 
-// Provide data
+// Fetch data from Nitro (Server)
 const { data } = useFetch('/api/cached-time', {
   key: 'cached-time',
   method: 'get',
@@ -25,18 +25,6 @@ const stringifiedData = computed(() => JSON.stringify(data.value, null, 2))
     </H>
     <section>
       <H level="2">
-        server/api/cached-time.get.ts
-      </H>
-      <ShikiJs :code="Code.time" lang="ts" />
-    </section>
-    <section>
-      <H level="2">
-        app/pages/nuxt/data-fetching/cached-1.vue & app/pages/nuxt/data-fetching/cached-2.vue
-      </H>
-      <ShikiJs :code="Code.page" lang="vue" />
-    </section>
-    <section>
-      <H level="2">
         {{ t('result.title') }}
       </H>
       <section>
@@ -45,6 +33,24 @@ const stringifiedData = computed(() => JSON.stringify(data.value, null, 2))
         </H>
         <ShikiJs :code="stringifiedData" lang="json" />
       </section>
+    </section>
+    <section>
+      <H level="2">
+        <i>nuxt.config.ts</i>
+      </H>
+      <ShikiJs :code="Code.config" lang="ts" />
+    </section>
+    <section>
+      <H level="2">
+        <i>server/api/cached-time.get.ts</i>
+      </H>
+      <ShikiJs :code="Code.time" lang="ts" />
+    </section>
+    <section>
+      <H level="2">
+        <i>app/pages/nuxt/data-fetching/cached-1.vue & app/pages/nuxt/data-fetching/cached-2.vue</i>
+      </H>
+      <ShikiJs :code="Code.page" lang="vue" />
     </section>
     <section>
       <NuxtLinkLocale to="/">

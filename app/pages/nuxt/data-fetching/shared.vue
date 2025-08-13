@@ -25,32 +25,40 @@ const stringifiedData = computed(() => JSON.stringify(data.value, null, 2))
     </H>
     <section>
       <H level="2">
-        server/api/time.get.ts
-      </H>
-      <ShikiJs :code="Code.time" lang="ts" />
-    </section>
-    <section>
-      <H level="2">
-        app/pages/nuxt/data-fetching/shared.vue
-      </H>
-      <ShikiJs :code="Code.page" lang="vue" />
-    </section>
-    <section>
-      <H level="2">
         {{ t('result.title') }}
       </H>
+      <!-- Page -->
       <section>
         <H level="3">
-          <code>useFetch</code> & <code>useAsyncData</code>
+          {{ t('result.page') }}
         </H>
         <ShikiJs :code="stringifiedData" lang="json" />
       </section>
+      <!-- Component -->
       <section>
         <H level="3">
           {{ t('result.component') }}
         </H>
         <SharedTime />
       </section>
+    </section>
+    <section>
+      <H level="2">
+        <i>server/api/time.get.ts</i>
+      </H>
+      <ShikiJs :code="Code.time" lang="ts" />
+    </section>
+    <section>
+      <H level="2">
+        <i>app/pages/nuxt/data-fetching/shared.vue</i>
+      </H>
+      <ShikiJs :code="Code.page" lang="vue" />
+    </section>
+    <section>
+      <H level="2">
+        <i>app/components/SharedTime.vue</i>
+      </H>
+      <ShikiJs :code="Code.component" lang="vue" />
     </section>
     <section>
       <NuxtLinkLocale to="/">
@@ -66,6 +74,7 @@ en:
   back-home: "{'<'} Back to home page {'>'}"
   result:
     title: Result
+    page: Data From Page
     component: Shared Data Across Components
 
 zh-CN:
@@ -73,6 +82,7 @@ zh-CN:
   back-home: "{'<'} 返回首页 {'>'}"
   result:
     title: 结果
+    page: 来自页面的数据
     component: 在组件之间共享数据
 
 zh-TW:
@@ -80,5 +90,6 @@ zh-TW:
   back-home: "{'<'} 返回首頁 {'>'}"
   result:
     title: 結果
+    page: 來自頁面的數據
     component: 在組件之間共享數據
 </i18n>

@@ -5,14 +5,14 @@ export const Code = {
 })`,
   component:
 `<script lang="ts" setup>
-// This will shared the data from page
-const { data } = useNuxtData('shared-time')
-const stringifiedData = computed(() => JSON.stringify(data.value, null, 2))
+// This will shared the data from page // [!code focus]
+const { data } = useNuxtData('shared-time') // [!code focus]
+const stringifiedData = computed(() => JSON.stringify(data.value, null, 2)) // [!code focus]
 </script>
 
 <template>
   <div>
-    <ShikiJs :code="stringifiedData" lang="json" />
+    <ShikiJs :code="stringifiedData" lang="json" /> // [!code focus]
   </div>
 </template>`,
   page:
@@ -21,28 +21,30 @@ const { t } = useI18n({
   useScope: 'local',
 })
 
-// Provide data
-const { data } = useFetch('/api/time', {
-  key: 'shared-time',
-  method: 'get',
-})
+// Provide data // [!code focus]
+const { data } = useFetch('/api/time', { // [!code focus]
+  key: 'shared-time', // [!code focus]
+  method: 'get', // [!code focus]
+}) // [!code focus]
 
-const stringifiedData = computed(() => JSON.stringify(data.value, null, 2))
+const stringifiedData = computed(() => JSON.stringify(data.value, null, 2)) // [!code focus]
 </script>
 
 <template>
   <div>
+    <!-- Page -->
     <section>
       <H level="3">
-        <code>useFetch</code> & <code>useAsyncData</code>
+        {{ t('result.page') }}
       </H>
-      <ShikiJs :code="stringifiedData" lang="json" />
+      <ShikiJs :code="stringifiedData" lang="json" /> // [!code focus]
     </section>
+    <!-- Component -->
     <section>
       <H level="3">
         {{ t('result.component') }}
       </H>
-      <SharedStaticMeal />
+      <SharedTime /> // [!code focus]
     </section>
   </div>
 </template>
@@ -50,14 +52,17 @@ const stringifiedData = computed(() => JSON.stringify(data.value, null, 2))
 <i18n lang="yaml">
 en:
   result:
+    page: Data From Page
     component: Shared Data Across Components
 
 zh-CN:
   result:
+    page: 来自页面的数据
     component: 在组件之间共享数据
 
 zh-TW:
   result:
+    page: 來自頁面的數據
     component: 在組件之間共享數據
 </i18n>`,
 }

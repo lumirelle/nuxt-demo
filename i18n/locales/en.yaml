@@ -1,6 +1,6 @@
-plugins:
+plugin:
   api:
-    errors:
+    error:
       login-expired: Login expired, please log in again
       too-many-requests: Too many requests, please try again later
       account-locked: Account is locked or login by other people

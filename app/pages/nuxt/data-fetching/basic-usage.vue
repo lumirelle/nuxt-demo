@@ -20,21 +20,10 @@ const { data } = useFetch('/api/time', {
 
 const stringifiedData = computed(() => JSON.stringify(data.value, null, 2))
 
-const { $api } = useNuxtApp()
-
 function submit() {
   // Use `$fetch` for client-side data fetching
   $fetch('/api/submit', {
     method: 'post',
-  }).then((res) => {
-    ElMessage.success(res.message)
-  }).catch((error) => {
-    ElMessage.error(error.message)
-  })
-
-  // Use `$api` for client-side data fetching
-  $api<{ message: string }>('/ipglobal-core/web/webMeal/queryWebLowMeal', {
-    method: 'get',
   }).then((res) => {
     ElMessage.success(res.message)
   }).catch((error) => {
@@ -63,32 +52,9 @@ function ask() {
     </H>
     <section>
       <H level="2">
-        server/api/time.get.ts
-      </H>
-      <ShikiJs :code="Code.time" lang="ts" />
-    </section>
-    <section>
-      <H level="2">
-        server/api/sumbit.post.ts
-      </H>
-      <ShikiJs :code="Code.sumbit" lang="ts" />
-    </section>
-    <section>
-      <H level="2">
-        server/api/ask.get.ts
-      </H>
-      <ShikiJs :code="Code.ask" lang="ts" />
-    </section>
-    <section>
-      <H level="2">
-        app/pages/nuxt/data-fetching/basic-usage.vue
-      </H>
-      <ShikiJs :code="Code.page" lang="vue" />
-    </section>
-    <section>
-      <H level="2">
         {{ t('result.title') }}
       </H>
+      <!-- $fetch -->
       <section>
         <H level="3">
           <code>$fetch</code>
@@ -106,12 +72,37 @@ function ask() {
           </div>
         </div>
       </section>
+      <!-- useFetch & useAsyncData -->
       <section>
         <H level="3">
           <code>useFetch</code> & <code>useAsyncData</code>
         </H>
         <ShikiJs :code="stringifiedData" lang="json" />
       </section>
+    </section>
+    <section>
+      <H level="2">
+        <i>server/api/time.get.ts</i>
+      </H>
+      <ShikiJs :code="Code.time" lang="ts" />
+    </section>
+    <section>
+      <H level="2">
+        <i>server/api/sumbit.post.ts</i>
+      </H>
+      <ShikiJs :code="Code.sumbit" lang="ts" />
+    </section>
+    <section>
+      <H level="2">
+        <i>server/api/ask.get.ts</i>
+      </H>
+      <ShikiJs :code="Code.ask" lang="ts" />
+    </section>
+    <section>
+      <H level="2">
+        <i>app/pages/nuxt/data-fetching/basic-usage.vue</i>
+      </H>
+      <ShikiJs :code="Code.page" lang="vue" />
     </section>
     <section>
       <NuxtLinkLocale to="/">

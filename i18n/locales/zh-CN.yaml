@@ -1,6 +1,6 @@
-plugins:
+plugin:
   api:
-    errors:
-      login-expired: 登录过期，请重新登录
+    error:
+      login-expired: 登录已过期，请重新登录
       too-many-requests: 请求过多，请稍后再试
-      account-locked: 账户被锁定或其他人登录
+      account-locked: 账号被锁定或登录被其他用户占用

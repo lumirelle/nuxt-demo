@@ -125,9 +125,10 @@ export default defineNuxtConfig({
 
   i18n: {
     locales: [
-      { code: 'en', name: 'English' },
-      { code: 'zh-CN', name: '简体中文' },
-      { code: 'zh-TW', name: '繁體中文' },
+      // FIXME: Should specify file manually
+      { code: 'en', name: 'English', file: 'en.yaml' },
+      { code: 'zh-CN', name: '简体中文', file: 'zh-CN.yaml' },
+      { code: 'zh-TW', name: '繁體中文', file: 'zh-TW.yaml' },
     ],
     // NOTE: I18n will detect the browser language by default
     defaultLocale: 'en',
@@ -181,6 +182,7 @@ export default defineNuxtConfig({
 
   nitro: {
     storage: {
+      // Override the default options of cache storage
       cache: {
         driver: 'lru-cache',
         // Options provided to lru-cache constructor
@@ -188,6 +190,7 @@ export default defineNuxtConfig({
         max: 100,
       },
     },
+    // Override the default options of cache storage in dev mode
     devStorage: {
       cache: {
         driver: 'lru-cache',
