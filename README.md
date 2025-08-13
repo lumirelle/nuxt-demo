@@ -70,6 +70,27 @@ Nuxt 4 provides a lot of features than Nuxt 2, including:
 
 Reading the getting started guide [here](https://nuxt.com/docs/4.x/getting-started/introduction).
 
+### Client & Server
+
+Under the `/app` folder, the code will be executed **both client & server**. For example:
+
+_app/pages/index.vue_
+
+```html
+<script lang="ts" setup>
+  // `useI18n` will be executed **both client & server**
+  // On server, it uses cookie to detect the locale
+  // On client, it uses cookie to detect the locale, if cookie is empty, it will detect the browser's language and save it to cookie
+  const { t } = useI18n({
+    useScope: 'local',
+  })
+
+  // `useFetch` will be executed **both client & server**
+  // But it use `import.meta.server` and `options.server = true` by default to run the data fetching logic only on server
+  const { data } = await useFetch('/api/data')
+</script>
+```
+
 ### Hydration Errors
 
 Something you must know about hydration errors if you are using SSR rendering mode of Nuxt 4: **Hydration errors**.
@@ -174,7 +195,11 @@ As this, Nuxt provides the abilities of [lazy fetching](https://nuxt.com/docs/4.
 
 #### Pass Client Headers
 
-When calling `useFetch` on the server, Nuxt will use `useRequestFetch` to proxy client headers and cookies (with the exception of headers not meant to be forwarded, like `host`) automatically.
+When we call `$fetch` in the browser, user headers like cookie will be directly sent to the API.
+
+Normally, during server-side-rendering, due to security considerations, the `$fetch` wouldn't include the user's browser cookies, nor pass on cookies from the fetch response.
+
+However, when calling `useFetch` with a relative URL on the server, Nuxt will use `useRequestFetch` to proxy headers and cookies (with the exception of headers not meant to be forwarded, like `host`).
 
 If you want to reach the same behavior while using `$fetch`, you should use the proxy manually, likes:
 
@@ -295,7 +320,9 @@ export default defineCachedEventHandler(() => {
 
 #### Custom Data Fetching
 
-Follow the [Nuxt Document](https://nuxt.com/docs/4.x/guide/recipes/custom-usefetch) here.
+Currently, Nuxt does not provide a cleaner way to let us create a custom fetcher, see <https://github.com/nuxt/nuxt/issues/14736>.
+
+To see the current solution, follow the [Nuxt Document](https://nuxt.com/docs/4.x/guide/recipes/custom-usefetch) here.
 
 ## Nitro
 
