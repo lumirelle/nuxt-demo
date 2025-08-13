@@ -4,6 +4,10 @@ import { Code } from '#shared/constants/code/e-charts/chart-full.code'
 import * as ECharts from 'echarts/core'
 import usaJson from '~/assets/data/map/USA.json'
 
+definePageMeta({
+  parent: '/',
+})
+
 const { t } = useI18n({
   useScope: 'local',
 })

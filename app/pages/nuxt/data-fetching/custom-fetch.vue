@@ -1,4 +1,8 @@
 <script lang="ts" setup>
+definePageMeta({
+  parent: '/',
+})
+
 const { t } = useI18n({
   useScope: 'local',
 })

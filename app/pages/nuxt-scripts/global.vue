@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import { Code } from '#shared/constants/code/nuxt-scripts/global.code'
 
+definePageMeta({
+  parent: '/nuxt/scripts',
+})
+
 function handleClick() {
   // Using JSConfetti, which is loaded globally in `nuxt.config.ts`
   // We can access it from the window object

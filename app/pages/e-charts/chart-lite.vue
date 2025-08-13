@@ -2,6 +2,10 @@
 import type { ECSSRClientEventParams } from 'echarts/ssr/client/types/index.js'
 import { Code } from '#shared/constants/code/e-charts/chart-lite.code'
 
+definePageMeta({
+  parent: '/',
+})
+
 const { t } = useI18n({
   useScope: 'local',
 })

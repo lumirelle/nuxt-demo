@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import { Code } from '#shared/constants/code/element-plus/button.code'
 
+definePageMeta({
+  parent: '/element-plus',
+})
+
 const { t } = useI18n({
   useScope: 'local',
 })

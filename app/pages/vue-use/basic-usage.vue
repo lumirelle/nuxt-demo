@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import { Code } from '#shared/constants/code/vue-use/basic-usage.code'
 
+definePageMeta({
+  parent: '/',
+})
+
 const { t } = useI18n({
   useScope: 'local',
 })

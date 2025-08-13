@@ -3,6 +3,10 @@ import { Code } from '#shared/constants/code/element-plus/date-picker.code'
 
 import { ref } from 'vue'
 
+definePageMeta({
+  parent: '/element-plus',
+})
+
 const date = ref<Date | null>(null)
 
 const { t } = useI18n({

@@ -2,6 +2,10 @@
 import { Code } from '#shared/constants/code/bignumber-js/basic-usage.code'
 import { BigNumber } from 'bignumber.js'
 
+definePageMeta({
+  parent: '/',
+})
+
 const { t } = useI18n({
   useScope: 'local',
 })

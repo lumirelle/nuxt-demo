@@ -1,6 +1,10 @@
 <script lang="ts" setup>
 import { Code } from '#shared/constants/code/nuxt/data-fetching/basic-usage.code'
 
+definePageMeta({
+  parent: '/',
+})
+
 const { t } = useI18n({
   useScope: 'local',
 })
