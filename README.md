@@ -160,8 +160,6 @@ So you should not let your HTML structure depend on the client-based data, such 
 
 Nuxt 4 uses `ofetch` to provide a better data fetching experience. It is a lightweight and powerful fetch wrapper that supports features like automatic retries, request cancellation, and more.
 
-Thanks that, we don't need to use `axios` and implement our own axios plugin any more.
-
 Nuxt 4 provides three ways to fetch data: `$fetch`, `useFetch`, `useAsyncData`.
 
 Notice that, `useFetch` & `useAsyncData` are designed to fetch data only on the server, in order to avoid redundant data fetching actions and prevent navigation until data fetching is completed.
@@ -294,6 +292,10 @@ export default defineCachedEventHandler(() => {
   name: 'foo'
 })
 ```
+
+#### Custom Data Fetching
+
+Follow the [Nuxt Document](https://nuxt.com/docs/4.x/guide/recipes/custom-usefetch) here.
 
 ## Nitro
 

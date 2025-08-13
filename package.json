@@ -3,11 +3,16 @@
   "type": "module",
   "private": true,
   "packageManager": "pnpm@10.14.0",
+  "engines": {
+    "node": ">=20.6.0"
+  },
   "scripts": {
+    "dev": "nuxt dev --dotenv .env.local",
+    "dev:production": "nuxt dev --dotenv .env.production",
     "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
+    "preview": "nuxt preview --dotenv .env.production",
+    "preview:local": "nuxt preview --dotenv .env.local",
+    "start": "node --env-file .env.production .output/server/index.mjs",
     "test": "vitest",
     "postinstall": "nuxt prepare"
   },
@@ -19,6 +24,7 @@
     "@unhead/vue": "^2.0.14",
     "@vueuse/nuxt": "^13.6.0",
     "bignumber.js": "^9.3.1",
+    "consola": "^3.4.2",
     "dayjs": "^1.11.13",
     "echarts": "^5.6.0",
     "highlight.js": "^11.11.1",

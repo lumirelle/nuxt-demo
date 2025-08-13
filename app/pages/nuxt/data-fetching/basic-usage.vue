@@ -16,10 +16,21 @@ const { data } = useFetch('/api/time', {
 
 const stringifiedData = computed(() => JSON.stringify(data.value, null, 2))
 
+const { $api } = useNuxtApp()
+
 function submit() {
   // Use `$fetch` for client-side data fetching
   $fetch('/api/submit', {
     method: 'post',
+  }).then((res) => {
+    ElMessage.success(res.message)
+  }).catch((error) => {
+    ElMessage.error(error.message)
+  })
+
+  // Use `$api` for client-side data fetching
+  $api<{ message: string }>('/ipglobal-core/web/webMeal/queryWebLowMeal', {
+    method: 'get',
   }).then((res) => {
     ElMessage.success(res.message)
   }).catch((error) => {

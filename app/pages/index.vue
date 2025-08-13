@@ -73,6 +73,16 @@ const { t } = useI18n({
             </NuxtLinkLocale>
           </p>
         </section>
+        <section>
+          <H level="4">
+            {{ t('nuxt.data-fetching.custom.title') }}
+          </H>
+          <p>
+            <NuxtLinkLocale to="/nuxt/data-fetching/custom-fetch">
+              <span>{{ t('nuxt.data-fetching.custom.try') }}</span>
+            </NuxtLinkLocale>
+          </p>
+        </section>
       </section>
     </section>
 
@@ -572,6 +582,9 @@ en:
         title: Cached Data
         try-1: Try caching data on the server (LRU Cache)
         try-2: Try fetching data again, see if data changed
+      custom:
+        title: Custom Fetch
+        try: Try custom fetch with API
 
   vue:
     title: Vue 3
@@ -717,6 +730,9 @@ zh-CN:
         title: 数据缓存
         try-1: 尝试在服务端缓存数据（LRU Cache）
         try-2: 尝试再次获取数据，看看它是否改变
+      custom:
+        title: 自定义获取
+        try: 尝试使用 API 进行自定义获取
 
   vue:
     title: Vue 3
@@ -862,6 +878,9 @@ zh-TW:
         title: 數據緩存
         try-1: 嘗試在服務端緩存數據（LRU Cache）
         try-2: 嘗試再次獲取數據，看看它是否改變
+      custom:
+        title: 自定义获取
+        try: 尝试使用 API 进行自定义获取
 
   vue:
     title: Vue 3

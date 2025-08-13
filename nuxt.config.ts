@@ -1,3 +1,5 @@
+import process from 'node:process'
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
@@ -13,6 +15,17 @@ export default defineNuxtConfig({
   ],
 
   devtools: { enabled: true },
+
+  runtimeConfig: {
+    // Private keys are only available on the server
+    // ...
+
+    // Public keys that are exposed to the client
+    public: {
+      apiBase: process.env.NUXT_PUBLIC_API_BASE,
+      dockerBase: process.env.NUXT_PUBLIC_DOCKER_BASE,
+    },
+  },
 
   modules: [
     // Element Plus auto import & theme & variables override support
@@ -119,6 +132,9 @@ export default defineNuxtConfig({
     // NOTE: I18n will detect the browser language by default
     defaultLocale: 'en',
     strategy: 'prefix_except_default',
+    detectBrowserLanguage: {
+      cookieKey: 'locale',
+    },
   },
 
   shiki: {
