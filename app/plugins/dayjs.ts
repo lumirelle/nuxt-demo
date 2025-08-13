@@ -12,5 +12,10 @@ export default defineNuxtPlugin(() => {
     'zh-TW': ZhWt,
   }
   dayjs.locale(locales[locale.value])
-  nuxtApp.provide('dayjs', dayjs)
+
+  return {
+    provide: {
+      dayjs,
+    },
+  }
 })
