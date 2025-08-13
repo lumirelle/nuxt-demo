@@ -1,6 +1,6 @@
 export const useInitializingStore = defineStore('initializing', {
   state: () => ({
-    answer: 'no',
+    answer: '',
     forced: false,
   }),
   getters: {
@@ -13,15 +13,9 @@ export const useInitializingStore = defineStore('initializing', {
         forced: boolean
       }
 
-      $fetch<Response>('https://yesno.wtf/api')
-        .then(({ answer, forced }) => {
-          this.answer = answer
-          this.forced = forced
-        })
-        .catch(() => {
-          this.answer = 'invalid'
-          this.forced = false
-        })
+      const { answer, forced } = await $fetch<Response>('https://yesno.wtf/api')
+      this.answer = answer
+      this.forced = forced
     },
   },
 })

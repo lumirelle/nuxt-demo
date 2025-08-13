@@ -14,7 +14,8 @@ const isStoreInitialized = ref(false)
 
 // Use Promise.all, support more stores initialization in the future
 Promise.all([
-  callOnce('initializing', () => initializingStore.askQuestion),
+  // `callOnce` should call the async store actions directly
+  callOnce('initializing', initializingStore.askQuestion),
 ])
   .then(() => {
     isStoreInitialized.value = true
@@ -22,7 +23,7 @@ Promise.all([
 
 watch(isStoreInitialized, (value) => {
   if (value) {
-    ElMessage.success('Store initialized!')
+    ElNotification.success(`Store initialized! Value is: ${initializingStore.answer}`)
   }
 })
 </script>

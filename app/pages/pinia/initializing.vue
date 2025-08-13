@@ -19,6 +19,14 @@ const initializingStore = useInitializingStore()
       {{ t('title') }}
     </H>
     <section>
+      <H level="2">
+        {{ t('result.title') }}
+      </H>
+      <p>
+        {{ initializingStore.answer }}
+      </p>
+    </section>
+    <section>
       <I18nT keypath="description.nuxt2" tag="p">
         <template #code>
           <code>nuxtServerInit</code>
@@ -35,29 +43,21 @@ const initializingStore = useInitializingStore()
     </section>
     <section>
       <H level="2">
-        app/stores/initializing.ts
+        <i>app/stores/initializing.ts</i>
       </H>
       <ShikiJs :code="Code.store" lang="ts" />
     </section>
     <section>
       <H level="2">
-        app/app.vue
+        <i>app/app.vue</i>
       </H>
       <ShikiJs :code="Code.app" lang="vue" />
     </section>
     <section>
       <H level="2">
-        app/pages/pinia/initializing.vue
+        <i>app/pages/pinia/initializing.vue</i>
       </H>
       <ShikiJs :code="Code.page" lang="vue" />
-    </section>
-    <section>
-      <H level="2">
-        {{ t('result.title') }}
-      </H>
-      <p>
-        {{ initializingStore.answer }}
-      </p>
     </section>
     <section>
       <NuxtLinkLocale to="/">

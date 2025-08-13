@@ -2,7 +2,7 @@ export const Code = {
   store:
 `export const useInitializingStore = defineStore('initializing', {
   state: () => ({
-    answer: 'no',
+    answer: '',
     forced: false,
   }),
   getters: {
@@ -15,18 +15,11 @@ export const Code = {
         forced: boolean
       }
 
-      $fetch<Response>('https://yesno.wtf/api')
-        .then(({ answer, forced }) => {
-          this.answer = answer
-          this.forced = forced
-        })
-        .catch(() => {
-          this.answer = 'invalid'
-          this.forced = false
-        })
-      },
+      const { answer, forced } = await $fetch<Response>('https://yesno.wtf/api')
+      this.answer = answer
+      this.forced = forced
     },
-  })
+  },
 })`,
   app:
 `<script setup lang="ts">
@@ -37,7 +30,8 @@ const isStoreInitialized = ref(false)
 
 // Use Promise.all, support more stores initialization in the future
 Promise.all([
-  callOnce('initializing', () => initializingStore.askQuestion),
+  // \`callOnce\` should call the async store actions directly
+  callOnce('initializing', initializingStore.askQuestion),
 ])
   .then(() => {
     isStoreInitialized.value = true
@@ -45,7 +39,7 @@ Promise.all([
 
 watch(isStoreInitialized, (value) => {
   if (value) {
-    ElMessage.success('Store initialized!')
+    ElNotification.success('Store initialized!')
   }
 })
 </script>`,

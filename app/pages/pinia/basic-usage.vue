@@ -20,18 +20,6 @@ const store = useBasicStore()
     </H>
     <section>
       <H level="2">
-        app/stores/basic.ts
-      </H>
-      <ShikiJs :code="Code.store" lang="ts" />
-    </section>
-    <section>
-      <H level="2">
-        app/pages/pinia/basic-usage.vue
-      </H>
-      <ShikiJs :code="Code.page" lang="vue" />
-    </section>
-    <section>
-      <H level="2">
         {{ t('result.title') }}
       </H>
       <p>
@@ -60,6 +48,18 @@ const store = useBasicStore()
           {{ t('result.buttons.reset') }}
         </ElButton>
       </div>
+    </section>
+    <section>
+      <H level="2">
+        <i>app/stores/basic.ts</i>
+      </H>
+      <ShikiJs :code="Code.store" lang="ts" />
+    </section>
+    <section>
+      <H level="2">
+        <i>app/pages/pinia/basic-usage.vue</i>
+      </H>
+      <ShikiJs :code="Code.page" lang="vue" />
     </section>
     <section>
       <NuxtLinkLocale to="/">
