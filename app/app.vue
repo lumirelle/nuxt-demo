@@ -10,7 +10,6 @@ const elLocale = computed(() => {
 
 // Initialize the store, equivalent to `nuxtServerInit` in Nuxt 2
 const initializingStore = useInitializingStore()
-
 const isStoreInitialized = ref(false)
 
 // Use Promise.all, support more stores initialization in the future

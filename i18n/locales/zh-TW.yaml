@@ -1,0 +1,6 @@
+plugins:
+  api:
+    errors:
+      login-expired: 登錄過期，請重新登錄
+      too-many-requests: 請求過多，請稍後再試
+      account-locked: 账户被锁定或其他人登录

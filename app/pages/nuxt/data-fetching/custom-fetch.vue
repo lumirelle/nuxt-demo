@@ -3,7 +3,8 @@ const { t } = useI18n({
   useScope: 'local',
 })
 
-const { data } = await useFetch('/api/mock-login', {
+const { data } = await useAPI('/api/mock-login', {
+  baseURL: '/',
   method: 'get',
 })
 
