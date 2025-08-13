@@ -80,7 +80,7 @@ export default defineNuxtConfig({
         'page': '#fff',
       },
       '$border-color': {
-        '': '#1D293D',
+        '': '#E2E8F0',
       },
       'dark': {
         '$colors': {
