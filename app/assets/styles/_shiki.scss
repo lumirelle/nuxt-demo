@@ -18,61 +18,9 @@ html.dark {
   --code-line-diff-remove-color: rgba(244, 63, 94, 0.16);
 }
 
-// Styles
-.shiki,
-.shiki code {
-  display: block;
+// Styles for `ShikiJs` component
+.shikijs {
   padding: var(--code-offset);
-  line-height: var(--code-line-height);
-
-  /* Styles for transformed results */
-
-  /* Highlighted & Diff */
-
-  .line {
-    &.highlighted,
-    &.diff {
-      display: inline-block;
-      margin: 0 calc(-1 * var(--code-offset));
-      padding: 0 var(--code-offset);
-      width: calc(100% + 2rem);
-    }
-
-    &.highlighted {
-      background-color: var(--code-line-highlight-color);
-      transition: background-color 0.5s;
-    }
-
-    &.diff {
-      &.add {
-        background-color: var(--code-line-diff-add-color);
-      }
-
-      &.remove {
-        background-color: var(--code-line-diff-remove-color);
-        opacity: 0.7;
-      }
-    }
-  }
-
-  /* Foucs */
-
-  &.has-focused {
-    .line:not(.focused) {
-      opacity: 0.7;
-      transition:
-        filter 0.35s,
-        opacity 0.35s;
-      filter: blur(0.095rem);
-    }
-  }
-
-  &:hover.has-focused {
-    .line:not(.focused) {
-      filter: blur(0);
-      opacity: 1;
-    }
-  }
 
   /* Line numbers */
 
@@ -90,11 +38,67 @@ html.dark {
       color: var(--code-line-number-color);
     }
   }
+
+  // Styles for `Shiki` component (Fit unwrap mode)
+  code.shiki,
+  .shiki code {
+    display: block;
+    line-height: var(--code-line-height);
+
+    /* Styles for transformed results */
+
+    /* Highlighted & Diff */
+
+    .line {
+      &.highlighted,
+      &.diff {
+        display: inline-block;
+        margin: 0 calc(-1 * var(--code-offset));
+        padding: 0 var(--code-offset);
+        width: calc(100% + 2rem);
+      }
+
+      &.highlighted {
+        background-color: var(--code-line-highlight-color);
+        transition: background-color 0.5s;
+      }
+
+      &.diff {
+        &.add {
+          background-color: var(--code-line-diff-add-color);
+        }
+
+        &.remove {
+          background-color: var(--code-line-diff-remove-color);
+          opacity: 0.7;
+        }
+      }
+    }
+
+    /* Foucs */
+
+    &.has-focused {
+      .line:not(.focused) {
+        opacity: 0.7;
+        transition:
+          filter 0.35s,
+          opacity 0.35s;
+        filter: blur(0.095rem);
+      }
+    }
+
+    &:hover.has-focused {
+      .line:not(.focused) {
+        filter: blur(0);
+        opacity: 1;
+      }
+    }
+  }
 }
 
 // Dark styles
 html.dark {
-  .shiki,
+  code.shiki,
   .shiki code {
     background-color: var(--shiki-dark-bg) !important;
 

@@ -26,7 +26,8 @@ const props = defineProps({
 
 <template>
   <Shiki
-    :class="{ 'shiki show-line-numbers': props.showLineNumber }"
+    class="shikijs"
+    :class="{ 'show-line-numbers': props.showLineNumber }"
     :code="props.code"
     :lang="props.lang"
     :as="props.as"
