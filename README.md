@@ -197,9 +197,9 @@ As this, Nuxt provides the abilities of [lazy fetching](https://nuxt.com/docs/4.
 
 When we call `$fetch` in the browser, user headers like cookie will be directly sent to the API.
 
-Normally, during server-side-rendering, due to security considerations, the `$fetch` wouldn't include the user's browser cookies, nor pass on cookies from the fetch response.
+Normally, during server-side-rendering, due to security considerations, the `$fetch` wouldn't include the user's browser cookies, nor pass on cookies from the fetch response. **(The case of using `useAsyncData(() => $fetch('/api/foo'))`)**
 
-However, when calling `useFetch` with a relative URL on the server, Nuxt will use `useRequestFetch` to proxy headers and cookies (with the exception of headers not meant to be forwarded, like `host`).
+However, when calling `useFetch` with **a relative URL** on the server, Nuxt will use `useRequestFetch` to proxy headers and cookies (with the exception of headers not meant to be forwarded, like `host`).
 
 If you want to reach the same behavior while using `$fetch`, you should use the proxy manually, likes:
 

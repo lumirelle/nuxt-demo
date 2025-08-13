@@ -6,9 +6,6 @@ export default defineNuxtPlugin({
     // Not type here
     const i18n: any = nuxtApp.$i18n
 
-    // Common headers, specify headers you want
-    const headers = useRequestHeaders(['cookie'])
-
     // Custom headers
     const cookieToken = useCookie('token', {
       default: () => '',
@@ -27,7 +24,7 @@ export default defineNuxtPlugin({
     }
 
     const api = $fetch.create({
-    // Base URL
+      // Base URL
       baseURL: import.meta.client ? config.public.apiBase : config.public.dockerBase ?? config.public.apiBase,
 
       // Timeout, 20s
@@ -36,11 +33,6 @@ export default defineNuxtPlugin({
       // Request interceptor
       // See https://github.com/unjs/ofetch#%EF%B8%8F-interceptors for more info
       async onRequest({ options }) {
-      // Set common headers
-        for (const [key, value] of Object.entries(headers)) {
-          options.headers.set(key, value)
-        }
-
         // Set user token
         if (cookieToken.value) {
           options.headers.set('Authorization', `Bearer ${cookieToken.value}`)
