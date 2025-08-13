@@ -64,20 +64,13 @@ html.dark {
   .shiki code {
     display: block;
     line-height: var(--code-line-height);
+    overflow-x: auto;
 
     /* Styles for transformed results */
 
     /* Highlighted & Diff */
 
     .line {
-      // Avoid text overflow
-      & > span {
-        display: inline-block;
-        max-width: 100%;
-        text-overflow: ellipsis;
-        overflow: hidden;
-      }
-
       &.highlighted,
       &.diff {
         display: inline-block;
