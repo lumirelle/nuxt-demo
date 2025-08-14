@@ -458,6 +458,11 @@ See chapter [CORS](#cors) for more information.
 
 Nuxt modules provide a lot of abilities, such as auto-importing, type generation, devtools integration, etc.
 
+These are the modules has introduced in this demo:
+
+- [Nuxt QRCode](#nuxt-qrcode)
+- [Nuxt Scripts](#nuxt-scripts)
+
 See [Nuxt Modules Page](https://nuxt.com/modules) for more information.
 
 ## Vue 3
