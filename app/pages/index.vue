@@ -550,11 +550,23 @@ const { t } = useI18n({
       <H level="2">
         {{ t('nuxt-scripts.title') }}
       </H>
-      <p>
-        <NuxtLinkLocale to="/nuxt-scripts">
-          <span>{{ t('nuxt-scripts.try') }}</span>
-        </NuxtLinkLocale>
-      </p>
+      <section>
+        <p>
+          <NuxtLinkLocale to="/nuxt-scripts">
+            <span>{{ t('nuxt-scripts.try') }}</span>
+          </NuxtLinkLocale>
+        </p>
+      </section>
+      <section>
+        <H level="3">
+          {{ t('nuxt-scripts.gtm.title') }}
+        </H>
+        <p>
+          <NuxtLinkLocale to="/gtm/basic-usage">
+            <span>{{ t('nuxt-scripts.gtm.try') }}</span>
+          </NuxtLinkLocale>
+        </p>
+      </section>
     </section>
 
     <!-- Nuxt QRCode -->
@@ -725,6 +737,9 @@ en:
   nuxt-scripts:
     title: "{'@'}nuxt/scripts"
     try: "Try {'@'}nuxt/scripts"
+    gtm:
+      title: Google Tag Manager
+      try: "Try {'@'}nuxt/scripts with Google Tag Manager"
 
   nuxt-qrcode:
     title: nuxt-qrcode
@@ -877,6 +892,9 @@ zh-CN:
   nuxt-scripts:
     title: "{'@'}nuxt/scripts"
     try: "尝试 {'@'}nuxt/scripts"
+    gtm:
+      title: Google Tag Manager
+      try: "尝试 {'@'}nuxt/scripts 的 Google Tag Manager"
 
   nuxt-qrcode:
     title: nuxt-qrcode
@@ -1029,6 +1047,9 @@ zh-TW:
   nuxt-scripts:
     title: "{'@'}nuxt/scripts"
     try: "嘗試 {'@'}nuxt/scripts"
+    gtm:
+      title: Google Tag Manager
+      try: "嘗試 {'@'}nuxt/scripts 的 Google Tag Manager"
 
   nuxt-qrcode:
     title: nuxt-qrcode

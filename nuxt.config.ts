@@ -27,6 +27,13 @@ export default defineNuxtConfig({
       webBase: '',
       dockerWebBase: '',
       proxyWebBase: '',
+
+      // Google Tag Manager id
+      scripts: {
+        googleTagManager: {
+          id: '',
+        },
+      },
     },
   },
 
@@ -36,6 +43,7 @@ export default defineNuxtConfig({
     // ESLint integration in Nuxt devtools
     '@nuxt/eslint',
     // Third party scripts loading, better performance & stronger feature
+    // Support Google Tag Manager too
     '@nuxt/scripts',
     // Test utils, unit test & e2e test support
     '@nuxt/test-utils',
@@ -117,6 +125,11 @@ export default defineNuxtConfig({
         bundle: true,
         trigger: 'onNuxtReady',
       }],
+    },
+
+    registry: {
+      // Load id from runtime config
+      googleTagManager: true,
     },
   },
 

@@ -26,17 +26,16 @@ Utilities:
 - [ECharts](https://echarts.apache.org/zh/index.html) (Nuxt Module: [nuxt-echarts](https://echarts.nuxt.dev/getting-started))
 - [Swiper.js](https://swiperjs.com/get-started) (Nuxt Module: [nuxt-swiper](https://github.com/cpreston321/nuxt-swiper))
 - [Nuxt QRCode](https://qrcode.s94.dev/)
+- [Nuxt Scripts](https://scripts.nuxt.com/docs/getting-started)
 
 TODO: Below
 
-- TODO: [Nuxt GTag](https://nuxt.com/modules/gtag)
 - TODO: [Nuxt SEO](https://nuxt.com/modules/seo)
 - TODO: MD5 & SHA256 (Finding crypto package)
 - TODO: XLSX
 
 Optimizations:
 
-- [Nuxt Scripts](https://nuxt.com/modules/scripts)
 - TODO: [Nuxt SVGO](https://nuxt.com/modules/nuxt-svgo)
 
 DX:
@@ -729,3 +728,9 @@ For reading QRCodes, use the component `<QrcodeStream>` & `<QrcodeCapture>` & `<
 ### LRU Cache
 
 Nuxt provide built-in support for data caching which is powered by `nitro`, we don't need to use external libraries like `lru-cache` to implement caching ourselves.
+
+### Nuxt Scripts
+
+Loading third party scripts, built-in support for Google Tag Manager and other [registries](https://scripts.nuxt.com/scripts).
+
+See [Nuxt Scripts](https://scripts.nuxt.com/docs/getting-started) for more information.

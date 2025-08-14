@@ -26,17 +26,16 @@ UI 库和 CSS 框架：
 - [ECharts](https://echarts.apache.org/zh/index.html) (Nuxt 模块: [nuxt-echarts](https://echarts.nuxt.dev/getting-started))
 - [Swiper.js](https://swiperjs.com/get-started) (Nuxt 模块: [nuxt-swiper](https://github.com/cpreston321/nuxt-swiper))
 - [Nuxt QRCode](https://qrcode.s94.dev/)
+- [Nuxt Scripts](https://scripts.nuxt.com/docs/getting-started)
 
 TODO: Below
 
-- TODO: [Nuxt GTag](https://nuxt.com/modules/gtag)
 - TODO: [Nuxt SEO](https://nuxt.com/modules/seo)
 - TODO: MD5 & SHA256 (寻找加密包)
 - TODO: XLSX
 
 优化：
 
-- [Nuxt Scripts](https://nuxt.com/modules/scripts)
 - TODO: [Nuxt SVGO](https://nuxt.com/modules/nuxt-svgo)
 
 开发体验：
@@ -729,3 +728,9 @@ Can I Use 显示，在中国使用的浏览器中，85.54% 支持 Web 组件。�
 ### LRU 缓存
 
 Nuxt 提供了由 `nitro` 驱动的内置数据缓存支持，我们不需要使用像 `lru-cache` 这样的外部库来实现自己的缓存。
+
+### Nuxt Scripts
+
+加载第三方脚本，内置支持 Google Tag Manager 和其他 [注册表](https://scripts.nuxt.com/scripts)。
+
+更多信息请参见 [Nuxt Scripts](https://scripts.nuxt.com/docs/getting-started)。
