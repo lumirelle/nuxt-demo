@@ -223,10 +223,6 @@ export default defineNuxtConfig({
         changeOrigin: true,
       },
     },
-
-    experimental: {
-      websocket: true,
-    },
   },
 
   build: {
