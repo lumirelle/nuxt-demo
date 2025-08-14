@@ -2,7 +2,7 @@ import process from 'node:process'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: '2025-07-15',
+  compatibilityDate: '2025-08-14',
 
   app: {
     head: {
@@ -16,14 +16,17 @@ export default defineNuxtConfig({
 
   devtools: { enabled: true },
 
+  // These config will auto-overridden by .env variables
   runtimeConfig: {
     // Private keys are only available on the server
     // ...
 
     // Public keys that are exposed to the client
     public: {
-      apiBase: process.env.NUXT_PUBLIC_API_BASE,
-      dockerBase: process.env.NUXT_PUBLIC_DOCKER_BASE,
+      // Base urls to `/web`
+      webBase: '',
+      dockerWebBase: '',
+      proxyWebBase: '',
     },
   },
 
@@ -199,6 +202,19 @@ export default defineNuxtConfig({
         max: 100,
       },
     },
+
+    // Proxy remote server to local (`<target>/xxx` => `/web/xxx`), avoid CORS.
+    devProxy: {
+      // All request start with `/web`, such as `/web/foo` will be replaced to `<target>/foo`, `/web` will be removed
+      '/web': {
+        target: process.env.NUXT_PUBLIC_PROXY_WEB_BASE,
+        changeOrigin: true,
+      },
+    },
+
+    experimental: {
+      websocket: true,
+    },
   },
 
   build: {
@@ -210,5 +226,10 @@ export default defineNuxtConfig({
     build: {
       target: 'es2015',
     },
+  },
+
+  devServer: {
+    host: '0.0.0.0',
+    port: 82,
   },
 })

@@ -193,37 +193,120 @@ Refer to [`$fetch`](https://nuxt.com/docs/4.x/getting-started/data-fetching#fetc
 
 As this, Nuxt provides the abilities of [lazy fetching](https://nuxt.com/docs/4.x/getting-started/data-fetching#lazy), [picking data](https://nuxt.com/docs/4.x/getting-started/data-fetching#minimize-payload-size), [caching and refetchin](https://nuxt.com/docs/4.x/getting-started/data-fetching#caching-and-refetching), and so on.
 
+#### CORS
+
+In Nuxt, there are two kinds of requests we can group them by the origin condition: **Cross-Origin** and **Same-Origin**.
+
+For example, when we send a request to **Nuxt server API or route**, we are doing the `Same-Origin` request, because the request is coming from or front-end server at http://0.0.0.0:82 (This demo), and just send to http://0.0.0.0:82/api or http://0.0.0.0:82/route/path.
+
+By the way, the rule for determining the same origin is: protocol + host + port (For example, in `http://0.0.0.0:82`, `http` is `protocol`, `0.0.0.0` is host, `82` is port). If they are the same, we are making the **Same-Origin** request.
+
+`$fetch` uses native `fetch` underhook, the default behavior of native `fetch` is adding safety headers like `Accept` to request, and `Cookies` will just been added when the request is **Same-Origin**.
+
+If we are just doing **simple request** (A request that just contains default headers and uses `GET` method), every thing just works fine. But if we want to add custom headers to our request or use `POST` method, the browser will do anthor thing for us silently: That's `CORS`, Cross Origin Resources Sharing.
+
+When we send a request to **Other server with different origin** and this request isn't a simple request, browser will send a preflight request (uses `OPTIONS` method). If the remote server doesn't handle the preflight request correctly, for example, accept the preflight request and return with headers: `Access-Control-Allow-Origin: https://your.front-end.com` & `Access-Control-Allow-Methods: <METHOD_THE_ACTUAL_REQUEST_USED>` and so on, the actual request will be blocked by browser.
+
+On the edge case, you will find that you send a request with `$fetch` to remote server and get success response, but get error if you send request with your custom fetch instance which may adds some custom headers and lets the request out of "simple".
+
+Notice that, CORS just happended on your browser, so you can create a proxy to avoid this:
+
+- (Development recommended) Create a proxy endpoint on your Nuxt server like `/api/foo`, it will call the remote server `/backend/foo` with `$fetch` for us, with **NO LIMITATION**, and response the response to us
+- (Production recommended) Or use Nginx proxy
+
+In this document, we just discussion how to create a proxy in development environment.
+
+There are two ways to create the proxy:
+
+<table>
+<tr><td width="400px" valign="top">
+
+One to One Proxy
+
+_server/api/foo.get.ts_
+
+```ts
+export default defineEventHandler((event) => {
+  return await $fetch('https://a.remote-server.com/api/foo')
+})
+```
+
+```html
+<script lang="ts" setup>
+  // Just call the Nuxt server API
+  const { data } = await useFetch('/api/foo')
+</script>
+
+<template>
+  <div>Data is: {{ data }}</div>
+</template>
+```
+
+</td><td width="600px"><br>
+
+Prefixed Path Proxy
+
+_nuxt.config.ts_
+
+```ts
+export default defineNuxtConfig({
+  nitro: {
+    devProxy: {
+      '/remote-api': {
+        target: 'https://a.remote-server.com/api',
+        changeOrigin: true
+        // Notice that, the prefix `/remote-api` will be removed when forwarding the request
+      }
+    }
+  }
+})
+```
+
+```html
+<script lang="ts" setup>
+  // Just call the proxy API started with `/remote-api`
+  const { data } = await useFetch('/remote-api/foo')
+</script>
+
+<template>
+  <div>Data is: {{ data }}</div>
+</template>
+```
+
+</td></tr>
+</table>
+
 #### Pass Client Headers
 
-When we call `$fetch` in the browser, user headers like cookie will be directly sent to the API.
+Refer to chapter [CORS](#cors), we know that client-side request will apply the default headers to request, and we can customize headers by customizing our own fetch instance.
 
-Normally, during server-side-rendering, due to security considerations, the `$fetch` wouldn't include the user's browser cookies, nor pass on cookies from the fetch response. **(The case of using `useAsyncData(() => $fetch('/api/foo'))`)**
+So, the key point of this chapter is discussion how to pass client headers in server-side request.
 
-However, when calling `useFetch` with **a relative URL** on the server, Nuxt will use `useRequestFetch` to proxy headers and cookies (with the exception of headers not meant to be forwarded, like `host`).
+By default, `useFetch` uses `useRequestFetch` to proxy headers and cookies (with the exception of headers not meant to be forwarded, like `host`).
 
-If you want to reach the same behavior while using `$fetch`, you should use the proxy manually, likes:
+So, the only case will not pass client headers left are using `useAsyncData` with custom logic:
+
+```ts
+const { data } = await useAsyncData(() => $fetch('/api/foo'))
+```
+
+The simplest way is using `useRequestFetch`, this fetch instance is a custom one with headers passed:
 
 ```ts
 const requestFetch = useRequestFetch()
-async function doFetchHeaders() {
-  const { data } = await requestFetch('/api/submit') // This **will** pass headers to endpoint `/api/submit`
-}
-
-async function doFetch() {
-  const { data } = await $fetch('/api/submit') // This **will not** pass headers to endpoint `/api/submit`
-}
+const { data } = await useAsyncData(() => requestFetch('/api/foo'))
 ```
 
-Or you can specify custom headers you want to include in the request by `useRequestHeaders`:
+Or you can implement your own fetch instance. See [Nuxt Document -- Custom Fetch](https://nuxt.com/docs/4.x/guide/recipes/custom-usefetch) for more information.
 
-```ts
-const headers = useRequestHeaders(['cookies'])
-async function doFetchWithHeaders() {
-  const { data } = await $fetch('/api/submit', { headers })
-}
-```
+There is a best practice to follow which can simplify these problem:
 
-Be very careful before proxying headers to an external API and just include headers that you need. Not all headers are safe to be bypassed and might introduce unwanted behavior. Here is a list of common headers that are NOT to be proxied:
+- Use `useFetch` for commonly cases
+- Use custom fetch for custom headers and other custom cases
+- Use `useAsyncData` for not data feching logic, such as a promise returned by a local funcion...
+- If all the solutions above can't not satisfied your need, maybe you should just create anthor heavily custom fetch instance...
+
+Of course, be very careful before proxying headers to an external API and just include headers that you need. Not all headers are safe to be bypassed and might introduce unwanted behavior. Here is a list of common headers that are NOT to be proxied:
 
 - `host`, `accept`
 - `content-length`, `content-md5`, `content-type`
@@ -360,6 +443,10 @@ In the case above, our endpoint located at `<BASE_URL>/api/ask` just a proxy of 
 By using `defineCachedEventHandler` & `defineCachedFunction`, you can caching the result of event handler & functions (which are part of one, and reusing it in multiple handlers)
 
 For further usage, please refer to [h3 Document](https://v1.h3.dev/guide).
+
+### Proxy
+
+See chapter [CORS](#cors) for more information.
 
 ## Nuxt Modules
 

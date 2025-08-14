@@ -24,7 +24,6 @@
     "@unhead/vue": "^2.0.14",
     "@vueuse/nuxt": "^13.6.0",
     "bignumber.js": "^9.3.1",
-    "consola": "^3.4.2",
     "dayjs": "^1.11.13",
     "echarts": "^6.0.0",
     "highlight.js": "^11.11.1",

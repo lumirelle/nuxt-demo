@@ -27,13 +27,12 @@ const { $api } = useNuxtApp()
 
 const stringifyManuallyData = computed(
   () => JSON.stringify(manuallyData.value, null, 2)
-    .replace(/("(?:lang|x-real-ip|x-forwarded-for|zonediff|zoneDiff|clientIP|locale|token|cookies)": [^\n]*)(\n)/g, '$1 // [!code focus] $2')
-    .replace(/( {2}\})(\n)/, '$1 // [!code focus] $2'),
+    .replace(/("(?:data|type|lowestPrice|maxDiscount|maxSend)": [^\n]*)(\n)/g, '$1 // [!code focus] $2')
+    .replace(/( {2}\],)(\n)/, '$1 // [!code focus] $2'),
 )
 
 async function fetchData() {
-  manuallyData.value = await $api('/api', {
-    baseURL: 'https://yesno.wtf',
+  manuallyData.value = await $api('/web/v2/website/getLowestPrice', {
     method: 'get',
   })
 }

@@ -25,7 +25,9 @@ export default defineNuxtPlugin({
 
     const api = $fetch.create({
       // Base URL
-      baseURL: import.meta.client ? config.public.apiBase : config.public.dockerBase ?? config.public.apiBase,
+      baseURL: import.meta.dev
+        ? '' // Use proxy in development, bypass CORS issues
+        : (config.public.dockerWebBase ?? config.public.webBase), // Use Docker or API web base URL in production, CORS will be handled by Nginx
 
       // Timeout, 20s
       timeout: 20000,
