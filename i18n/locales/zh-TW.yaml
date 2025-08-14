@@ -1,5 +1,5 @@
 plugin:
-  api:
+  cfetch:
     error:
       login-expired: 登錄已過期，請重新登錄
       too-many-requests: 請求過多，請稍後再試

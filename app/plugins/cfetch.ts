@@ -1,5 +1,5 @@
 export default defineNuxtPlugin({
-  name: 'api',
+  name: 'cfetch', // cfetch, Custom fetch
   setup: async (nuxtApp) => {
     const config = useRuntimeConfig()
 
@@ -23,7 +23,7 @@ export default defineNuxtPlugin({
       cookieClientIP.value = await $fetch<string>('https://ip.ipipgo.com/ip') // This will update the cookie
     }
 
-    const api = $fetch.create({
+    const cfetch = $fetch.create({
       // Base URL
       baseURL: import.meta.dev
         ? '' // Use proxy in development, bypass CORS issues
@@ -58,7 +58,7 @@ export default defineNuxtPlugin({
         if (response.status === 401 || response.status === 110 || response.status === 111) {
         // Redirect to home page
           await nuxtApp.runWithContext(() => navigateTo('/'))
-          const statusMessage = await response.text() || i18n.t('api.errors.login-expired')
+          const statusMessage = await response.text() || i18n.t('cfetch.errors.login-expired')
           ElMessage.error(statusMessage)
           throw showError({
             statusCode: response.status,
@@ -67,7 +67,7 @@ export default defineNuxtPlugin({
         }
         // Too many requests
         else if (response.status === 429) {
-          const statusMessage = await response.text() || i18n.t('api.errors.too-many-requests')
+          const statusMessage = await response.text() || i18n.t('cfetch.errors.too-many-requests')
           ElMessage.warning(statusMessage)
           throw showError({
             statusCode: response.status,
@@ -77,7 +77,7 @@ export default defineNuxtPlugin({
         // Account is locked or login by other people
         else if (response.status === 402 || response.status === 431) {
           await nuxtApp.runWithContext(() => navigateTo('/'))
-          const statusMessage = await response.text() || i18n.t('api.errors.account-locked')
+          const statusMessage = await response.text() || i18n.t('cfetch.errors.account-locked')
           ElMessage.error(statusMessage)
           throw showError({
             statusCode: response.status,
@@ -87,10 +87,10 @@ export default defineNuxtPlugin({
       },
     })
 
-    // Expose to useNuxtApp().$api
+    // Expose to useNuxtApp().$cfetch
     return {
       provide: {
-        api,
+        cfetch,
       },
     }
   },

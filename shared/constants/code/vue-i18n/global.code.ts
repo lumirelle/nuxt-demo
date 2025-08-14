@@ -45,9 +45,9 @@ const { t } = useI18n() // By default, \`useScope\` is \`global\` // [!code focu
 </script>
 
 <template>
-  <p>{{ t('plugin.api.error.account-locked') }}</p> // [!code focus:3]
-  <p>{{ t('plugin.api.error.login-expired') }}</p>
-  <p>{{ t('plugin.api.error.too-many-requests') }}</p>
+  <p>{{ t('plugin.cfetch.error.account-locked') }}</p> // [!code focus:3]
+  <p>{{ t('plugin.cfetch.error.login-expired') }}</p>
+  <p>{{ t('plugin.cfetch.error.too-many-requests') }}</p>
   <LangSwitcher mt-4 />
 </template>`,
 }

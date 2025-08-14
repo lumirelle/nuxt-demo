@@ -18,9 +18,9 @@ const { t } = useI18n() // By default, `useScope` is `global`
       <H level="2">
         {{ t('result.title') }}
       </H>
-      <p>{{ t('plugin.api.error.account-locked') }}</p>
-      <p>{{ t('plugin.api.error.login-expired') }}</p>
-      <p>{{ t('plugin.api.error.too-many-requests') }}</p>
+      <p>{{ t('plugin.cfetch.error.account-locked') }}</p>
+      <p>{{ t('plugin.cfetch.error.login-expired') }}</p>
+      <p>{{ t('plugin.cfetch.error.too-many-requests') }}</p>
       <LangSwitcher mt-4 />
     </section>
     <section>

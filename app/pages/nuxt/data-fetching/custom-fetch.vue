@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { Code } from '#shared/constants/code/nuxt/data-fetching/custom-fetch.code'
+
 definePageMeta({
   parent: '/',
 })
@@ -7,9 +9,8 @@ const { t } = useI18n({
   useScope: 'local',
 })
 
-// `useAPI` will pass custom headers to server automatically
-const { data } = await useAPI('/api/headers-cookies', {
-  baseURL: '/',
+// `useCfetch` will pass custom headers to server automatically
+const { data } = await useCfetch('/api/headers-cookies', {
   method: 'get',
 })
 
@@ -20,10 +21,10 @@ const stringifyData = computed(
       .replace(/( {2}\})(\n)/, '$1 // [!code focus] $2'),
 )
 
-// `$api` will pass custom headers to server automatically
+// `$cfetch` will pass custom headers to server automatically
 const manuallyData = ref({})
 
-const { $api } = useNuxtApp()
+const { $cfetch } = useNuxtApp()
 
 const stringifyManuallyData = computed(
   () => JSON.stringify(manuallyData.value, null, 2)
@@ -32,7 +33,7 @@ const stringifyManuallyData = computed(
 )
 
 async function fetchData() {
-  manuallyData.value = await $api('/web/v2/website/getLowestPrice', {
+  manuallyData.value = await $cfetch('/web/v2/website/getLowestPrice', {
     method: 'get',
   })
 }
@@ -46,14 +47,14 @@ async function fetchData() {
     <section grid="~ auto-cols-580px justify-between">
       <div row="start-0 end-1" col="start-0 end-1">
         <H level="3">
-          <code>useAPI</code>
+          <code>useCfetch</code>
         </H>
         <ShikiJs :code="stringifyData" lang="json" />
       </div>
       <div row="start-0 end-1" col="start-1 end-2">
         <div flex justify-between>
           <H level="3">
-            <code>$api</code>
+            <code>$cfetch</code>
           </H>
           <ElButton @click="fetchData">
             {{ t('fetch-data') }}
@@ -61,6 +62,24 @@ async function fetchData() {
         </div>
         <ShikiJs :code="stringifyManuallyData" lang="json" />
       </div>
+    </section>
+    <section>
+      <H level="3">
+        <i>app/plugins/cfetch.ts</i>
+      </H>
+      <ShikiJs :code="Code.plugin" lang="ts" />
+    </section>
+    <section>
+      <H level="3">
+        <i>app/composables/useCfetch.ts</i>
+      </H>
+      <ShikiJs :code="Code.composable" lang="ts" />
+    </section>
+    <section>
+      <H level="3">
+        <i>app/pages/nuxt/data-fetching/custom-fetch.vue</i>
+      </H>
+      <ShikiJs :code="Code.page" lang="vue" />
     </section>
     <section>
       <NuxtLinkLocale to="/">

@@ -45,5 +45,7 @@
   "i18n-ally.namespace": true,
   // If your i18n modules are under `modules` folder, or you don't need to use custom path matcher
   // "i18n-ally.pathMatcher": "modules/{namespaces}/{locale}.json",
-  "i18n-ally.keystyle": "nested"
+  "i18n-ally.keystyle": "nested",
+
+  "cSpell.words": ["cfetch"]
 }

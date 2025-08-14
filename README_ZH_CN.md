@@ -1,100 +1,121 @@
-# Nuxt 4 演示项目
+# Nuxt 4 Demo
 
-## 架构
+## Architecture
 
-基础框架：
+Basic Framework:
 
 - [Nuxt 4](https://nuxt.com/docs/4.x/getting-started/introduction)
 - [Vue 3](https://vuejs.org/guide/introduction.html)
-- [Pinia](https://pinia.vuejs.org/zh/getting-started/) (Nuxt 模块: [@pinia/nuxt](https://nuxt.com/modules/pinia))
+- [Pinia](https://pinia.vuejs.org/zh/getting-started/) (Nuxt Module: [@pinia/nuxt](https://nuxt.com/modules/pinia))
 - [VueRouter](https://router.vuejs.org/zh/introduction.html)
-- [VueI18n](https://vue-i18n.intlify.dev/zh/guide/introduction.html) (Nuxt 模块: [@nuxtjs/i18n](https://i18n.nuxtjs.org/docs/getting-started))
+- [VueI18n](https://vue-i18n.intlify.dev/zh/guide/introduction.html) (Nuxt Module: [@nuxtjs/i18n](https://i18n.nuxtjs.org/docs/getting-started))
 
-UI 库和 CSS 框架：
+UI Library & CSS Framework:
 
-- [Element Plus](https://element-plus.org/zh-CN/guide/design.html) (Nuxt 模块: [@element-plus/nuxt](https://nuxt.com/modules/element-plus))
-- [UnoCSS](https://unocss.dev/guide/) (Nuxt 模块: [@unocss/nuxt](https://nuxt.com/modules/unocss))
+- [Element Plus](https://element-plus.org/zh-CN/guide/design.html) (Nuxt Module: [@element-plus/nuxt](https://nuxt.com/modules/element-plus))
+- [UnoCSS](https://unocss.dev/guide/) (Nuxt Module: [@unocss/nuxt](https://nuxt.com/modules/unocss))
 
-工具库：
+Utilities:
 
-- [VueUse](https://vueuse.org/zh/) (Nuxt 模块: [@vueuse/nuxt](https://nuxt.com/modules/vueuse))
-- 代码高亮：
-  - [Highlight.js](https://highlightjs.org/) (Vue 插件: [highlightjs-vue-plugin](https://github.com/lumirelle/highlightjs-vue-plugin))
-  - [Shiki](https://shiki.style/guide/) (Nuxt 模块: [nuxt-shiki](https://github.com/pi0/nuxt-shiki))
+- [VueUse](https://vueuse.org/zh/) (Nuxt Module: [@vueuse/nuxt](https://nuxt.com/modules/vueuse))
+- Code highlight:
+  - [Highlight.js](https://highlightjs.org/) (Vue Plugin: [highlightjs-vue-plugin](https://github.com/lumirelle/highlightjs-vue-plugin))
+  - [Shiki](https://shiki.style/guide/) (Nuxt Module: [nuxt-shiki](https://github.com/pi0/nuxt-shiki))
 - [Bignumber.js](https://mikemcl.github.io/bignumber.js/)
 - [Day.js](https://day.js.org/)
-- [ECharts](https://echarts.apache.org/zh/index.html) (Nuxt 模块: [nuxt-echarts](https://echarts.nuxt.dev/getting-started))
-- [Swiper.js](https://swiperjs.com/get-started) (Nuxt 模块: [nuxt-swiper](https://github.com/cpreston321/nuxt-swiper))
+- [ECharts](https://echarts.apache.org/zh/index.html) (Nuxt Module: [nuxt-echarts](https://echarts.nuxt.dev/getting-started))
+- [Swiper.js](https://swiperjs.com/get-started) (Nuxt Module: [nuxt-swiper](https://github.com/cpreston321/nuxt-swiper))
 - [Nuxt QRCode](https://qrcode.s94.dev/)
 
-待办事项：
+TODO: Below
 
 - [Nuxt GTag](https://nuxt.com/modules/gtag)
-- 待办: MD5 & SHA256 (寻找加密包)
-- 待办: XLSX
+- TODO: MD5 & SHA256 (Finding crypto package)
+- TODO: XLSX
 
-优化：
+Optimizations:
 
 - [Nuxt Scripts](https://nuxt.com/modules/scripts)
 - [Nuxt SVGO](https://nuxt.com/modules/nuxt-svgo)
 
-开发体验：
+DX:
 
 - [Nuxt Test Utils](https://nuxt.com/modules/test-utils)
 - [Nuxt Typed Router](https://nuxt.com/modules/typed-router)
 
 ## Nuxt 4
 
-Nuxt 4 相比 Nuxt 2 提供了更多功能，包括：
+Nuxt 4 provides a lot of features than Nuxt 2, including:
 
-- 丰富的模块支持
-  - `@nuxt/image` 用于图片优化
-  - `@nuxt/scripts` 用于第三方脚本加载
-  - `@nuxt/seo` 用于更好的 SEO
+- Plenty of modules support
+  - `@nuxt/image` for image optimization
+  - `@nuxt/scripts` for third party scripts loading
+  - `@nuxt/seo` for better SEO
   - ...
-- 性能改进
-  - 使用 Vite 替代 Webpack
-  - 使用 Nitro 替代 Connect
-  - 使用 Vue 3 替代 Vue 2
+- Performance improvements
+  - Using Vite instead of Webpack
+  - Using Nitro instead of Connect
+  - Using Vue 3 instead of Vue 2
   - ...
-- SEO 友好 (感谢 `@nuxt/seo` 和 Nuxt 4 本身)
-- 更好的开发体验
-  - 完全类型化，让你写代码时减少查阅文档
-  - Nuxt 开发工具面板集成了许多插件和模块
+- SEO friendly (Thanks to `@nuxt/seo` & Nuxt 4 itself)
+- Better DX
+  - Fully typed, let you write code with less document
+  - Nuxt devtools panel integrated many plugins & modules
   - ...
-- 清晰的文件结构
-  - 所有与应用端相关的代码都在 `app` 目录中
-  - 所有与服务器端相关的代码都在 `server` 目录中
+- Clearly file structure
+  - All codes related to application side are in `app` directory
+  - All codes related to server side are in `server` directory
   - ...
 - ...
 
-阅读入门指南请点击[这里](https://nuxt.com/docs/4.x/getting-started/introduction)。
+Reading the getting started guide [here](https://nuxt.com/docs/4.x/getting-started/introduction).
 
-### 水合错误
+### Client & Server
 
-如果你使用 Nuxt 4 的 SSR 渲染模式，你必须了解水合错误：**水合错误**。
+Under the `/app` folder, the code will be executed **both client & server**. For example:
 
-水合错误是由服务器渲染的 HTML 和客户端渲染的 HTML 不匹配引起的。
+_app/pages/index.vue_
 
-更多信息请参考[官方文档](https://nuxt.com/docs/4.x/guide/best-practices/hydration)。
+```html
+<script lang="ts" setup>
+  // `useI18n` will be executed **both client & server**
+  // On server, it uses cookie to detect the locale
+  // On client, it uses cookie to detect the locale, if cookie is empty, it will detect the browser's language and save it to cookie
+  const { t } = useI18n({
+    useScope: 'local',
+  })
 
-以下是一些常见的水合错误情况。
+  // `useFetch` will be executed **both client & server**
+  // But it use `import.meta.server` and `options.server = true` by default to run the data fetching logic only on server
+  const { data } = await useFetch('/api/data')
+</script>
+```
 
-#### 无效的 HTML 嵌套结构
+### Hydration Errors
 
-最常见的情况是无效的 HTML 嵌套结构，比如你在 `p` 标签内放置了一个 `div`：
+Something you must know about hydration errors if you are using SSR rendering mode of Nuxt 4: **Hydration errors**.
 
-<!-- 使用 `xml` 而不是 `html` 来避免 prettier 的错误 -->
+Hydration errors are caused by the mismatch between the server-rendered HTML and the client-rendered HTML.
+
+Please refer to the [official documentation](https://nuxt.com/docs/4.x/guide/best-practices/hydration) for more information.
+
+There are some common cases of hydration errors below.
+
+#### Invalid HTML Nesting Structure
+
+The most cases are invalid HTML nesting structure, such as you put a `div` inside a `p` tag:
+
+<!-- Using `xml` instead of `html` to avoid the error from prettier -->
 
 ```xml
 <p><div>hi</div></p>
 ```
 
-如果你使用 prettier，你会得到这样的错误：
+If you use prettier, you will get an error like this:
 
-> 解析错误：意外的结束标签 "p"。当标签已经被另一个标签关闭时可能会发生这种情况。更多信息请参见 https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags
+> Parsing error: Unexpected closing tag "p". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags
 
-原因是 HTML 标准不允许这样做，浏览器会将代码解析为：
+The reason is HTML Standard does not allow you to do like this, and the browser will reserve the code as below:
 
 ```xml
 <p></p>
@@ -102,22 +123,22 @@ Nuxt 4 相比 Nuxt 2 提供了更多功能，包括：
 <p></p>
 ```
 
-所以你应该真正了解 **HTML 的嵌套结构规则**，无论你是否使用 SSR 渲染。
+So you should really know about **the nesting structure rules of HTML**, what ever you are using SSR rendering or not.
 
-以下是一些基本规则：
+Here are some basic rules:
 
-- [交互式内容](https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Content_categories#interactive_content)不应该嵌套在任何其他交互式内容中。
-- `h1` ~ `h6` 只能包含[短语内容](https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Content_categories#phrasing_content)。
-- `label` 和 `p` 只能接受[短语内容](https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Content_categories#phrasing_content)，除了它们自己。
-- [空元素](https://developer.mozilla.org/en-US/docs/Glossary/Void_element)不能包含任何内容，它们必须通过自闭合标签关闭。
+- [Interactive content](https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Content_categories#interactive_content) should not be nested in any other interactive content.
+- `h1` ~ `h6` can only contain [phrasing content](https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Content_categories#phrasing_content).
+- `label` & `p` can only accept [phrasing content](https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Content_categories#phrasing_content) except itself.
+- [Void elements](https://developer.mozilla.org/en-US/docs/Glossary/Void_element) can not contain any content, they must be closed by a self-closing tag.
 
-更多详细信息，你可以从 [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements) 找到特定元素的**技术摘要**。
+For more details, you can find the specific element's **Technical Summary** from [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements).
 
-#### 渲染期间使用不同的数据
+#### Different Data Used During Render
 
-另一个常见情况是在渲染期间使用不同的数据。
+Another common case is using different data during render.
 
-例如，你直接使用 `@vueuse/core` 中的 `useDark` 来控制你的 Vue SFC 模板，你会得到水合错误。
+For example, you use `useDark` from `@vueuse/core` to control your Vue SFC template directly, you will get a hydration error.
 
 ```html
 <script setup>
@@ -128,165 +149,250 @@ Nuxt 4 相比 Nuxt 2 提供了更多功能，包括：
 
 <template>
   <div v-if="isDark">
-    <p>深色</p>
+    <p>Dark</p>
   </div>
   <div v-else>
-    <p>浅色</p>
+    <p>Light</p>
   </div>
 </template>
 ```
 
-你的服务器渲染的 HTML 如下：
+Your server-rendered HTML is as below:
 
 ```html
 <div>
-  <p>浅色</p>
+  <p>Light</p>
 </div>
 ```
 
-而你的客户端渲染的 HTML 如下：
+And your client-rendered HTML is as below:
 
 ```html
 <div>
-  <p>深色</p>
+  <p>Dark</p>
 </div>
 ```
 
-在水合过程中，它们会产生冲突。
+During the hydration process, they will cause a confliction.
 
-所以如果你使用 SSR 渲染，你不应该让你的 HTML 结构依赖于基于客户端的数据，比如 LocalStorage、浏览器 API 等。
+So you should not let your HTML structure depend on the client-based data, such as LocalStorage, Browser API, etc, if you are using SSR rendering.
 
-### 数据获取
+### Data Fetching
 
-Nuxt 4 使用 `ofetch` 提供更好的数据获取体验。它是一个轻量级且强大的 fetch 包装器，支持自动重试、请求取消等功能。
+Nuxt 4 uses `ofetch` to provide a better data fetching experience. It is a lightweight and powerful fetch wrapper that supports features like automatic retries, request cancellation, and more.
 
-因此，我们不再需要使用 `axios` 和实现我们自己的 axios 插件。
+Nuxt 4 provides three ways to fetch data: `$fetch`, `useFetch`, `useAsyncData`.
 
-Nuxt 4 提供了三种获取数据的方式：`$fetch`、`useFetch`、`useAsyncData`。
+Notice that, `useFetch` & `useAsyncData` are designed to fetch data only on the server, in order to avoid redundant data fetching actions and prevent navigation until data fetching is completed.
 
-注意，`useFetch` 和 `useAsyncData` 设计为仅在服务器上获取数据，以避免冗余的数据获取操作并防止在数据获取完成之前进行导航。
+Refer to [The need of `useFetch` and `useAsyncData`](https://nuxt.com/docs/4.x/getting-started/data-fetching#the-need-for-usefetch-and-useasyncdata) for more information.
 
-更多信息请参考 [`useFetch` 和 `useAsyncData` 的必要性](https://nuxt.com/docs/4.x/getting-started/data-fetching#the-need-for-usefetch-and-useasyncdata)。
+Beware that using only `$fetch` will not provide network calls de-duplication and navigation prevention. It is recommended to use $fetch for client-side interactions (event-based) or combined with useAsyncData when fetching the initial component data.
 
-注意，仅使用 `$fetch` 不会提供网络调用去重和导航阻止。建议将 $fetch 用于客户端交互（基于事件）或与 useAsyncData 结合使用来获取初始组件数据。
+Refer to [`$fetch`](https://nuxt.com/docs/4.x/getting-started/data-fetching#fetch) for more information.
 
-更多信息请参考 [`$fetch`](https://nuxt.com/docs/4.x/getting-started/data-fetching#fetch)。
+As this, Nuxt provides the abilities of [lazy fetching](https://nuxt.com/docs/4.x/getting-started/data-fetching#lazy), [picking data](https://nuxt.com/docs/4.x/getting-started/data-fetching#minimize-payload-size), [caching and refetchin](https://nuxt.com/docs/4.x/getting-started/data-fetching#caching-and-refetching), and so on.
 
-因此，Nuxt 提供了[懒加载](https://nuxt.com/docs/4.x/getting-started/data-fetching#lazy)、[数据选择](https://nuxt.com/docs/4.x/getting-started/data-fetching#minimize-payload-size)、[缓存和重新获取](https://nuxt.com/docs/4.x/getting-started/data-fetching#caching-and-refetching)等功能。
+#### CORS
 
-#### 传递客户端请求头
+In Nuxt, there are two kinds of requests we can group them by the origin condition: **Cross-Origin** and **Same-Origin**.
 
-在服务器上调用 `useFetch` 时，Nuxt 将使用 `useRequestFetch` 自动代理客户端请求头和 cookie（除了不应该转发的请求头，如 `host`）。
+For example, when we send a request to **Nuxt server API or route**, we are doing the `Same-Origin` request, because the request is coming from or front-end server at http://0.0.0.0:82 (This demo), and just send to http://0.0.0.0:82/api or http://0.0.0.0:82/route/path.
 
-如果你想在使用 `$fetch` 时达到相同的行为，你应该手动使用代理，例如：
+By the way, the rule for determining the same origin is: protocol + host + port (For example, in `http://0.0.0.0:82`, `http` is `protocol`, `0.0.0.0` is host, `82` is port). If they are the same, we are making the **Same-Origin** request.
+
+`$fetch` uses native `fetch` underhook, the default behavior of native `fetch` is adding safety headers like `Accept` to request, and `Cookies` will just been added when the request is **Same-Origin**.
+
+If we are just doing **simple request** (A request that just contains default headers and uses `GET` method), every thing just works fine. But if we want to add custom headers to our request or use `POST` method, the browser will do anthor thing for us silently: That's `CORS`, Cross Origin Resources Sharing.
+
+When we send a request to **Other server with different origin** and this request isn't a simple request, browser will send a preflight request (uses `OPTIONS` method). If the remote server doesn't handle the preflight request correctly, for example, accept the preflight request and return with headers: `Access-Control-Allow-Origin: https://your.front-end.com` & `Access-Control-Allow-Methods: <METHOD_THE_ACTUAL_REQUEST_USED>` and so on, the actual request will be blocked by browser.
+
+On the edge case, you will find that you send a request with `$fetch` to remote server and get success response, but get error if you send request with your custom fetch instance which may adds some custom headers and lets the request out of "simple".
+
+Notice that, CORS just happended on your browser, so you can create a proxy to avoid this:
+
+- (Development recommended) Create a proxy endpoint on your Nuxt server like `/api/foo`, it will call the remote server `/backend/foo` with `$fetch` for us, with **NO LIMITATION**, and response the response to us
+- (Production recommended) Or use Nginx proxy
+
+In this document, we just discussion how to create a proxy in development environment.
+
+There are two ways to create the proxy:
+
+<table>
+<tr><td width="400px" valign="top">
+
+One to One Proxy
+
+_server/api/foo.get.ts_
+
+```ts
+export default defineEventHandler((event) => {
+  return await $fetch('https://a.remote-server.com/api/foo')
+})
+```
+
+```html
+<script lang="ts" setup>
+  // Just call the Nuxt server API
+  const { data } = await useFetch('/api/foo')
+</script>
+
+<template>
+  <div>Data is: {{ data }}</div>
+</template>
+```
+
+</td><td width="600px"><br>
+
+Prefixed Path Proxy
+
+_nuxt.config.ts_
+
+```ts
+export default defineNuxtConfig({
+  nitro: {
+    devProxy: {
+      '/remote-api': {
+        target: 'https://a.remote-server.com/api',
+        changeOrigin: true
+        // Notice that, the prefix `/remote-api` will be removed when forwarding the request
+      }
+    }
+  }
+})
+```
+
+```html
+<script lang="ts" setup>
+  // Just call the proxy API started with `/remote-api`
+  const { data } = await useFetch('/remote-api/foo')
+</script>
+
+<template>
+  <div>Data is: {{ data }}</div>
+</template>
+```
+
+</td></tr>
+</table>
+
+#### Pass Client Headers
+
+Refer to chapter [CORS](#cors), we know that client-side request will apply the default headers to request, and we can customize headers by customizing our own fetch instance.
+
+So, the key point of this chapter is discussion how to pass client headers in server-side request.
+
+By default, `useFetch` uses `useRequestFetch` to proxy headers and cookies (with the exception of headers not meant to be forwarded, like `host`).
+
+So, the only case will not pass client headers left are using `useAsyncData` with custom logic:
+
+```ts
+const { data } = await useAsyncData(() => $fetch('/api/foo'))
+```
+
+The simplest way is using `useRequestFetch`, this fetch instance is a custom one with headers passed:
 
 ```ts
 const requestFetch = useRequestFetch()
-async function doFetchHeaders() {
-  const { data } = await requestFetch('/api/submit') // 这**会**将请求头传递给端点 `/api/submit`
-}
-
-async function doFetch() {
-  const { data } = await $fetch('/api/submit') // 这**不会**将请求头传递给端点 `/api/submit`
-}
+const { data } = await useAsyncData(() => requestFetch('/api/foo'))
 ```
 
-或者你可以通过 `useRequestHeaders` 指定要包含在请求中的自定义请求头：
+Or you can implement your own fetch instance. See [Nuxt Document -- Custom Fetch](https://nuxt.com/docs/4.x/guide/recipes/custom-usefetch) for more information.
+
+There is a best practice to follow which can simplify these problem:
+
+- Use `useFetch` for commonly cases
+- Use custom fetch for custom headers and other custom cases
+- Use `useAsyncData` for not data feching logic, such as a promise returned by a local funcion...
+- If all the solutions above can't not satisfied your need, maybe you should just create anthor heavily custom fetch instance...
+
+Of course, be very careful before proxying headers to an external API and just include headers that you need. Not all headers are safe to be bypassed and might introduce unwanted behavior. Here is a list of common headers that are NOT to be proxied:
+
+- `host`, `accept`
+- `content-length`, `content-md5`, `content-type`
+- `x-forwarded-host`, `x-forwarded-port`, `x-forwarded-proto`
+- `cf-connecting-ip`, `cf-ray`
+
+#### Caching and Refetching (Share Across Components)
+
+By default, `useFetch` and `useAsyncData` use keys to prevent refetching the same data, it supports sharing data across components.
 
 ```ts
-const headers = useRequestHeaders(['cookies'])
-async function doFetchWithHeaders() {
-  const { data } = await $fetch('/api/submit', { headers })
-}
+const { data } = await useFetch('/api/foo') // In this case, key is the provided URL
+const { data } = await useFetch('/api/foo', { key: 'foo' }) // In this case, key is 'foo'
+
+const { data } = await useAsyncData(() => $fetch('/api/bar')) // In this case, key is '<filename>-<linenumber>'
+const { data } = await useAsyncData('bar', () => $fetch('/api/bar')) // In this case, key is 'bar'
 ```
 
-在将请求头代理到外部 API 之前要非常小心，只包含你需要的请求头。并非所有请求头都可以安全地绕过，可能会引入不必要的行为。以下是不应该代理的常见请求头列表：
+You can share state across components by using the same key.
 
-- `host`、`accept`
-- `content-length`、`content-md5`、`content-type`
-- `x-forwarded-host`、`x-forwarded-port`、`x-forwarded-proto`
-- `cf-connecting-ip`、`cf-ray`
+Notice that, share state requires the following options provided to composable must be consistent:
 
-#### 缓存和重新获取（跨组件共享）
+- `handler` function
+- `deep` option
+- `transform` function
+- `pick` array
+- `getCachedData` function
+- `default` value
 
-默认情况下，`useFetch` 和 `useAsyncData` 使用键来防止重新获取相同的数据，它支持跨组件共享数据。
+Because these options will results different data. If you need independent instances, please use different keys.
 
-```ts
-const { data } = await useFetch('/api/foo') // 在这种情况下，键是提供的 URL
-const { data } = await useFetch('/api/foo', { key: 'foo' }) // 在这种情况下，键是 'foo'
-
-const { data } = await useAsyncData(() => $fetch('/api/bar')) // 在这种情况下，键是 '<filename>-<linenumber>'
-const { data } = await useAsyncData('bar', () => $fetch('/api/bar')) // 在这种情况下，键是 'bar'
-```
-
-你可以通过使用相同的键来跨组件共享状态。
-
-注意，共享状态要求提供给组合式函数的以下选项必须一致：
-
-- `handler` 函数
-- `deep` 选项
-- `transform` 函数
-- `pick` 数组
-- `getCachedData` 函数
-- `default` 值
-
-因为这些选项会导致不同的数据。如果你需要独立实例，请使用不同的键。
-
-在组件中，使用 `useNuxtData` 访问共享数据：
+In components, use `useNuxtData` to access the shared data:
 
 ```ts
 const { data: foo } = useNuxtData('foo')
 ```
 
-你可以通过组合式函数暴露的函数刷新、清除缓存数据，或通过提供 `watch` 数组快速刷新数据：
+You can refresh, clear the cached data by exposed functions from composables, or quick refreshing data by providing `watch` array:
 
 ```ts
 const { data, refresh, clear } = await useFetch('/api/foo', { key: 'foo' })
 
-// 这将重新获取数据
+// This will refetching the data
 function doRefresh() {
   refresh()
 }
 
-// 这将清除数据（仅清除键 'foo' 下的数据）
+// This will clear the data (Only the data under the key 'foo')
 function doClear() {
   clear()
 }
 
 const id = ref(1)
-// 数据将在 id 更改后重新获取
+// Data will refetching after id changed
 const { data: watchData } = await useFetch('/api/foo', { key: 'foo', watch: [id] })
 ```
 
-更多信息请参考 [Nuxt 文档](https://nuxt.com/docs/4.x/getting-started/data-fetching#caching-and-refetching)。
+Please refer to [Nuxt document](https://nuxt.com/docs/4.x/getting-started/data-fetching#caching-and-refetching) for more information.
 
-#### Nitro 中的缓存
+#### Caching in Nitro
 
-如果你想在服务器中缓存数据（是的，那就是 Nitro！）。你应该使用 Nitro 提供的能力：[KV 存储](#kv-存储) 和 [缓存](#缓存)。
+If you want to caching data in server (Yes, that's Nitro!). You should use the ability provided by Nitro: [KV Storage](#kv-storage) & [Cache](#cache).
 
-简而言之，你应该**通过 Nitro `api` 或 `route` 与 `event handler` 代理你的数据获取**，然后在事件处理程序中添加缓存逻辑。
+In short, you should **proxy your data fetching** with Nitro `api` or `route` with `event handler`, then add the caching logic in the event handler.
 
-之前：
+Before:
 
 _app/pages/foo.vue_
 
 ```ts
-const { data } = await useFetch('/backend/endpoint/foo', { key: 'foo' }) // 直接使用后端端点
+const { data } = await useFetch('/backend/endpoint/foo', { key: 'foo' }) // Use backend endpoint directly
 ```
 
-之后：
+After:
 
 _app/pages/foo.vue_
 
 ```ts
-const { data } = await useFetch('/api/foo', { key: 'foo' }) // 使用 Nitro 端点替代
+const { data } = await useFetch('/api/foo', { key: 'foo' }) // Use Nitro endpoint instead
 ```
 
 _server/api/foo.ts_
 
 ```ts
 export default defineCachedEventHandler(() => {
-  return $fetch('/backend/endpoint/foo', { // 在 Nitro 端点中使用后端端点，就像代理一样
+  return $fetch('/backend/endpoint/foo', { // Use backend endpoint in Nitro endpoint, like a proxy
     method: 'get',
     // ...
   })
@@ -295,31 +401,33 @@ export default defineCachedEventHandler(() => {
 })
 ```
 
-#### 自定义数据获取
+#### Custom Data Fetching
 
-请参考 [Nuxt 文档](https://nuxt.com/docs/4.x/guide/recipes/custom-usefetch)。
+Currently, Nuxt does not provide a cleaner way to let us create a custom fetcher, see <https://github.com/nuxt/nuxt/issues/14736>.
+
+To see the current solution, follow the [Nuxt Document](https://nuxt.com/docs/4.x/guide/recipes/custom-usefetch) here.
 
 ## Nitro
 
-Nuxt 4 使用 Nitro 作为其服务器引擎，它提供了一种强大而灵活的方式来处理服务器端渲染、API 路由等。Nitro 设计为轻量级和高效，使其成为现代 Web 应用程序的绝佳选择。
+Nuxt 4 uses Nitro as its server engine, which provides a powerful and flexible way to handle server-side rendering, API routes, and more. Nitro is designed to be lightweight and efficient, making it a great choice for modern web applications.
 
-### KV 存储
+### KV Storage
 
-Nitro 提供了与 `unstorage` 集成的内置存储层，可以抽象文件系统或数据库或任何其他数据源。
+Nitro provides a built-in storage layer integration with `unstorage` that can abstract filesystem or database or any other data source.
 
-更多信息请参考 [Nitro 文档](https://nitro.build/guide/storage)。
+Please refer to [Nitro Document](https://nitro.build/guide/storage) for more information.
 
-### 缓存
+### Cache
 
-Nitro 提供了基于存储层构建的缓存系统。内置的 KV 存储名为 `cache`。
+Nitro provides a caching system built on top of the storage layer. The built-in KV storage named `cache` is used underhood.
 
-注意，这个缓存系统基于 `h3` 提供的 `event handler`。
+Notice that, this caching system is based on `event handler` provided by `h3`.
 
-[事件处理程序](https://v1.h3.dev/guide/event-handler)是一个函数，它将绑定到路由，并在路由器为传入请求匹配路由时执行。
+An [event handler](https://v1.h3.dev/guide/event-handler) is a function that will be bound to a route and executed when the route is matched by the router for an incoming request.
 
-**简而言之，事件处理程序提供了在 Nitro 上创建服务器路由/端点的能力，你可以在服务器端和客户端请求它们。然后，你可以在事件处理程序中 `$fetch` 数据并返回它们。**
+**In short, event handler provides the ability to create server routes / endpoints on Nitro, an you can request them on both server-side & client-side. Then, you can `$fetch` data and return them on event handlers.**
 
-_server/api/ask.get.ts_ (通过文件名扩展创建带有 `get` 方法的端点)
+_server/api/ask.get.ts_ (Create a endpoint with `get` method by file name extensions)
 
 ```ts
 export default defineEventHandler(() => {
@@ -330,41 +438,45 @@ export default defineEventHandler(() => {
 })
 ```
 
-在上述情况下，我们位于 `<BASE_URL>/api/ask` 的端点只是后端端点的代理，并具有缓存能力。
+In the case above, our endpoint located at `<BASE_URL>/api/ask` just a proxy of backend endpoint and with the ability of caching.
 
-通过使用 `defineCachedEventHandler` 和 `defineCachedFunction`，你可以缓存事件处理程序和函数的结果（它们是其中的一部分，并在多个处理程序中重复使用）
+By using `defineCachedEventHandler` & `defineCachedFunction`, you can caching the result of event handler & functions (which are part of one, and reusing it in multiple handlers)
 
-更多用法请参考 [h3 文档](https://v1.h3.dev/guide)。
+For further usage, please refer to [h3 Document](https://v1.h3.dev/guide).
 
-## Nuxt 模块
+### Proxy
 
-Nuxt 模块提供了许多功能，如自动导入、类型生成、开发工具集成等。
+See chapter [CORS](#cors) for more information.
 
-更多信息请参见 [Nuxt 模块页面](https://nuxt.com/modules)。
+## Nuxt Modules
+
+Nuxt modules provide a lot of abilities, such as auto-importing, type generation, devtools integration, etc.
+
+See [Nuxt Modules Page](https://nuxt.com/modules) for more information.
 
 ## Vue 3
 
-没什么可说的...
+Noting to say...
 
-## Vue 插件
+## Vue Addons
 
-Pinia、Vue Router 和 Vue I18n。
+Pinia & Vue Router & Vue I18n.
 
 ### Vue I18n
 
-遗憾的是，目前 SFC 中的 i18n 自定义块不支持类型安全：[官方注释](https://vue-i18n.intlify.dev/guide/advanced/typescript.html#type-safe-resources-in-usei18n)。
+It's pity that type safety is not supported for i18n custom blocks in SFC currently: [Official Annotation](https://vue-i18n.intlify.dev/guide/advanced/typescript.html#type-safe-resources-in-usei18n).
 
-这个演示使用了 Nuxt 团队提供的官方 Nuxt 模块，它为开发人员提供了丰富的 API 和组件来操作基于语言环境的路由跳转、语言环境更改、基于 cookie 的语言环境等方面。
+This demo uses the official Nuxt module provided by Nuxt Team, which provides plenty of apis & components for developers to maniplate route jumping with locale, locale changing, cookie based locale, and other aspects.
 
-这个演示使用 Vue SFC 中的 `<i18n>` 块来存储**组件级别**的 i18n 文本，使用全局语言环境文件 (`i18n/*.yaml`) 来存储**公共**的 i18n 文本。
+This demo uses `<i18n>` block in Vue SFC to store **component level** i18n text, use global locale files (`i18n/*.yaml`) to store **public** i18n text.
 
-在我看来，将**组件级别**的 i18n 文本直接放入将要使用的 SFC 中，比将它们放入远离的文件夹中要好得多，即使这些文件夹是"命名模块"。
+In my opinion, put **component level** i18n text directly into the SFC where they will be used is much better than put them into the folders far away, even though these folders are "named modules".
 
-#### 为什么我更喜欢将组件级别的 i18n 文本直接放入 SFC？
+#### Why I prefer to put component level i18n text into SFC directly?
 
-想象一下，当你收到更新某些 i18n 文本的请求时，你必须找出旧文本在哪里使用，甚至执行一些兼容性任务。
+Just imagine that, when you receive a request to update some i18n text, you have to figure out where the old text is used, and even perform some compatibility tasks.
 
-module1 下的旧文本：
+The old text under module1:
 
 _i18n/module1/en.json_
 
@@ -374,7 +486,7 @@ _i18n/module1/en.json_
 }
 ```
 
-**module1** 下使用旧文本的页面：
+A page under **module1** who is using the old text:
 
 _app/pages/module1/page1.vue_
 
@@ -388,7 +500,7 @@ _app/pages/module1/page1.vue_
 </template>
 ```
 
-**module2** 下**意外**使用 **module1** 旧文本的另一个页面：
+Another page under **module2** who is using the old text of **module1** **by accident**:
 
 _app/pages/module2/page2.vue_
 
@@ -402,9 +514,9 @@ _app/pages/module2/page2.vue_
 </template>
 ```
 
-现在你应该保留旧文本或将其从 module1 移动到 module2，然后添加新文本：
+Now you should reserve the old text or move it from module1 to module2, then add new text:
 
-保留旧文本：
+Reserve the old text:
 
 _i18n/module1/en.json_
 
@@ -427,7 +539,7 @@ _app/pages/module1/page1.vue_
 </template>
 ```
 
-将其从 module1 移动到 module2
+Move it from module1 to module2
 
 _i18n/module1/en.json_
 
@@ -469,35 +581,35 @@ _app/pages/module2/page2.vue_
 </template>
 ```
 
-它们都太麻烦了。
+They are both too troublesome.
 
-所以最佳实践是"不要将**组件级别**的 i18n 文本放入**公共**位置"。
+So the best practice is "Do not put the **component level** i18n text into **public** place".
 
-就是这样！
+That's it!
 
-## UI 库和 CSS 框架
+## UI Library & CSS Framework
 
 ### Element Plus
 
-它可能不是最好的，但绝对不是一个错误的选择。
+It may not be the best, but it must not be a wrong choice.
 
-这个演示使用了 Element Plus 提供的官方 Nuxt 模块，它提供了自定义 UI 组件颜色、语言环境等方面的能力。
+This demo uses the official Nuxt module provided by Element Plus, which provides the ability to custom the color, locale and other aspects of UI components.
 
 ### UnoCSS
 
-UnoCSS 是一个原子化 CSS 框架，比纯 Tailwind CSS 有更好的性能。
+UnoCSS is a atomic CSS framework has great performance than pure Tailwind CSS.
 
-原子化 CSS 可以减少 CSS 文件的大小，特别是对于大型项目。
+Atomic CSS can reduce the size of the CSS file, especially for a large project.
 
-UnoCSS 有与 Tailwind CSS 和其他 CSS 框架兼容的预设。
+UnoCSS has presets compatible with Tailwind CSS & other CSS frameworks.
 
-这个演示使用 `presetWind3` 和 `presetAttributify` 预设，与 Tailwind CSS 3 和 attributify 原子化 CSS 类兼容，并添加一些自定义规则以使用来自 Element Plus 的 CSS 变量。
+This demo use `presetWind3` & `presetAttributify` presets, compatible with Tailwind CSS 3 & attributify atomic css classes, and add some custom rules in order to use the css variables from Element Plus.
 
-详细配置请参见[这里](uno.config.ts)。
+See the detail config [here](uno.config.ts).
 
-Attributify 让你像 HTML 属性一样编写 CSS 类，这可以避免语义和非语义类的混合。
+Attributify let you write CSS classes like HTML attributes, which can avoid the mixing of semantic & non-semantic classes.
 
-使用 attributify 之前：
+Before attributify:
 
 ```html
 <div class="flex flex-row justify-between items-center max-w-1200px mx-auto py-1 px-4">
@@ -505,7 +617,7 @@ Attributify 让你像 HTML 属性一样编写 CSS 类，这可以避免语义和
 </div>
 ```
 
-使用 attributify 之后：
+After attributify:
 
 ```html
 <div flex="~ row" justify-between items-center max-w-1200px mx-auto p="y-1 x-4">
@@ -513,7 +625,7 @@ Attributify 让你像 HTML 属性一样编写 CSS 类，这可以避免语义和
 </div>
 ```
 
-例如下面，`page-header` 和 `page-title` 是通常在 JS 中使用的语义类，对于开发人员来说，在这么多其他非语义类中找到它们是很烦人的。
+For example below, `page-header` & `page-title` are semantic classes which are commonly used in JS, and it's annoying for developers to find them with so many other non-semantic classes.
 
 ```html
 <div class="flex flex-row justify-between items-center max-w-1200px mx-auto py-1 px-4 page-header">
@@ -521,92 +633,92 @@ Attributify 让你像 HTML 属性一样编写 CSS 类，这可以避免语义和
 </div>
 ```
 
-## 工具库
+## Utilities
 
 ### Vue Use
 
-Vue Use 为 Vue Composition API 提供了丰富的工具。
+Vue Use provide plenty of utilities for Vue Composition API.
 
-例如，`useClipboard` 可以帮助你将文本复制到剪贴板，`useCookie` 可以帮助你管理 cookie。
+For example, `useClipboard` can help you copy text to clipboard, `useCookie` can help you manage cookies.
 
-所以我们不再需要 `clipboard` 和 `cookie-universal-nuxt` 包。
+So we don't need `clipboard` & `cookie-universal-nuxt` packages any more.
 
-### 代码高亮
+### Code Highlight
 
-在 Nuxt 中有两种常见的代码高亮选择：Highlight.js 和 Shiki。
+There are two common choice for highlighting codes in Nuxt: Highlight.js and Shiki.
 
-#### Highlight.js (传统)
+#### Highlight.js (Legacy)
 
-Highlight.js 是代码块的传统语法高亮器。
+Highlight.js is a legacy syntax highlighter for code blocks.
 
-它支持多种语言，你可以将其与 Vue 3 一起使用。
+It supports many languages, and you can use it with Vue 3.
 
-这个演示使用了 [Highlight Js Vue Plugin](https://github.com/lumirelle/highlightjs-vue-plugin)，它提供了使用 Highlight.js 的基本 Vue 组件包装，并实现了一个带有一些默认预设的[组件](app/components/HighlightJs.vue)。
+This demo uses [Highlight Js Vue Plugin](https://github.com/lumirelle/highlightjs-vue-plugin) which provide a basic Vue component wrap of using Highlight.js, and implements a [component](app/components/HighlightJs.vue) with some default presets.
 
-#### Shiki (推荐)
+#### Shiki (Recommended)
 
-现代、智能、比 Highlight.js 更强大，比 Highlight.js 稍微复杂一些。
+Modern, intelligent, strong than Highlight.js, and a little bit complex than Highlight.js.
 
-这个演示使用了 [Nuxt Shiki](https://github.com/pi0/nuxt-shiki)，它提供了使用 Shiki 的基本 Vue 组件包装，并实现了一个带有一些默认预设的[组件](app/components/ShikiJs.vue)。
+This demo uses [Nuxt Shiki](https://github.com/pi0/nuxt-shiki) which provide a basic Vue component wrap of using Shiki, and implements a [component](app/components/ShikiJs.vue) with some default presets.
 
 ### BigNumber.js
 
-大数字支持，避免计算价格时的精度问题等。
+Big number support, avoid precision issue while calculating price, and so on.
 
-这个演示实现了一个[工具](shared/utils/bignumber.ts)，其中包含 `BigNumber` 或 `number` 之间的一些数学运算。
+This demo implements a [util](shared/utils/bignumber.ts) which contains some math operations between `BigNumber` or `number`.
 
 ### Day.js
 
-日期操作，Element Plus 也依赖它。
+Date maniplation, Element Plus dependents on it too.
 
-这个演示实现了一个[插件](app/plugins/dayjs.ts)以便将 Day.js 添加到 Nuxt 应用中。
+This demo implements a [plugin](app/plugins/dayjs.ts) in order to add Day.js to Nuxt App.
 
 ### ECharts
 
-在页面中添加图表的最佳选择。
+The best choice of adding charts to your page.
 
-默认情况下，ECharts 在浏览器中渲染，如果你更喜欢在服务器上渲染（SSR 模式）以获得更好的 FCP 或其他原因，你应该先阅读 [ECharts SSR 指南](https://echarts.apache.org/handbook/en/how-to/cross-platform/server/)。
+By default, ECharts rendering on the browser, if you prefer rendering on the server (SSR Mode) for better FCP or other reasons, you should read through [ECharts SSR Guide](https://echarts.apache.org/handbook/en/how-to/cross-platform/server/) first.
 
-然后，`nuxt-echarts` 提供不同的组件来处理不同的情况：
+Then, `nuxt-echarts` provides different components to handle different situations:
 
-- `<VChart>`：Vue 中简单而强大的 ECharts 包装器，与 [`Vue-ECharts`](https://github.com/ecomfe/vue-echarts) 相同，在浏览器中渲染。
-- `<VChartIsland>`：在服务器上渲染 ECharts，在底层使用 `<NuxtIsland>`，无 JS，非交互式（SVG）。
-- `<VChartServer>`：围绕 `<VChartIsland>` 的包装器，所以允许客户端注入，仍然无 JS，非交互式（SVG）。
-- `<VChartLight>`：在底层使用 `<VChartServer>` 在服务器端渲染 ECharts，服务器渲染的 SVG 通过 [ECharts 轻量级客户端运行时](https://echarts.apache.org/handbook/en/how-to/cross-platform/server/#lightweight-client-runtime)进行水合，支持简单交互。
-- `<VChartFull>`：为你的 Nuxt 应用带来完整的 ECharts 功能（与 `<VChart>` 相同）和 SSR，将在服务器上渲染图表，然后在浏览器中挂载后在客户端渲染。稍微有点重。
+- `<VChart>`: A simple and powerful ECharts wrapper in Vue, the same as [`Vue-ECharts`](https://github.com/ecomfe/vue-echarts), rendering on the browser.
+- `<VChartIsland>`: Rendering ECharts on server, uses `<NuxtIsland>` under the hood, no JS, non-interactive (SVG).
+- `<VChartServer>`: A wrapper around `<VChartIsland>`, so allow client-side injection, still no JS, non-interactive (SVG).
+- `<VChartLight>`: Uses `<VChartServer>` underhood to render ECharts on server side, The SVG rendered by the server is hydrated with [ECharts lightweight client runtime](https://echarts.apache.org/handbook/en/how-to/cross-platform/server/#lightweight-client-runtime), support simple interactions.
+- `<VChartFull>`: Brings full ECharts functionality (The same as `<VChart>`) to your Nuxt app with SSR, will render a chart on the server then on the client once mounted in the browser. A little bit too heavy.
 
-简而言之：
+TL;DR:
 
-完整功能和仅客户端：`<VChart>`
-非交互和服务器端渲染：`<VChartServer>`
-简单交互和服务器端渲染：`<VChartLight>`
-完整功能和服务器端渲染：`<VChartFull>`
+Full Functionality & Client Only: `<VChart>`
+Non Interactions & Server Side Rendering: `<VChartServer>`
+Simple Interactions & Server Side Rendering: `<VChartLight>`
+Full Functionality & Server Side Rendering: `<VChartFull>`
 
-更多用法请阅读 [ECharts 指南](https://echarts.apache.org/handbook/en/get-started) 和 [Nuxt ECharts 指南](https://echarts.nuxt.dev/getting-started)。
+Read through [ECharts Guide](https://echarts.apache.org/handbook/en/get-started) & [Nuxt ECharts Guide](https://echarts.nuxt.dev/getting-started) for futher usage.
 
 ### Swiper.js
 
-在页面中实现自定义轮播的最佳选择。
+The best choice to implement custom swiper in your page.
 
-注意，`Nuxt Swiper` 使用 `Swiper.js` 作为其基础，使用其**Web 组件**，它们使用 kebab-case 命名约定，而 Vue 使用 PascalCase 命名约定。
+Notice that, `Nuxt Swiper` utilizes `Swiper.js` as its foundation using its **web components**, they use the kebab-case naming convention vs the PascalCase naming convention that Vue uses.
 
-如果你想了解如何在 Vue.js 中使用 Web 组件，请参考这里的文档：[Vue.js Web 组件](https://vuejs.org/guide/extras/web-components.html)
+If you want to learn how to use web components in Vue.js please refer to the docs here: [Vue.js Web Components](https://vuejs.org/guide/extras/web-components.html)
 
-Can I Use 显示 Web 组件在中国使用的浏览器中有 85.54% 的支持率。在不支持的浏览器中，8.99% 是 IE 浏览器。也就是说，在大多数情况下我们不需要担心 Web 组件的兼容性。
+Can I Use shows that web components are supported in 85.54% of browsers used in China. Among unsupported browsers, 8.99% are the IE browser. That's to say, we don't need to worry about web components compatibility in most cases.
 
-以下是 Can I Use 的结果：
+Here are the results from Can I Use:
 
-- [自定义元素 (V1) 兼容性](https://caniuse.com/custom-elementsv1)
-- [Shadow DOM (V1) 兼容性](https://caniuse.com/shadowdomv1)
+- [Custom Element (V1) Compatibility](https://caniuse.com/custom-elementsv1)
+- [Shadow DOM (V1) Compatibility](https://caniuse.com/shadowdomv1)
 
 ### Nuxt QRCode
 
-一个提供生成和读取二维码支持的 Nuxt 模块。
+A Nuxt module that provides support for generating and reading QRCodes.
 
-对于生成二维码，使用组件 `<Qrcode>` 和组合式函数 `useQrcode()`。
+For generating QRCodes, use the component `<Qrcode>` & composable `useQrcode()`.
 
-对于读取二维码，使用组件 `<QrcodeStream>`、`<QrcodeCapture>` 和 `<QrcodeDropZone>`（这里没有演示，因为这些用例相当不常见）。如果你真的需要使用它们，请参考[文档](https://qrcode.s94.dev/read/qrcode-stream)。
+For reading QRCodes, use the component `<QrcodeStream>` & `<QrcodeCapture>` & `<QrcodeDropZone>` (No demos here, because of these use cases are quit unusual). If you really need to use them, please refer to the [documentation](https://qrcode.s94.dev/read/qrcode-stream).
 
-### LRU 缓存
+### LRU Cache
 
-Nuxt 提供了由 `nitro` 提供支持的数据缓存内置支持，我们不需要使用像 `lru-cache` 这样的外部库来实现我们自己的缓存。
+Nuxt provide built-in support for data caching which is powered by `nitro`, we don't need to use external libraries like `lru-cache` to implement caching ourselves.

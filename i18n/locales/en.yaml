@@ -1,5 +1,5 @@
 plugin:
-  api:
+  cfetch:
     error:
       login-expired: Login expired, please log in again
       too-many-requests: Too many requests, please try again later
