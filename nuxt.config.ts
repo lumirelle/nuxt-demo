@@ -227,9 +227,4 @@ export default defineNuxtConfig({
       target: 'es2015',
     },
   },
-
-  devServer: {
-    host: '0.0.0.0',
-    port: 82,
-  },
 })
