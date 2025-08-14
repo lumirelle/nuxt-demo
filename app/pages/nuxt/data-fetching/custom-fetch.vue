@@ -11,6 +11,7 @@ const { t } = useI18n({
 
 // `useCfetch` will pass custom headers to server automatically
 const { data } = await useCfetch('/api/headers-cookies', {
+  baseURL: '',
   method: 'get',
 })
 

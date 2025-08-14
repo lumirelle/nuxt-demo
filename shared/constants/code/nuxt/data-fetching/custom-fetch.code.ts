@@ -115,8 +115,9 @@ const { t } = useI18n({
   useScope: 'local',
 })
 
-// \`useCfetch\` will pass custom headers to server automatically // [!code focus:4]
+// \`useCfetch\` will pass custom headers to server automatically // [!code focus:5]
 const { data } = await useCfetch('/api/headers-cookies', {
+  baseURL: '',
   method: 'get',
 })
 
