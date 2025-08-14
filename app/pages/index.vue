@@ -9,6 +9,7 @@ const { t } = useI18n({
     <H level="1">
       {{ t('title') }}
     </H>
+    <p>{{ t('more-info') }}</p>
 
     <!-- Nuxt -->
     <section border-b="1px solid [var(--el-border-color)]">
@@ -584,6 +585,7 @@ const { t } = useI18n({
 <i18n lang="yaml">
 en:
   title: Welcome to Nuxt 4
+  more-info: For more info, please refer to source code & README.md
 
   nuxt:
     title: Nuxt 4
@@ -735,6 +737,7 @@ en:
 
 zh-CN:
   title: 欢迎使用 Nuxt 4
+  more-info: 有关更多信息，请参阅源代码和 README.md。
 
   nuxt:
     title: Nuxt 4
@@ -886,6 +889,7 @@ zh-CN:
 
 zh-TW:
   title: 歡迎使用 Nuxt 4
+  more-info: 有關更多信息，請參閱源代碼和 README.md。
 
   nuxt:
     title: Nuxt 4
