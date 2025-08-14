@@ -29,14 +29,15 @@ Utilities:
 
 TODO: Below
 
-- [Nuxt GTag](https://nuxt.com/modules/gtag)
+- TODO: [Nuxt GTag](https://nuxt.com/modules/gtag)
+- TODO: [Nuxt SEO](https://nuxt.com/modules/seo)
 - TODO: MD5 & SHA256 (Finding crypto package)
 - TODO: XLSX
 
 Optimizations:
 
 - [Nuxt Scripts](https://nuxt.com/modules/scripts)
-- [Nuxt SVGO](https://nuxt.com/modules/nuxt-svgo)
+- TODO: [Nuxt SVGO](https://nuxt.com/modules/nuxt-svgo)
 
 DX:
 
@@ -69,6 +70,12 @@ Nuxt 4 provides a lot of features than Nuxt 2, including:
 - ...
 
 Reading the getting started guide [here](https://nuxt.com/docs/4.x/getting-started/introduction).
+
+### Project Dependencies
+
+Thanks to [vercel/nft](https://github.com/vercel/nft), now we can put all dependencies int `devDependencies`.
+
+See discussions [here](https://github.com/nuxt/nuxt/discussions/10400).
 
 ### Client & Server
 
