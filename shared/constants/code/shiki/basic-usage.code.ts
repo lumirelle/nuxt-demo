@@ -215,7 +215,7 @@ console.log(greet('World'));\`,
 export default Code`,
   page:
 `<script setup lang="ts">
-import { Code } from '#shared/constants/code/shiki/basic-usage.code'
+import { Code } from '#shared/constants/code/shiki/basic-usage.code' // [!code focus]
 
 const { t } = useI18n({
   useScope: 'local',
@@ -228,13 +228,13 @@ const { t } = useI18n({
       {{ t('result.xml') }}
     </p>
     <p>
-      <ShikiJs :code="Code.xml" language="xml" />
+      <ShikiJs :code="Code.xml" language="xml" /> // [!code focus]
     </p>
     <p>
       {{ t('result.javascript') }}
     </p>
     <p>
-      <ShikiJs :code="Code.javascript" language="javascript" />
+      <ShikiJs :code="Code.javascript" language="javascript" /> // [!code focus]
     </p>
   </div>
 </template>

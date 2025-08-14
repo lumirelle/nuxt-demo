@@ -24,13 +24,13 @@ function handleChange(date: Date | null) {
       {{ t('title') }}
     </H>
     <section>
+      <p><ElDatePicker v-model="date" type="datetime" @change="handleChange" /></p>
+    </section>
+    <section>
       <H level="2">
         ElDatePicker
       </H>
       <ShikiJs :code="Code.elDatePicker" lang="vue" />
-    </section>
-    <section>
-      <p><ElDatePicker v-model="date" type="datetime" @change="handleChange" /></p>
     </section>
     <section>
       <p>

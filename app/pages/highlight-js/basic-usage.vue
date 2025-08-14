@@ -17,24 +17,6 @@ const { t } = useI18n({
     </H>
     <section>
       <H level="2">
-        shared/constants/code/highlight-js/basic-usage.code.ts
-      </H>
-      <HighlightJs :code="Code.code" language="js" />
-    </section>
-    <section>
-      <H level="2">
-        app/components/HighlightJs.vue
-      </H>
-      <HighlightJs :code="Code.component" />
-    </section>
-    <section>
-      <H level="2">
-        app/pages/highlight-js/basic-usage.vue
-      </H>
-      <HighlightJs :code="Code.page" />
-    </section>
-    <section>
-      <H level="2">
         {{ t('result.title') }}
       </H>
       <section>
@@ -49,6 +31,24 @@ const { t } = useI18n({
         </p>
         <HighlightJs :code="Code.javascript" language="javascript" />
       </section>
+    </section>
+    <section>
+      <H level="2">
+        <i>shared/constants/code/highlight-js/basic-usage.code.ts</i>
+      </H>
+      <HighlightJs :code="Code.code" language="js" />
+    </section>
+    <section>
+      <H level="2">
+        <i>app/components/HighlightJs.vue</i>
+      </H>
+      <HighlightJs :code="Code.component" />
+    </section>
+    <section>
+      <H level="2">
+        <i>app/pages/highlight-js/basic-usage.vue</i>
+      </H>
+      <HighlightJs :code="Code.page" />
     </section>
     <section>
       <NuxtLinkLocale to="/">

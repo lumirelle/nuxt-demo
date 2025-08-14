@@ -25,12 +25,6 @@ const radius = ref(1)
         {{ t('result.title') }}
       </H>
       <section>
-        <H level="2">
-          app/pages/nuxt-qrcode/basic-usage.vue
-        </H>
-        <ShikiJs :code="Code.page" lang="vue" />
-      </section>
-      <section>
         <H level="3">
           {{ t('result.default') }}
         </H>
@@ -54,6 +48,12 @@ const radius = ref(1)
           <Qrcode value="https://qrcode.s94.dev" :variant="variant" :radius="radius" width="200" height="200" />
         </div>
       </section>
+    </section>
+    <section>
+      <H level="2">
+        <i>app/pages/nuxt-qrcode/basic-usage.vue</i>
+      </H>
+      <ShikiJs :code="Code.page" lang="vue" />
     </section>
     <section>
       <NuxtLinkLocale to="/">

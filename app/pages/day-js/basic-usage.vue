@@ -17,26 +17,26 @@ const { t } = useI18n({
     </H>
     <section>
       <H level="2">
-        app/plugins/dayjs.ts
-      </H>
-      <ShikiJs :code="Code.plugins" lang="ts" />
-    </section>
-    <section>
-      <H level="2">
-        app/pages/day-js/basic-usage.vue
-      </H>
-      <ShikiJs :code="Code.page" lang="vue" />
-    </section>
-    <section>
-      <H level="2">
         {{ t('result.title') }}
       </H>
-      <!-- NOTE: Don't use `$dayjs()` directly, or will get a hydration error -->
+      <!-- NOTE: Don't use `$dayjs()` directly, or you will get a hydration error -->
       <I18nT keypath="result.parse" tag="p">
         <template #parsed>
           <span>{{ $dayjs('2018-04-04T16:00:00.000Z').format('YYYY-MM-DD HH:mm:ss') }}</span>
         </template>
       </I18nT>
+    </section>
+    <section>
+      <H level="2">
+        <i>app/plugins/dayjs.ts</i>
+      </H>
+      <ShikiJs :code="Code.plugins" lang="ts" />
+    </section>
+    <section>
+      <H level="2">
+        <i>app/pages/day-js/basic-usage.vue</i>
+      </H>
+      <ShikiJs :code="Code.page" lang="vue" />
     </section>
     <section>
       <NuxtLinkLocale to="/">

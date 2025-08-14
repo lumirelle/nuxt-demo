@@ -17,36 +17,6 @@ const { t } = useI18n({
     </H>
     <section>
       <H level="2">
-        nuxt.config.ts
-      </H>
-      <ShikiJs :code="Code.config" lang="ts" />
-    </section>
-    <section>
-      <H level="2">
-        app/assets/styles/_shiki.scss
-      </H>
-      <ShikiJs :code="Code.styles" lang="scss" />
-    </section>
-    <section>
-      <H level="2">
-        app/components/ShikiJs.vue
-      </H>
-      <ShikiJs :code="Code.component" lang="vue" />
-    </section>
-    <section>
-      <H level="2">
-        shared/constants/code/shiki/basic-usage.code.ts
-      </H>
-      <ShikiJs :code="Code.code" lang="ts" />
-    </section>
-    <section>
-      <H level="2">
-        app/pages/shiki/basic-usage.vue
-      </H>
-      <ShikiJs :code="Code.page" lang="vue" />
-    </section>
-    <section>
-      <H level="2">
         {{ t('result.title') }}
       </H>
       <section>
@@ -61,6 +31,36 @@ const { t } = useI18n({
         </p>
         <ShikiJs :code="Code.javascript" lang="js" />
       </section>
+    </section>
+    <section>
+      <H level="2">
+        <i>nuxt.config.ts</i>
+      </H>
+      <ShikiJs :code="Code.config" lang="ts" />
+    </section>
+    <section>
+      <H level="2">
+        <i>app/assets/styles/_shiki.scss</i>
+      </H>
+      <ShikiJs :code="Code.styles" lang="scss" />
+    </section>
+    <section>
+      <H level="2">
+        <i>app/components/ShikiJs.vue</i>
+      </H>
+      <ShikiJs :code="Code.component" lang="vue" />
+    </section>
+    <section>
+      <H level="2">
+        <i>shared/constants/code/shiki/basic-usage.code.ts</i>
+      </H>
+      <ShikiJs :code="Code.code" lang="ts" />
+    </section>
+    <section>
+      <H level="2">
+        <i>app/pages/shiki/basic-usage.vue</i>
+      </H>
+      <ShikiJs :code="Code.page" lang="vue" />
     </section>
     <section>
       <NuxtLinkLocale to="/">

@@ -5,7 +5,7 @@ const { t } = useI18n({
   useScope: "local",
 })
 
-function handleClick() {
+function handleClick() { // [!code focus:6]
   // Using JSConfetti, which is loaded globally in \`nuxt.config.ts\`,
   // We can access it from the window object,
   const confetti = new window.JSConfetti()
@@ -23,7 +23,7 @@ zh-TW:
 </i18n>
 
 <template>
-  <button @click="handleClick">
+  <button @click="handleClick"> // [!code focus:3]
     {{ t("description4") }}
   </button>
 </template>`,

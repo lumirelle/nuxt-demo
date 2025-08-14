@@ -55,37 +55,37 @@ const { t } = useI18n({
 
 <i18n lang="yaml">
   en:
-    title: "{'@element-plus/nuxt'}"
+    title: "Element Plus & {'@'}element-plus/nuxt"
     button:
       title: Button
-      try: "{'Try @element-plus/nuxt - Button'}"
+      try: "Try Button"
     datePicker:
       title: DatePicker (Based on Day.js)
-      try: "{'Try @element-plus/nuxt - DatePicker'}"
+      try: "Try DatePicker"
     configure:
       title: Configure Element Plus
       try: Try dark theme & variables override
     back: "{'<'} Back to home page {'>'}"
   zh-CN:
-    title: "{'@element-plus/nuxt'}"
+    title: "Element Plus & {'@'}element-plus/nuxt"
     button:
       title: Button
-      try: "{'尝试 @element-plus/nuxt - Button'}"
+      try: "尝试 Button"
     datePicker:
       title: DatePicker (基于 Day.js)
-      try: "{'尝试 @element-plus/nuxt - DatePicker'}"
+      try: "尝试 DatePicker"
     configure:
       title: "配置 Element Plus"
       try: 尝试暗色主题 & 覆盖变量
     back: "{'<'} 返回首頁 {'>'}"
   zh-TW:
-    title: "{'@element-plus/nuxt'}"
+    title: "Element Plus & {'@'}element-plus/nuxt"
     button:
       title: Button
-      try: "{'嘗試 @element-plus/nuxt - Button'}"
+      try: "嘗試 Button"
     datePicker:
       title: DatePicker (基於 Day.js)
-      try: "{'嘗試 @element-plus/nuxt - DatePicker'}"
+      try: "嘗試 DatePicker"
     configure:
       title: "配置 Element Plus"
       try: 嘗試暗色主題 & 覆蓋變數

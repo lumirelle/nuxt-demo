@@ -28,39 +28,39 @@ const { t } = useI18n({
   useScope: 'local',
 })
 
-// Use \`useFetch\` & \`useAsyncData\` for server-side data fetching // [!code focus]
+// Use \`useFetch\` & \`useAsyncData\` for server-side data fetching // [!code focus:21]
 
-// \`useFetch\` is a developer experience sugar of \`useAsyncData\` & \`$fetch\` // [!code focus]
-// This is nearly equivalent to \`useAsyncData('staticMeal', () => $fetch('/api/time'))\` // [!code focus]
-const { data } = useFetch('/api/time', { // [!code focus]
-  key: 'time', // [!code focus]
-  method: 'get', // [!code focus]
-}) // [!code focus]
+// \`useFetch\` is a developer experience sugar of \`useAsyncData\` & \`$fetch\`
+// This is nearly equivalent to \`useAsyncData('staticMeal', () => $fetch('/api/time'))\`
+const { data } = useFetch('/api/time', {
+  key: 'time',
+  method: 'get',
+})
 
-const stringifiedData = computed(() => JSON.stringify(data.value, null, 2)) // [!code focus]
+const stringifiedData = computed(() => JSON.stringify(data.value, null, 2))
 
 function submit() {
-  // Use \`$fetch\` for client-side data fetching // [!code focus]
-  $fetch('/api/submit', { // [!code focus]
-    method: 'post', // [!code focus]
-  }).then((res) => { // [!code focus]
-    ElMessage.success(res.message) // [!code focus]
-  }).catch((error) => { // [!code focus]
-    ElMessage.error(error.message) // [!code focus]
-  }) // [!code focus]
+  // Use \`$fetch\` for client-side data fetching
+  $fetch('/api/submit', {
+    method: 'post',
+  }).then((res) => {
+    ElMessage.success(res.message)
+  }).catch((error) => {
+    ElMessage.error(error.message)
+  })
 }
 
 const question = ref('')
 
 function ask() {
-  // Use \`$fetch\` for client-side data fetching // [!code focus]
-  $fetch('/api/ask', { // [!code focus]
-    method: 'get', // [!code focus]
-  }).then((res) => { // [!code focus]
-    ElMessage.success(res.message) // [!code focus]
-  }).catch((error) => { // [!code focus]
-    ElMessage.error(error.message) // [!code focus]
-  }) // [!code focus]
+  // Use \`$fetch\` for client-side data fetching // [!code focus:8]
+  $fetch('/api/ask', {
+    method: 'get',
+  }).then((res) => {
+    ElMessage.success(res.message)
+  }).catch((error) => {
+    ElMessage.error(error.message)
+  })
 }
 </script>
 
@@ -73,9 +73,9 @@ function ask() {
       <div flex gap-4 h-100px>
         <div flex="~ 1 col" justify-between>
           <p>{{ t('click-submit') }}</p>
-          <ElButton @click="submit"> // [!code focus]
-            {{ t('submit') }} // [!code focus]
-          </ElButton> // [!code focus]
+          <ElButton @click="submit"> // [!code focus:3]
+            {{ t('submit') }}
+          </ElButton>
         </div>
         <div flex="~ 1 col" justify-between>
           <p>{{ t('blur-ask') }}</p>

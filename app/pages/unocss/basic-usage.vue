@@ -17,18 +17,6 @@ const { t } = useI18n({
     </H>
     <section>
       <H level="2">
-        unocss.config.ts
-      </H>
-      <ShikiJs :code="Code.config" lang="ts" />
-    </section>
-    <section>
-      <H level="2">
-        app/pages/unocss/basic-usage.vue
-      </H>
-      <ShikiJs :code="Code.page" lang="vue" />
-    </section>
-    <section>
-      <H level="2">
         {{ t('result.title') }}
       </H>
       <p>{{ t('result.p1') }}</p>
@@ -41,6 +29,18 @@ const { t } = useI18n({
       <p text-8 color-green>
         {{ t('result.p4') }}
       </p>
+    </section>
+    <section>
+      <H level="2">
+        <i>unocss.config.ts</i>
+      </H>
+      <ShikiJs :code="Code.config" lang="ts" />
+    </section>
+    <section>
+      <H level="2">
+        <i>app/pages/unocss/basic-usage.vue</i>
+      </H>
+      <ShikiJs :code="Code.page" lang="vue" />
     </section>
     <section>
       <NuxtLinkLocale to="/">

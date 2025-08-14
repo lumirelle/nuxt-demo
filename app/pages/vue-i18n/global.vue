@@ -1,14 +1,12 @@
 <script setup lang="ts">
-import { Code } from '#shared/constants/code/vue-i18n/basic-usage.code'
+import { Code } from '#shared/constants/code/vue-i18n/global.code'
 import { useI18n } from 'vue-i18n'
 
 definePageMeta({
   parent: '/',
 })
 
-const { t } = useI18n({
-  useScope: 'local',
-})
+const { t } = useI18n() // By default, `useScope` is `global`
 </script>
 
 <template>
@@ -20,15 +18,16 @@ const { t } = useI18n({
       <H level="2">
         {{ t('result.title') }}
       </H>
-      <p>{{ t('i18n-text') }}</p>
-      <p>{{ t('switch-lang') }}</p>
+      <p>{{ t('plugin.api.error.account-locked') }}</p>
+      <p>{{ t('plugin.api.error.login-expired') }}</p>
+      <p>{{ t('plugin.api.error.too-many-requests') }}</p>
       <LangSwitcher mt-4 />
     </section>
     <section>
       <H level="2">
-        <i>.vscode/settings.json</i>
+        <i>nuxt.config.ts</i>
       </H>
-      <ShikiJs :code="Code.settings" lang="json" />
+      <ShikiJs :code="Code.config" lang="ts" />
     </section>
     <section>
       <H level="2">
@@ -52,25 +51,19 @@ const { t } = useI18n({
 
 <i18n lang="yaml">
 en:
-  title: Vue I18n Basic Usage
-  i18n-text: This is a i18n text.
-  switch-lang: Or you can switch the language by the selector below.
+  title: Vue I18n Global Usage
   result:
     title: Result
   back-home: "{'<'} Back to home page {'>'}"
 
 zh-CN:
-  title: Vue I18n 基本使用
-  i18n-text: 这是一个 i18n 文本。
-  switch-lang: 或者你可以通过下面的选择器切换语言。
+  title: Vue I18n 全局使用
   result:
     title: 结果
   back-home: "{'<'} 返回首頁 {'>'}"
 
 zh-TW:
-  title: Vue I18n 基本使用
-  i18n-text: 這是一個 i18n 文本。
-  switch-lang: 或者你可以通過下面的選擇器切換語言。
+  title: Vue I18n 全局使用
   result:
     title: 結果
   back-home: "{'<'} 返回首頁 {'>'}"

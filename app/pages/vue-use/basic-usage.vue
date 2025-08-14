@@ -34,12 +34,6 @@ useEventListener('mousemove', () => {
     </H>
     <section>
       <H level="2">
-        app/pages/vue-use/basic-usage.vue
-      </H>
-      <ShikiJs :code="Code.page" lang="vue" />
-    </section>
-    <section>
-      <H level="2">
         {{ t('result.title') }}
       </H>
       <I18nT keypath="result.mouse" tag="p">
@@ -55,6 +49,12 @@ useEventListener('mousemove', () => {
           <span>{{ isMouseMoving }}</span>
         </template>
       </I18nT>
+    </section>
+    <section>
+      <H level="2">
+        <i>app/pages/vue-use/basic-usage.vue</i>
+      </H>
+      <ShikiJs :code="Code.page" lang="vue" />
     </section>
     <section>
       <NuxtLinkLocale to="/">

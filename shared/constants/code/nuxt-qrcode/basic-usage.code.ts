@@ -7,7 +7,7 @@ const { t } = useI18n({
   useScope: 'local',
 })
 
-const variant = ref<SVGVariant>('default')
+const variant = ref<SVGVariant>('default') // [!code focus:2]
 const radius = ref(1)
 </script>
 
@@ -18,14 +18,14 @@ const radius = ref(1)
         {{ t('result.default') }}
       </H>
       <div>
-        <Qrcode value="https://qrcode.s94.dev" width="200" height="200" />
+        <Qrcode value="https://qrcode.s94.dev" width="200" height="200" /> // [!code focus]
       </div>
     </section>
     <section>
       <H level="3">
         {{ t('result.variant') }}
       </H>
-      <ElSelect v-model="variant" mb-4>
+      <ElSelect v-model="variant" mb-4> // [!code focus:11]
         <ElOption label="Default" value="default" />
         <ElOption label="Dots" value="dots" />
         <ElOption label="Rounded" value="rounded" />

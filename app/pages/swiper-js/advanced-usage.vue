@@ -49,12 +49,6 @@ onMounted(() => {
     </H>
     <section>
       <H level="2">
-        app/pages/swiper-js/basic-usage.vue
-      </H>
-      <ShikiJs :code="Code.page" lang="ts" />
-    </section>
-    <section>
-      <H level="2">
         {{ t('result.title') }}
       </H>
       <!-- You should use client only to avoid hydration error -->
@@ -80,6 +74,12 @@ onMounted(() => {
           Next
         </ElButton>
       </div>
+    </section>
+    <section>
+      <H level="2">
+        <i>app/pages/swiper-js/advanced-usage.vue</i>
+      </H>
+      <ShikiJs :code="Code.page" lang="vue" />
     </section>
     <section>
       <NuxtLinkLocale to="/">

@@ -15,23 +15,25 @@ const { t } = useI18n({
     <H level="1">
       {{ t('title') }}
     </H>
-    <section>
-      <H level="2">
-        ElButton
-      </H>
-      <ShikiJs :code="Code.elButton" lang="vue" />
-    </section>
-    <section>
-      <p><ElButton>{{ t('button') }}</ElButton></p>
-    </section>
-    <section>
-      <H level="2">
-        LazyElButton
-      </H>
-      <ShikiJs :code="Code.lazyElButton" lang="vue" />
-    </section>
-    <section>
-      <p><LazyElButton>{{ t('button') }}</LazyElButton></p>
+    <section flex="~ gap-4">
+      <div>
+        <section>
+          <H level="2">
+            ElButton
+          </H>
+          <p><ElButton>{{ t('button') }}</ElButton></p>
+          <ShikiJs :code="Code.elButton" lang="vue" />
+        </section>
+      </div>
+      <div>
+        <section>
+          <H level="2">
+            LazyElButton
+          </H>
+          <p><LazyElButton>{{ t('button') }}</LazyElButton></p>
+          <ShikiJs :code="Code.lazyElButton" lang="vue" />
+        </section>
+      </div>
     </section>
     <section>
       <p>

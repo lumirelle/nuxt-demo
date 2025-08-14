@@ -5,9 +5,9 @@ export const Code = {
 })`,
   component:
 `<script lang="ts" setup>
-// This will shared the data from page // [!code focus]
-const { data } = useNuxtData('shared-time') // [!code focus]
-const stringifiedData = computed(() => JSON.stringify(data.value, null, 2)) // [!code focus]
+// This will shared the data from page // [!code focus:3]
+const { data } = useNuxtData('shared-time')
+const stringifiedData = computed(() => JSON.stringify(data.value, null, 2))
 </script>
 
 <template>
@@ -21,13 +21,13 @@ const { t } = useI18n({
   useScope: 'local',
 })
 
-// Provide data // [!code focus]
-const { data } = useFetch('/api/time', { // [!code focus]
-  key: 'shared-time', // [!code focus]
-  method: 'get', // [!code focus]
-}) // [!code focus]
+// Provide data // [!code focus:7]
+const { data } = useFetch('/api/time', {
+  key: 'shared-time',
+  method: 'get',
+})
 
-const stringifiedData = computed(() => JSON.stringify(data.value, null, 2)) // [!code focus]
+const stringifiedData = computed(() => JSON.stringify(data.value, null, 2))
 </script>
 
 <template>

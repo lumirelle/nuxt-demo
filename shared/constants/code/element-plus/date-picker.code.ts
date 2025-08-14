@@ -3,20 +3,20 @@ export const Code = {
 `<script setup lang="ts">
 import { ref } from 'vue'
 
-const date = ref<Date | null>(null)
+const date = ref<Date | null>(null) // [!code focus]
 
 const { t } = useI18n({
   useScope: 'local',
 })
 
-function handleChange(date: Date | null) {
+function handleChange(date: Date | null) { // [!code focus:3]
   ElMessage.success(t('success', { date: date?.toLocaleString() }))
 }
 </script>
 
 <template>
   <div>
-    <p><ElDatePicker v-model="date" type="datetime" @change="handleChange" /></p>
+    <p><ElDatePicker v-model="date" type="datetime" @change="handleChange" /></p> // [!code focus]
   </div>
 </template>
 

@@ -21,8 +21,8 @@ export const Code = {
   },
 
   build: {
-    // echarts-liquidfill is not ESM friendly // [!code highlight]
-    transpile: ['echarts-liquidfill'], // [!code highlight]
+    // echarts-liquidfill is not ESM friendly // [!code highlight:2]
+    transpile: ['echarts-liquidfill'],
   },
 })`,
   page:

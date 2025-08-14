@@ -5,10 +5,10 @@ const { t } = useI18n({
   useScope: 'local',
 })
 
-// "x" and "y" are refs
+// "x" and "y" are refs // [!code focus:2]
 const { x, y } = useMouse()
 
-// Will cleanup automatically while component unmounted
+// Will cleanup automatically while component unmounted // [!code focus:13]
 const isMouseMoving = ref(false)
 let timer: ReturnType<typeof setTimeout> | null = null
 useEventListener('mousemove', () => {
@@ -26,7 +26,7 @@ useEventListener('mousemove', () => {
 <template>
   <div>
     <I18nT keypath="result.mouse" tag="p">
-      <template #x>
+      <template #x> // [!code focus:6]
         <span>{{ x }}</span>
       </template>
       <template #y>
@@ -34,7 +34,7 @@ useEventListener('mousemove', () => {
       </template>
     </I18nT>
     <I18nT keypath="result.mouse-moving" tag="p">
-      <template #moving>
+      <template #moving> // [!code focus:3]
         <span>{{ isMouseMoving }}</span>
       </template>
     </I18nT>

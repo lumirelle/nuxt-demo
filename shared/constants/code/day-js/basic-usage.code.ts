@@ -15,6 +15,8 @@ export default defineNuxtPlugin(() => {
   }
   dayjs.locale(locales[locale.value])
 
+  // Do not use \`nuxtApp.provide('dayjs', dayjs)\`
+  // It's recommended to use return type to support typed usage
   return {
     provide: {
       dayjs,
@@ -30,7 +32,7 @@ const { t } = useI18n({
 
 <template>
   <div>
-    <!-- NOTE: Don't use \`$dayjs()\` directly, or will get a hydration error -->
+    <!-- NOTE: Don't use \`$dayjs()\` directly, or you will get a hydration error --> // [!code focus:6]
     <I18nT keypath="result.parse" tag="p">
       <template #parsed>
         <span>{{ $dayjs('2018-04-04T16:00:00.000Z').format('YYYY-MM-DD HH:mm:ss') }}</span>

@@ -80,15 +80,15 @@ zh-TW:
       </I18nT>
     </section>
     <section>
-      <ShikiJs :code="Code.demand" lang="vue" />
-    </section>
-    <section>
       <p mb-4>
         <span ref="mouseOverEl" underline hover="text-red">{{ t('trigger') }}</span>
       </p>
       <ElButton @click="refresh">
         {{ t('refreshButton') }}
       </ElButton>
+    </section>
+    <section>
+      <ShikiJs :code="Code.demand" lang="vue" />
     </section>
     <section>
       <p>

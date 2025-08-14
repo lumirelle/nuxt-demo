@@ -8,7 +8,7 @@ const { t } = useI18n({
 
 <template>
   <div>
-    <p><ElButton>{{ t('button') }}</ElButton></p>
+    <p><ElButton>{{ t('button') }}</ElButton></p> // [!code focus]
   </div>
 </template>
 
@@ -29,7 +29,7 @@ const { t } = useI18n({
 
 <template>
   <div>
-    <p><LazyElButton>{{ t('button') }}</LazyElButton></p>
+    <p><LazyElButton>{{ t('button') }}</LazyElButton></p> // [!code focus]
   </div>
 </template>
 

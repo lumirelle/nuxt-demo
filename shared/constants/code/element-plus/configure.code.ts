@@ -2,7 +2,7 @@ export const Code = {
   nuxtConfig:
 `export default defineNuxtConfig({
   elementPlus: {
-    // Enable dark mode
+    // Enable dark mode // [!code focus:33]
     themes: ['dark'],
 
     // Import Element Plus SCSS & override the default variables
@@ -18,7 +18,7 @@ export const Code = {
         'page': '#fff',
       },
       '$border-color': {
-        '': '#1D293D',
+        '': '#E2E8F0',
       },
       'dark': {
         '$colors': {

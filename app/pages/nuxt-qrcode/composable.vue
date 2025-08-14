@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import type { SVGVariant } from 'nuxt-qrcode'
 
-import { Code } from '#shared/constants/code/nuxt-qrcode/basic-usage.code'
+import { Code } from '#shared/constants/code/nuxt-qrcode/composable.code'
 
 definePageMeta({
   parent: '/',
@@ -37,12 +37,6 @@ const qrcodeVariant = useQrcode(data, {
         {{ t('result.title') }}
       </H>
       <section>
-        <H level="2">
-          app/pages/nuxt-qrcode/composable.vue
-        </H>
-        <ShikiJs :code="Code.page" lang="vue" />
-      </section>
-      <section>
         <H level="3">
           {{ t('result.default') }}
         </H>
@@ -66,6 +60,12 @@ const qrcodeVariant = useQrcode(data, {
           <img :src="qrcodeVariant" width="200" height="200">
         </div>
       </section>
+    </section>
+    <section>
+      <H level="2">
+        <i>app/pages/nuxt-qrcode/composable.vue</i>
+      </H>
+      <ShikiJs :code="Code.page" lang="vue" />
     </section>
     <section>
       <NuxtLinkLocale to="/">

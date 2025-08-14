@@ -34,18 +34,6 @@ const option = ref<ECOption>({
     </H>
     <section>
       <H level="2">
-        nuxt.config.ts
-      </H>
-      <ShikiJs :code="Code.config" lang="ts" />
-    </section>
-    <section>
-      <H level="2">
-        app/pages/e-charts/basic-usage.vue
-      </H>
-      <ShikiJs :code="Code.page" lang="vue" />
-    </section>
-    <section>
-      <H level="2">
         {{ t('result.title') }}
       </H>
       <section w-full h-400px>
@@ -54,6 +42,18 @@ const option = ref<ECOption>({
         </H>
         <VChart :option="option" />
       </section>
+    </section>
+    <section>
+      <H level="2">
+        <i>nuxt.config.ts</i>
+      </H>
+      <ShikiJs :code="Code.config" lang="ts" />
+    </section>
+    <section>
+      <H level="2">
+        <i>app/pages/e-charts/basic-usage.vue</i>
+      </H>
+      <ShikiJs :code="Code.page" lang="vue" />
     </section>
     <section>
       <NuxtLinkLocale to="/">

@@ -23,21 +23,6 @@ const num4 = new BigNumber('123412421.234324', 5) // '607236.557696'
     </H>
     <section>
       <H level="2">
-        shared/utils/bignumber.ts
-      </H>
-      <p v-for="i in 2" :key="i">
-        {{ t(`utils.p${i}`) }}
-      </p>
-      <ShikiJs :code="Code.utils" lang="ts" />
-    </section>
-    <section>
-      <H level="2">
-        app/pages/bignumber-js/basic-usage.vue
-      </H>
-      <ShikiJs :code="Code.page" lang="vue" />
-    </section>
-    <section>
-      <H level="2">
         {{ t('result.title') }}
       </H>
       <p>Number 1: {{ num1 }}, {{ num1.toString() === '43210' ? 'Correct' : 'Error' }}</p>
@@ -53,6 +38,26 @@ const num4 = new BigNumber('123412421.234324', 5) // '607236.557696'
       <p>Number 1 toFixed(2): {{ bigToFixed(num1, 2) }}, {{ bigToFixed(num1, 2).toString() === '43210.00' ? 'Correct' : 'Error' }}</p>
     </section>
     <section>
+      <H level="2">
+        <i>shared/utils/bignumber.ts</i>
+      </H>
+      <p>{{ t('utils.p1') }}</p>
+      <I18nT keypath="utils.p2" tag="p">
+        <template #link>
+          <NuxtLink to="https://nuxt.com/docs/4.x/guide/directory-structure/shared" external target="_blank">
+            Nuxt
+          </NuxtLink>
+        </template>
+      </I18nT>
+      <ShikiJs :code="Code.utils" lang="ts" />
+    </section>
+    <section>
+      <H level="2">
+        <i>app/pages/bignumber-js/basic-usage.vue</i>
+      </H>
+      <ShikiJs :code="Code.page" lang="vue" />
+    </section>
+    <section>
       <NuxtLinkLocale to="/">
         <span>{{ t('back-home') }}</span>
       </NuxtLinkLocale>
@@ -65,7 +70,7 @@ en:
   title: Bignumber.js Basic Usage
   utils:
     p1: This is a utility function for big number operations.
-    p2: These function are auto-imported by Nuxt.
+    p2: These function are auto-imported by {link}.
   result:
     title: Result
   back-home: "{'<'} Back to home page {'>'}"
@@ -74,7 +79,7 @@ zh-CN:
   title: Bignumber.js 基本使用
   utils:
     p1: 这是一个用于大数字运算的工具函数。
-    p2: 这些函数是由 Nuxt 自动导入的。
+    p2: 这些函数是由 {link} 自动导入的。
   result:
     title: 结果
   back-home: "{'<'} 返回首页 {'>'}"
@@ -83,7 +88,7 @@ zh-TW:
   title: Bignumber.js 基本使用
   utils:
     p1: 這是一個用於大數字運算的工具函數。
-    p2: 這些函數是由 Nuxt 自動導入的。
+    p2: 這些函數是由 {link} 自動導入的。
   result:
     title: 結果
   back-home: "{'<'} 返回首頁 {'>'}"

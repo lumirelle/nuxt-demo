@@ -7,7 +7,7 @@ const { t } = useI18n({
   useScope: 'local',
 })
 
-// When encoding QRCode images to base64, the \`blackColor\` and \`whiteColor\` will default to \`#000\` and \`#FFF\` respectively, ignoring those set in the \`nuxt.config.ts\` file.
+// When encoding QRCode images to base64, the \`blackColor\` and \`whiteColor\` will default to \`#000\` and \`#FFF\` respectively, ignoring those set in the \`nuxt.config.ts\` file. // [!code focus:14]
 // You can override this by passing the \`blackColor\` and \`whiteColor\` options to the composable.
 const qrcodeDefault = useQrcode('https://nuxt.com', {
   toBase64: true,
@@ -30,14 +30,14 @@ const qrcodeVariant = useQrcode(data, {
         {{ t('result.default') }}
       </H>
       <div>
-        <img :src="qrcodeDefault" width="200" height="200">
+        <img :src="qrcodeDefault" width="200" height="200"> // [!code focus]
       </div>
     </section>
     <section>
       <H level="3">
         {{ t('result.variant') }}
       </H>
-      <ElSelect v-model="variant" mb-4>
+      <ElSelect v-model="variant" mb-4> // [!code focus:11]
         <ElOption label="Default" value="default" />
         <ElOption label="Dots" value="dots" />
         <ElOption label="Rounded" value="rounded" />

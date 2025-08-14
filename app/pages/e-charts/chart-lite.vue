@@ -64,18 +64,6 @@ function onClick(params: ECSSRClientEventParams) {
     </H>
     <section>
       <H level="2">
-        nuxt.config.ts
-      </H>
-      <ShikiJs :code="Code.config" lang="ts" />
-    </section>
-    <section>
-      <H level="2">
-        app/pages/e-charts/chart-lite.vue
-      </H>
-      <ShikiJs :code="Code.page" lang="vue" />
-    </section>
-    <section>
-      <H level="2">
         {{ t('result.title') }}
       </H>
       <section w-full h-400px>
@@ -85,6 +73,18 @@ function onClick(params: ECSSRClientEventParams) {
         <!-- We have to specify the `height` and `width` property in `init-options` for SSR. -->
         <VChartLight :option="option" :init-options="{ height: 400, width: 1200 }" @click="onClick" />
       </section>
+    </section>
+    <section>
+      <H level="2">
+        <i>nuxt.config.ts</i>
+      </H>
+      <ShikiJs :code="Code.config" lang="ts" />
+    </section>
+    <section>
+      <H level="2">
+        <i>app/pages/e-charts/chart-lite.vue</i>
+      </H>
+      <ShikiJs :code="Code.page" lang="vue" />
     </section>
     <section>
       <NuxtLinkLocale to="/">

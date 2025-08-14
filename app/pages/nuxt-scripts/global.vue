@@ -52,12 +52,12 @@ zh-TW:
       <p>{{ t('p3') }}</p>
     </section>
     <section>
-      <ShikiJs :code="Code.global" lang="vue" />
-    </section>
-    <section>
       <ElButton @click="handleClick">
         {{ t('button') }}
       </ElButton>
+    </section>
+    <section>
+      <ShikiJs :code="Code.global" lang="vue" />
     </section>
     <section>
       <p>

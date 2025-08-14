@@ -145,18 +145,6 @@ const option: ECOption = {
     </H>
     <section>
       <H level="2">
-        nuxt.config.ts
-      </H>
-      <ShikiJs :code="Code.config" lang="ts" />
-    </section>
-    <section>
-      <H level="2">
-        app/pages/e-charts/chart-full.vue
-      </H>
-      <ShikiJs :code="Code.page" lang="vue" />
-    </section>
-    <section>
-      <H level="2">
         {{ t('result.title') }}
       </H>
       <section w-full h-400px>
@@ -166,6 +154,18 @@ const option: ECOption = {
         <!-- We have to specify the `height` and `width` property in `init-options` for SSR. -->
         <VChartFull :option="option" :init-options="{ height: 400, width: 1200 }" />
       </section>
+    </section>
+    <section>
+      <H level="2">
+        <i>nuxt.config.ts</i>
+      </H>
+      <ShikiJs :code="Code.config" lang="ts" />
+    </section>
+    <section>
+      <H level="2">
+        <i>app/pages/e-charts/chart-full.vue</i>
+      </H>
+      <ShikiJs :code="Code.page" lang="vue" />
     </section>
     <section>
       <NuxtLinkLocale to="/">

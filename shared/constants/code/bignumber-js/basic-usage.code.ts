@@ -2,7 +2,7 @@ export const Code = {
   utils:
 `import { BigNumber } from 'bignumber.js'
 
-export function bigDivide(num1: number | BigNumber, num2: number | BigNumber): BigNumber {
+export function bigDivide(num1: number | BigNumber, num2: number | BigNumber): BigNumber { // [!code highlight]
   if (num1 instanceof BigNumber) {
     return num1.div(num2)
   }
@@ -14,7 +14,7 @@ export function bigDivide(num1: number | BigNumber, num2: number | BigNumber): B
   }
 }
 
-export function bigMultiply(num1: number | BigNumber, num2: number | BigNumber): BigNumber {
+export function bigMultiply(num1: number | BigNumber, num2: number | BigNumber): BigNumber { // [!code highlight]
   if (num1 instanceof BigNumber) {
     return num1.multipliedBy(num2)
   }
@@ -26,7 +26,7 @@ export function bigMultiply(num1: number | BigNumber, num2: number | BigNumber):
   }
 }
 
-export function bigAdd(num1: number | BigNumber, num2: number | BigNumber): BigNumber {
+export function bigAdd(num1: number | BigNumber, num2: number | BigNumber): BigNumber { // [!code highlight]
   if (num1 instanceof BigNumber) {
     return num1.plus(num2)
   }
@@ -38,7 +38,7 @@ export function bigAdd(num1: number | BigNumber, num2: number | BigNumber): BigN
   }
 }
 
-export function bigSubstract(num1: number | BigNumber, num2: number | BigNumber): BigNumber {
+export function bigSubstract(num1: number | BigNumber, num2: number | BigNumber): BigNumber { // [!code highlight]
   if (num1 instanceof BigNumber) {
     return num1.minus(num2)
   }
@@ -50,7 +50,7 @@ export function bigSubstract(num1: number | BigNumber, num2: number | BigNumber)
   }
 }
 
-export function bigPow(base: number | BigNumber, exponent: number | BigNumber): BigNumber {
+export function bigPow(base: number | BigNumber, exponent: number | BigNumber): BigNumber { // [!code highlight]
   if (base instanceof BigNumber) {
     return base.exponentiatedBy(exponent)
   }
@@ -62,7 +62,7 @@ export function bigPow(base: number | BigNumber, exponent: number | BigNumber): 
   }
 }
 
-export function bigToFixed(num: number | BigNumber, decimalPlaces: number = 2): string {
+export function bigToFixed(num: number | BigNumber, decimalPlaces: number = 2): string { // [!code highlight]
   if (num instanceof BigNumber) {
     return num.toFixed(decimalPlaces)
   }

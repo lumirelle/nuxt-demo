@@ -2,7 +2,7 @@ export const Code = {
   page:
 `<script lang="ts" setup>
 
-// Create 10 slides
+// Create 10 slides // [!code focus:15]
 const containerRef = ref(null)
 const slides = ref(Array.from({ length: 10 }))
 
@@ -21,7 +21,7 @@ onMounted(() => {
 
 <template>
   <div>
-    <!-- You should use client only to avoid hydration error -->
+    <!-- You should use client only to avoid hydration error --> // [!code focus:22]
     <!-- These components are the web components provided by Swiper.js -->
     <ClientOnly>
       <swiper-container ref="containerRef">

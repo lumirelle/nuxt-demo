@@ -5,22 +5,22 @@ export const Code = {
 const containerRef = ref(null)
 const slides = ref(Array.from({ length: 10 }))
 const swiper = useSwiper(containerRef, {
-  // Effects                    // [!code highlight]
-  effect: 'creative',           // [!code highlight]
+  // Effects // [!code highlight:2]
+  effect: 'creative',
   loop: true,
   // Auto play
   autoplay: {
     delay: 5000,
   },
-  creativeEffect: {             // [!code highlight]
-    prev: {                     // [!code highlight]
-      shadow: true,             // [!code highlight]
-      translate: [0, 0, -400],  // [!code highlight]
-    },                          // [!code highlight]
-    next: {                     // [!code highlight]
-      shadow: true,             // [!code highlight]
-      translate: [0, 0, -400],  // [!code highlight]
-    },                          // [!code highlight]
+  creativeEffect: { // [!code highlight:8]
+    prev: {
+      shadow: true,
+      translate: [0, 0, -400],
+    },
+    next: {
+      shadow: true,
+      translate: [0, 0, -400],
+    },
   },
 })
 

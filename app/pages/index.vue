@@ -169,6 +169,16 @@ const { t } = useI18n({
               <span>Vue Router</span>
             </NuxtLinkLocale>
           </template>
+          <template #link1>
+            <NuxtLinkLocale to="https://nuxt.com/docs/4.x/getting-started/routing" external target="_blank">
+              <span>Nuxt Routing</span>
+            </NuxtLinkLocale>
+          </template>
+          <template #link2>
+            <NuxtLinkLocale to="https://nuxt.com/docs/4.x/api/utils/define-page-meta" external target="_blank">
+              <span>Page Meta in Nuxt</span>
+            </NuxtLinkLocale>
+          </template>
         </I18nT>
       </section>
     </section>
@@ -191,6 +201,16 @@ const { t } = useI18n({
             </NuxtLinkLocale>
           </template>
         </I18nT>
+      </section>
+      <section>
+        <H level="3">
+          {{ t('vue-i18n.global.title') }}
+        </H>
+        <p>
+          <NuxtLinkLocale to="/vue-i18n/global">
+            <span>{{ t('vue-i18n.global.try') }}</span>
+          </NuxtLinkLocale>
+        </p>
       </section>
       <section>
         <H level="3">
@@ -604,7 +624,7 @@ en:
 
   vue-router:
     title: Vue Router
-    more-info: See {link} documentation for more information.
+    more-info: See {link}, {link1} and {link2} documentation for more information.
 
   vue-i18n:
     title: Vue I18n
@@ -613,6 +633,9 @@ en:
       title: Basic Usage
       desc: A demo of using Vue I18n with local scope (yaml) and VSCode I18n extension settings (i18n ally).
       try: Try basic usage of Vue I18n
+    global:
+      title: Global Usage
+      try: Try global usage of Vue I18n
 
   element-plus:
     title: Element Plus
@@ -752,7 +775,7 @@ zh-CN:
 
   vue-router:
     title: Vue Router
-    more-info: 查看 {link} 文档了解更多信息。
+    more-info: 查看 {link}，{link1} 和 {link2} 文档了解更多信息。
 
   vue-i18n:
     title: Vue I18n
@@ -761,6 +784,9 @@ zh-CN:
       title: 基本使用
       desc: 使用 Vue I18n 的 local scope (yaml) 和 VSCode I18n 扩展设置 (i18n ally)。
       try: 尝试 Vue I18n 的基本使用
+    global:
+      title: 全局使用
+      try: 尝试 Vue I18n 的全局使用
 
   element-plus:
     title: Element Plus
@@ -900,7 +926,7 @@ zh-TW:
 
   vue-router:
     title: Vue Router
-    more-info: 查看 {link} 文檔了解更多信息。
+    more-info: 查看 {link}，{link1} 和 {lin2} 文檔了解更多信息。
 
   vue-i18n:
     title: Vue I18n
@@ -909,6 +935,9 @@ zh-TW:
       title: 基本使用
       desc: 使用 Vue I18n 的 local scope (yaml) 和 VSCode I18n 擴展設置 (i18n ally)。
       try: 嘗試 Vue I18n 的基本使用
+    global:
+      title: 全局使用
+      try: 嘗試 Vue I18n 的全局使用
 
   element-plus:
     title: Element Plus

@@ -3,51 +3,51 @@ export const Code = {
 `export default defineNuxtConfig({
   nitro: {
     storage: {
-      // Override the default options of cache storage // [!code focus]
-      cache: { // [!code focus]
-        driver: 'lru-cache', // [!code focus]
-        // Options provided to lru-cache constructor // [!code focus]
-        ttl: 1000 * 60 * 5, // [!code focus]
-        max: 100, // [!code focus]
-      }, // [!code focus]
+      // Override the default options of cache storage // [!code focus:7]
+      cache: {
+        driver: 'lru-cache',
+        // Options provided to lru-cache constructor
+        ttl: 1000 * 60 * 5,
+        max: 100,
+      },
     },
-    // Override the default options of cache storage in dev mode // [!code focus]
     devStorage: {
-      cache: { // [!code focus]
-        driver: 'lru-cache', // [!code focus]
-        // Options provided to lru-cache constructor // [!code focus]
-        ttl: 1000 * 60 * 5, // [!code focus]
-        max: 100, // [!code focus]
-      }, // [!code focus]
+      // Override the default options of cache storage in dev mode // [!code focus:7]
+      cache: {
+        driver: 'lru-cache',
+        // Options provided to lru-cache constructor
+        ttl: 1000 * 60 * 5,
+        max: 100,
+      },
     },
   },
 })`,
   time:
-`// This is a cached event handler // [!code focus]
-export default defineCachedEventHandler( // [!code focus]
+`// This is a cached event handler // [!code focus:2]
+export default defineCachedEventHandler(
   async () => {
     return new Date().toLocaleString()
   },
-  // Cache options // [!code focus]
-  { // [!code focus]
-    name: 'cached-time', // [!code focus]
-    // If not provided, will act as the non-cached event handler // [!code focus]
-    maxAge: 1000 * 60 * 5, // [!code focus]
-  }, // [!code focus]
-) // [!code focus]`,
+  // Cache options // [!code focus:7]
+  {
+    name: 'cached-time',
+    // If not provided, will act as the non-cached event handler
+    maxAge: 1000 * 60 * 5,
+  },
+)`,
   page:
 `<script lang="ts" setup>
 const { t } = useI18n({
   useScope: 'local',
 })
 
-// Fetch data from Nitro (Server) // [!code focus]
-const { data } = useFetch('/api/time', { // [!code focus]
-  key: 'cached-time', // [!code focus]
-  method: 'get', // [!code focus]
-}) // [!code focus]
+// Fetch data from Nitro (Server) // [!code focus:7]
+const { data } = useFetch('/api/time', {
+  key: 'cached-time',
+  method: 'get',
+})
 
-const stringifiedData = computed(() => JSON.stringify(data.value, null, 2)) // [!code focus]
+const stringifiedData = computed(() => JSON.stringify(data.value, null, 2))
 </script>
 
 <template>

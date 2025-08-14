@@ -13,6 +13,8 @@ export default defineNuxtPlugin(() => {
   }
   dayjs.locale(locales[locale.value])
 
+  // Do not use `nuxtApp.provide('dayjs', dayjs)`
+  // It's recommended to use return type to support typed usage
   return {
     provide: {
       dayjs,
