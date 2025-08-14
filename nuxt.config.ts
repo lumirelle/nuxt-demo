@@ -108,6 +108,8 @@ export default defineNuxtConfig({
     // Third party scripts loading, better performance & stronger feature
     // Support Google Tag Manager too
     '@nuxt/scripts',
+    '@nuxt/image',
+    '@nuxt/fonts',
 
     // SEO, robots.txt, sitemap.xml and so on
     '@nuxtjs/seo',
@@ -198,7 +200,7 @@ export default defineNuxtConfig({
     },
   },
 
-  /* ----------------------------- Scripts Modules ---------------------------- */
+  /* ----------------------------- Resources Modules ---------------------------- */
 
   scripts: {
     // Example to load third party script globally
