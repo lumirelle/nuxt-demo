@@ -27,10 +27,10 @@ Utilities:
 - [Swiper.js](https://swiperjs.com/get-started) (Nuxt Module: [nuxt-swiper](https://github.com/cpreston321/nuxt-swiper))
 - [Nuxt QRCode](https://qrcode.s94.dev/)
 - [Nuxt Scripts](https://scripts.nuxt.com/docs/getting-started)
+- [Nuxt SEO](https://nuxt.com/modules/seo)
 
 TODO: Below
 
-- TODO: [Nuxt SEO](https://nuxt.com/modules/seo)
 - TODO: MD5 & SHA256 (Finding crypto package)
 - TODO: XLSX
 
@@ -739,3 +739,9 @@ Nuxt provide built-in support for data caching which is powered by `nitro`, we d
 Loading third party scripts, built-in support for Google Tag Manager and other [registries](https://scripts.nuxt.com/scripts).
 
 See [Nuxt Scripts](https://scripts.nuxt.com/docs/getting-started) for more information.
+
+### Nuxt SEO
+
+Nuxt SEO is the collective name of modules focused on improving your technical SEO, like [@nuxtjs/robots](https://nuxt.com/modules/robots) & [@nuxtjs/sitemap](https://nuxt.com/modules/sitemap).
+
+For more information, please refer to the [documentation](https://nuxtseo.com/docs/nuxt-seo/guides/using-the-modules).

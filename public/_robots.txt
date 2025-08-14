@@ -1,2 +1,4 @@
-User-Agent: *
-Disallow:
+# Block private paths
+User-agent: *
+Disallow: /admin
+Disallow: /dashboard

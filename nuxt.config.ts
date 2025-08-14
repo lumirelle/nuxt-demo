@@ -1,8 +1,11 @@
 import process from 'node:process'
+import { defineOrganization } from 'nuxt-schema-org/schema'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: '2025-08-14',
+  /* -------------------------------------------------------------------------- */
+  /*                                 Application                                */
+  /* -------------------------------------------------------------------------- */
 
   app: {
     head: {
@@ -37,41 +40,112 @@ export default defineNuxtConfig({
     },
   },
 
+  /* -------------------------------------------------------------------------- */
+  /*                               Server                                       */
+  /* -------------------------------------------------------------------------- */
+
+  nitro: {
+    storage: {
+      // Override the default options of cache storage
+      cache: {
+        driver: 'lru-cache',
+        // Options provided to lru-cache constructor
+        ttl: 1000 * 60 * 5,
+        max: 100,
+      },
+    },
+    // Override the default options of cache storage in dev mode
+    devStorage: {
+      cache: {
+        driver: 'lru-cache',
+        // Options provided to lru-cache constructor
+        ttl: 1000 * 60 * 5,
+        max: 100,
+      },
+    },
+
+    // Proxy remote server to local (`<target>/xxx` => `/web/xxx`), avoid CORS.
+    devProxy: {
+      // All request start with `/web`, such as `/web/foo` will be replaced to `<target>/foo`, `/web` will be removed
+      '/web': {
+        target: process.env.NUXT_PUBLIC_PROXY_WEB_BASE,
+        changeOrigin: true,
+      },
+    },
+  },
+
+  compatibilityDate: '2025-08-14',
+
+  /* -------------------------------------------------------------------------- */
+  /*                                    Build                                   */
+  /* -------------------------------------------------------------------------- */
+
+  build: {
+    // echarts-liquidfill is not ESM friendly
+    transpile: ['echarts-liquidfill'],
+  },
+
+  vite: {
+    build: {
+      target: 'es2015',
+    },
+  },
+
+  /* -------------------------------------------------------------------------- */
+  /*                                   Modules                                  */
+  /* -------------------------------------------------------------------------- */
+
   modules: [
+    // Color mode
+    '@nuxtjs/color-mode',
     // Element Plus auto import & theme & variables override support
     '@element-plus/nuxt',
-    // ESLint integration in Nuxt devtools
-    '@nuxt/eslint',
+    // UnoCSS
+    '@unocss/nuxt',
+    // i18n
+    '@nuxtjs/i18n',
+
     // Third party scripts loading, better performance & stronger feature
     // Support Google Tag Manager too
     '@nuxt/scripts',
-    // Test utils, unit test & e2e test support
-    '@nuxt/test-utils',
-    // Color mode
-    '@nuxtjs/color-mode',
-    // i18n
-    '@nuxtjs/i18n',
-    // TODO: SEO
+
+    // SEO, robots.txt, sitemap.xml and so on
     '@nuxtjs/seo',
+
     // Pinia
     '@pinia/nuxt',
-    // UnoCSS
-    '@unocss/nuxt',
     // Vue Use
     '@vueuse/nuxt',
+
     // Shiki, code highlighting
     'nuxt-shiki',
-    // Typed route path, improve your DX
-    'nuxt-typed-router',
+    // Swiper.js
+    'nuxt-swiper',
     // ECharts components, themes, init options, ssr support and so on
     'nuxt-echarts',
     // Generating and reading QRCodes.
     'nuxt-qrcode',
 
+    // Typed route path, improve your DX
+    'nuxt-typed-router',
+    // ESLint integration in Nuxt devtools
+    '@nuxt/eslint',
+    // Test utils, unit test & e2e test support
+    '@nuxt/test-utils',
+
     // TODO: Pending triage below
     'nuxt-svgo',
-    'nuxt-swiper',
   ],
+
+  /* ------------------------------- UI Modules ------------------------------- */
+
+  colorMode: {
+    // Compatible with UnoCSS & Element Plus
+    classSuffix: '',
+    // Default color mode preference is below, you don't need provide them explicitly
+    preference: 'system',
+    fallback: 'light',
+  },
 
   elementPlus: {
     // Enable dark mode
@@ -109,14 +183,22 @@ export default defineNuxtConfig({
     },
   },
 
-  eslint: {
-    config: {
-      // By default, `@nuxt/eslint` will install the JS, TS and Vue plugins with their recommended rules,
-      // Which may override your config preset. Setting `standalone` option to `false` will disable this behavior.
-      // See https://eslint.nuxt.com/packages/module#custom-config-presets for more information.
-      standalone: false,
+  i18n: {
+    locales: [
+      // FIXME: Should specify file manually
+      { code: 'en', name: 'English', file: 'en.yaml' },
+      { code: 'zh-CN', name: '简体中文', file: 'zh-CN.yaml' },
+      { code: 'zh-TW', name: '繁體中文', file: 'zh-TW.yaml' },
+    ],
+    // NOTE: I18n will detect the browser language by default
+    defaultLocale: 'en',
+    strategy: 'prefix_except_default',
+    detectBrowserLanguage: {
+      cookieKey: 'locale',
     },
   },
+
+  /* ----------------------------- Scripts Modules ---------------------------- */
 
   scripts: {
     // Example to load third party script globally
@@ -133,25 +215,29 @@ export default defineNuxtConfig({
     },
   },
 
-  colorMode: {
-    // Compatible with UnoCSS & Element Plus
-    classSuffix: '',
-  },
+  /* ------------------------------- SEO Modules ------------------------------ */
 
-  i18n: {
-    locales: [
-      // FIXME: Should specify file manually
-      { code: 'en', name: 'English', file: 'en.yaml' },
-      { code: 'zh-CN', name: '简体中文', file: 'zh-CN.yaml' },
-      { code: 'zh-TW', name: '繁體中文', file: 'zh-TW.yaml' },
-    ],
-    // NOTE: I18n will detect the browser language by default
-    defaultLocale: 'en',
-    strategy: 'prefix_except_default',
-    detectBrowserLanguage: {
-      cookieKey: 'locale',
+  // Default sitemap setting
+  // For futher usage, please refer to https://nuxtseo.com/docs/sitemap/guides/loc-data
+  sitemap: {
+    defaults: {
+      lastmod: new Date().toISOString(),
     },
   },
+
+  ogImage: {
+    enabled: false,
+  },
+
+  schemaOrg: {
+    // Basic example
+    identity: defineOrganization({
+      name: 'TechCorp Solutions',
+      logo: '/logo.png',
+    }),
+  },
+
+  /* ---------------------------- Component Modules --------------------------- */
 
   shiki: {
     bundledThemes: [
@@ -195,44 +281,14 @@ export default defineNuxtConfig({
     features: ['LabelLayout', 'UniversalTransition'],
   },
 
-  nitro: {
-    storage: {
-      // Override the default options of cache storage
-      cache: {
-        driver: 'lru-cache',
-        // Options provided to lru-cache constructor
-        ttl: 1000 * 60 * 5,
-        max: 100,
-      },
-    },
-    // Override the default options of cache storage in dev mode
-    devStorage: {
-      cache: {
-        driver: 'lru-cache',
-        // Options provided to lru-cache constructor
-        ttl: 1000 * 60 * 5,
-        max: 100,
-      },
-    },
+  /* ------------------------------- DX Modules ------------------------------- */
 
-    // Proxy remote server to local (`<target>/xxx` => `/web/xxx`), avoid CORS.
-    devProxy: {
-      // All request start with `/web`, such as `/web/foo` will be replaced to `<target>/foo`, `/web` will be removed
-      '/web': {
-        target: process.env.NUXT_PUBLIC_PROXY_WEB_BASE,
-        changeOrigin: true,
-      },
-    },
-  },
-
-  build: {
-    // echarts-liquidfill is not ESM friendly
-    transpile: ['echarts-liquidfill'],
-  },
-
-  vite: {
-    build: {
-      target: 'es2015',
+  eslint: {
+    config: {
+      // By default, `@nuxt/eslint` will install the JS, TS and Vue plugins with their recommended rules,
+      // Which may override your config preset. Setting `standalone` option to `false` will disable this behavior.
+      // See https://eslint.nuxt.com/packages/module#custom-config-presets for more information.
+      standalone: false,
     },
   },
 })

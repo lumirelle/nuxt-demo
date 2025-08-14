@@ -27,10 +27,10 @@ UI 库和 CSS 框架：
 - [Swiper.js](https://swiperjs.com/get-started) (Nuxt 模块: [nuxt-swiper](https://github.com/cpreston321/nuxt-swiper))
 - [Nuxt QRCode](https://qrcode.s94.dev/)
 - [Nuxt Scripts](https://scripts.nuxt.com/docs/getting-started)
+- [Nuxt SEO](https://nuxt.com/modules/seo)
 
 TODO: Below
 
-- TODO: [Nuxt SEO](https://nuxt.com/modules/seo)
 - TODO: MD5 & SHA256 (寻找加密包)
 - TODO: XLSX
 
@@ -734,3 +734,9 @@ Nuxt 提供了由 `nitro` 驱动的内置数据缓存支持，我们不需要使
 加载第三方脚本，内置支持 Google Tag Manager 和其他 [注册表](https://scripts.nuxt.com/scripts)。
 
 更多信息请参见 [Nuxt Scripts](https://scripts.nuxt.com/docs/getting-started)。
+
+### Nuxt SEO
+
+Nuxt SEO 是专注于改善您的技术 SEO 的模块的集合，如 [@nuxtjs/robots](https://nuxt.com/modules/robots) & [@nuxtjs/sitemap](https://nuxt.com/modules/sitemap)。
+
+更多信息，请参考 [文档](https://nuxtseo.com/docs/nuxt-seo/guides/using-the-modules)。
