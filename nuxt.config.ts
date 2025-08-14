@@ -61,7 +61,6 @@ export default defineNuxtConfig({
     'nuxt-qrcode',
 
     // TODO: Pending triage below
-    'nuxt-gtag',
     'nuxt-svgo',
     'nuxt-swiper',
   ],

@@ -45,7 +45,6 @@
     "highlightjs-vue-plugin": "^2.1.4",
     "nuxt": "^4.0.3",
     "nuxt-echarts": "^1.0.0",
-    "nuxt-gtag": "^3.0.3",
     "nuxt-qrcode": "^0.4.6",
     "nuxt-shiki": "^0.3.1",
     "nuxt-svgo": "^4.2.6",
